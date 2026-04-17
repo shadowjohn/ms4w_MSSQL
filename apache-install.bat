@@ -10,7 +10,8 @@ mkdir c:\sqlite3_ext
 xcopy /-y  %mypath%ms4w_MSSQL\sqlite3_ext\*.* C:\sqlite3_ext\
 
 cd C:\ms4w_MSSQL\Apache\bin
-httpd -k install -n "Apache MS4W MSSQL Web Server: port 82"
+rem httpd -k install -n "Apache MS4W MSSQL Web Server: port 82"
+sc create "Apache MS4W MSSQL Web Server: port 82" binPath= "C:\ms4w_MSSQL\Apache\bin\httpd.exe -k runservice" start= auto
 net start "Apache MS4W MSSQL Web Server: port 82"
 cd ..\..
 
