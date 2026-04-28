@@ -19,10 +19,8 @@ try {
     $db->exec("PRAGMA trusted_schema = ON");
     $db->exec("PRAGMA database_list");
 
-    # Load the SpatiaLite extension
-    $db->sqliteCreateFunction('enable_extension', 'this->sqlite3_enable_load_extension', 1);
-    //$db->sqliteCreateFunction('load_extension', 'sqlite3_load_extension', 1);
-    $db->query("SELECT load_extension('libspatialite.dll')");
+    # Load the SpatiaLite extension（DLL 已 patch，直接呼叫即可）
+    $db->query("SELECT load_extension('mod_spatialite.dll')");
 
     # enabling Spatial Metadata
     $db->exec("SELECT InitSpatialMetadata(1)");
