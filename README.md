@@ -30,15 +30,15 @@ MS4W 4.0.4
 
 | 元件 | 版本 / 狀態 | 位置 |
 |---|---|---|
-| Apache | Apache/2.4.67 Win64，Apache Lounge VS18 build 2026-04-30 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
-| PHP | PHP 8.3.8 ZTS x64，Visual C++ 2019，含 Zend OPcache | `ms4w_MSSQL/Apache/php/php.exe` |
+| Apache | Apache/2.4.68 Win64，Apache Lounge VS18 build 2026-06-17 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
+| PHP | PHP 8.3.32 ZTS x64，Visual C++ 2019，含 Zend OPcache | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
 | PHP legacy CGI | PHP 5.3.2，保留於 CGI 目錄，主要作為舊版相容檢查 | `ms4w_MSSQL/Apache/cgi-bin/php.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
 | GDAL / OGR | GDAL 2.4.0，released 2018-12-14 | `ms4w_MSSQL/GDAL/` |
 | Python | Python 3.7.8 | `ms4w_MSSQL/python/python.exe` |
 | SQLite CLI | SQLite 3.42.0 | `ms4w_MSSQL/sqlite3_ext/sqlite3.exe` |
-| OpenSSL | OpenSSL 3.6.2 | `ms4w_MSSQL/Apache/bin/openssl.exe` |
+| OpenSSL | OpenSSL 3.6.3 | `ms4w_MSSQL/Apache/bin/openssl.exe` |
 
 這包也包含編譯後的 PHP SQLite / PDO / GeoSQLite 相關 DLL，包含：
 
@@ -52,6 +52,8 @@ MS4W 4.0.4
 - `libgeos_c.dll`
 
 其中 `pdo_geosqlite` / GeoSQLite 支援是這個整理版的重要用途之一，用來讓舊 Easymap / PHP 程式可以透過 PDO / SQLite 路線讀寫帶空間能力的 SQLite 資料，而不是只依賴純文字 WKT 或外部轉檔。
+
+PHP 8.3.32 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中 `php_pdo_sqlite.dll` 為可執行 `load_extension()` 的重編版本，已以 PDO 載入 SpatiaLite 5.1.0 驗證。Apache FastCGI 必須保留 `C:/sqlite3_ext` 於 PATH，否則 SpatiaLite 的相依 DLL 無法被載入。
 
 已知主要使用情境：
 
@@ -70,7 +72,7 @@ MS4W 4.0.4
 apache-install.bat
 ```
 
-安裝腳本會建立固定 runtime 位置：
+安裝腳本會建立或沿用固定 runtime 位置：
 
 ```text
 C:\ms4w_MSSQL
@@ -85,6 +87,8 @@ Apache MS4W MSSQL Web Server: port 82
 
 這個固定位置是為了讓既有 Easymap、GDAL、SQLite extension 與產線腳本可以用一致路徑找到工具。若要改路徑，請同步檢查 `setenv.bat`、Apache 設定與依賴此環境的外部工具。
 
+`apache-install.bat` 會先驗證系統管理員權限與 `httpd -t`，不會刪除既有 `C:\ms4w_MSSQL` runtime；`C:\sqlite3_ext` 以較新檔案補齊。這可避免重裝時覆蓋已驗證的本機設定。
+
 ## 服務操作
 
 重啟 Apache：
@@ -98,6 +102,8 @@ apache-restart.bat
 ```bat
 apache-uninstall.bat
 ```
+
+移除腳本只刪除 service，保留 `C:\ms4w_MSSQL`、`C:\sqlite3_ext` 與所有 runtime／資料檔案。
 
 如果服務啟動失敗，先檢查：
 
