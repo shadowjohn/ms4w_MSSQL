@@ -26,6 +26,12 @@
 MS4W 4.0.4
 ```
 
+## 下載版本
+
+可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
+
+主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
+
 主要 runtime 版本：
 
 | 元件 | 版本 / 狀態 | 位置 |
