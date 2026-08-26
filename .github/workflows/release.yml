@@ -1,0 +1,121 @@
+name: 發布 Windows runtime
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 已存在的 Release tag，例如 v2026.07.20
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.event_name }}-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: 打包並發布
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 取出原始碼
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 確認 tag 與版本說明
+        shell: pwsh
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          if ('${{ github.event_name }}' -eq 'workflow_dispatch') {
+            $tag = $env:INPUT_TAG.Trim()
+          } else {
+            $tag = $env:GITHUB_REF_NAME
+          }
+
+          if ($tag -notmatch '^v[0-9A-Za-z][0-9A-Za-z._-]*$') {
+            throw "Release tag 格式不符：$tag"
+          }
+
+          if ('${{ github.event_name }}' -eq 'workflow_dispatch') {
+            git fetch origin "refs/tags/${tag}:refs/tags/${tag}"
+            if ($LASTEXITCODE -ne 0) {
+              throw "找不到 tag：$tag"
+            }
+            git checkout --detach $tag
+            if ($LASTEXITCODE -ne 0) {
+              throw "無法切換到 tag：$tag"
+            }
+          }
+
+          $notesPath = Join-Path 'docs/releases' "$tag.md"
+          if (-not (Test-Path -LiteralPath $notesPath -PathType Leaf)) {
+            throw "缺少版本說明：$notesPath"
+          }
+
+          "RELEASE_TAG=$tag" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "RELEASE_NOTES=$notesPath" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "PACKAGE_NAME=ms4w_MSSQL-$tag-windows-x64.zip" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: 檢查 runtime
+        shell: pwsh
+        run: ./scripts/Test-Runtime.ps1
+
+      - name: 建立 Release 資產
+        shell: pwsh
+        run: ./scripts/New-ReleasePackage.ps1 -ReleaseTag $env:RELEASE_TAG
+
+      - name: 解壓並再次檢查
+        shell: pwsh
+        run: |
+          ./scripts/Test-ReleasePackage.ps1 `
+            -PackagePath "artifacts/$env:PACKAGE_NAME" `
+            -ChecksumPath 'artifacts/SHA256SUMS.txt' `
+            -ManifestPath 'artifacts/release-manifest.json' `
+            -KeepExtracted
+
+      - name: 建立或更新 GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $assets = @(
+            "artifacts/$env:PACKAGE_NAME",
+            'artifacts/SHA256SUMS.txt',
+            'artifacts/release-manifest.json'
+          )
+          $title = "ms4w_MSSQL $env:RELEASE_TAG"
+
+          gh release view $env:RELEASE_TAG *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $env:RELEASE_TAG @assets --clobber
+            if ($LASTEXITCODE -ne 0) { throw '更新 Release 資產失敗。' }
+            gh release edit $env:RELEASE_TAG --title $title --notes-file $env:RELEASE_NOTES
+            if ($LASTEXITCODE -ne 0) { throw '更新 Release 說明失敗。' }
+          } else {
+            gh release create $env:RELEASE_TAG @assets `
+              --verify-tag `
+              --title $title `
+              --notes-file $env:RELEASE_NOTES
+            if ($LASTEXITCODE -ne 0) { throw '建立 Release 失敗。' }
+          }
+
+      - name: 寫入工作摘要
+        if: always()
+        shell: pwsh
+        run: |
+          if (Test-Path -LiteralPath 'artifacts/SHA256SUMS.txt') {
+            "## Release 資產" | Out-File $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+            '```text' | Out-File $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+            Get-Content -LiteralPath 'artifacts/SHA256SUMS.txt' -Encoding UTF8 |
+              Out-File $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+            '```' | Out-File $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          }
