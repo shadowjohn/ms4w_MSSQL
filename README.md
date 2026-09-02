@@ -32,7 +32,7 @@ MS4W 4.0.4
 
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
-這個 ZIP 已採用 **app-local Microsoft Visual C++ v14 x64 runtime**：Apache、PHP 與 MapServer 所需的 runtime DLL 已放在各自的實際載入目錄，不需要使用者另外安裝 Visual C++ Redistributable。runtime 來源版本與每個 DLL 的 SHA-256 請見 `ms4w_MSSQL/VC_RUNTIME_X64.json`；不要自行以來路不明的 DLL 覆蓋。
+這個 ZIP 已採用 **app-local Microsoft Visual C++ v14 runtime**：x64 Apache、PHP 使用 x64 DLL，x86 MapServer 與 legacy CGI 使用 x86 DLL，均已放在各自的實際載入目錄，不需要使用者另外安裝 Visual C++ Redistributable。runtime 來源版本與每個 DLL 的 SHA-256 請見 `ms4w_MSSQL/VC_RUNTIME_X64.json` 與 `ms4w_MSSQL/VC_RUNTIME_X86.json`；不要自行以來路不明的 DLL 覆蓋。
 
 主要 runtime 版本：
 
@@ -248,7 +248,7 @@ http://localhost:82/
 
 ### 找不到 VCRUNTIME140.dll
 
-正式 ZIP 已內含 x64 app-local VC++ runtime。請確認是**完整解壓**後，從原始目錄執行 `apache-install.bat`，不要只複製 `httpd.exe` 或 `Apache/bin` 的部分檔案。若仍出現此訊息，請先比對 Release 的 SHA-256，再確認防毒軟體沒有隔離 `Apache/bin/vcruntime140.dll`。
+正式 ZIP 已內含 app-local VC++ runtime。請確認是**完整解壓**後，從原始目錄執行 `apache-install.bat`，不要只複製 `httpd.exe`、`Apache/bin` 或 `Apache/cgi-bin` 的部分檔案。若仍出現此訊息，請先比對 Release 的 SHA-256，再確認防毒軟體沒有隔離對應目錄的 `vcruntime140.dll`。
 
 ### 找不到 GDAL DLL
 

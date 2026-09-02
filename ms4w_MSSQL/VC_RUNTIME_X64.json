@@ -11,8 +11,7 @@
   },
   "deploymentDirectories": [
     "ms4w_MSSQL/Apache/bin",
-    "ms4w_MSSQL/Apache/php",
-    "ms4w_MSSQL/Apache/cgi-bin"
+    "ms4w_MSSQL/Apache/php"
   ],
   "files": [
     {

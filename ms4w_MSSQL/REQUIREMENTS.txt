@@ -1,13 +1,16 @@
-This MS4W bundle deploys the Microsoft Visual C++ v14 x64 runtime app-local.
+This MS4W bundle deploys the Microsoft Visual C++ v14 runtime app-local.
 
 No separate Visual C++ Redistributable installation is required to run the
-included x64 Apache, PHP, or MapServer executables on supported Windows 10/11
-systems. The runtime files are deployed next to the relevant executable roots:
+included Apache, PHP, or MapServer executables on supported Windows 10/11
+systems. Apache and PHP use the x64 runtime; legacy CGI and MapServer use the
+x86 runtime. The runtime files are deployed next to the relevant executable
+roots:
 
     /ms4w_MSSQL/Apache/bin/
     /ms4w_MSSQL/Apache/php/
     /ms4w_MSSQL/Apache/cgi-bin/
 
 Runtime file versions and SHA-256 values are recorded in
-/ms4w_MSSQL/VC_RUNTIME_X64.json. Do not download individual DLL files from
-third-party sites or replace these files independently.
+/ms4w_MSSQL/VC_RUNTIME_X64.json and /ms4w_MSSQL/VC_RUNTIME_X86.json. Do not
+download individual DLL files from third-party sites or replace these files
+independently.
