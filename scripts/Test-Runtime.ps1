@@ -31,6 +31,179 @@ if ($bundleVersion -notmatch '^MS4W\s+\d+\.\d+\.\d+$') {
     throw "VERSION.txt 格式不符：$bundleVersion"
 }
 
+function Convert-RvaToFileOffset {
+    param(
+        [Parameter(Mandatory)]
+        [uint32]$Rva,
+
+        [Parameter(Mandatory)]
+        [object[]]$Sections
+    )
+
+    foreach ($section in $Sections) {
+        $start = [uint64]$section.VirtualAddress
+        $end = $start + [uint64]$section.Span
+        if ([uint64]$Rva -ge $start -and [uint64]$Rva -lt $end) {
+            return [int]([uint64]$section.RawOffset + ([uint64]$Rva - $start))
+        }
+    }
+
+    throw ('PE import RVA 無法對應檔案位置：0x{0:X8}' -f $Rva)
+}
+
+function Get-PeImportedDllNames {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Path
+    )
+
+    $bytes = [System.IO.File]::ReadAllBytes($Path)
+    if ($bytes.Length -lt 0x40 -or $bytes[0] -ne 0x4D -or $bytes[1] -ne 0x5A) {
+        throw "不是有效的 PE 檔案：$Path"
+    }
+
+    $peOffset = [int][BitConverter]::ToUInt32($bytes, 0x3C)
+    if ($peOffset -lt 0 -or $peOffset + 24 -gt $bytes.Length -or
+        [Text.Encoding]::ASCII.GetString($bytes, $peOffset, 4) -ne "PE`0`0") {
+        throw "PE header 格式不符：$Path"
+    }
+
+    $sectionCount = [int][BitConverter]::ToUInt16($bytes, $peOffset + 6)
+    $optionalHeaderSize = [int][BitConverter]::ToUInt16($bytes, $peOffset + 20)
+    $optionalHeaderOffset = $peOffset + 24
+    $optionalHeaderMagic = [BitConverter]::ToUInt16($bytes, $optionalHeaderOffset)
+    $dataDirectoryOffset = switch ($optionalHeaderMagic) {
+        0x20B { $optionalHeaderOffset + 112; break }
+        0x10B { $optionalHeaderOffset + 96; break }
+        default { throw "不支援的 PE optional header：0x$('{0:X4}' -f $optionalHeaderMagic) ($Path)" }
+    }
+
+    $importRva = [BitConverter]::ToUInt32($bytes, $dataDirectoryOffset + 8)
+    if ($importRva -eq 0) {
+        return @()
+    }
+
+    $sectionOffset = $optionalHeaderOffset + $optionalHeaderSize
+    if ($sectionOffset + ($sectionCount * 40) -gt $bytes.Length) {
+        throw "PE section table 超出檔案範圍：$Path"
+    }
+
+    $sections = @(
+        for ($index = 0; $index -lt $sectionCount; $index++) {
+            $offset = $sectionOffset + ($index * 40)
+            $virtualSize = [BitConverter]::ToUInt32($bytes, $offset + 8)
+            $virtualAddress = [BitConverter]::ToUInt32($bytes, $offset + 12)
+            $rawSize = [BitConverter]::ToUInt32($bytes, $offset + 16)
+            $rawOffset = [BitConverter]::ToUInt32($bytes, $offset + 20)
+            [pscustomobject]@{
+                VirtualAddress = $virtualAddress
+                Span = [Math]::Max([uint64]$virtualSize, [uint64]$rawSize)
+                RawOffset = $rawOffset
+            }
+        }
+    )
+
+    $descriptorOffset = Convert-RvaToFileOffset -Rva $importRva -Sections $sections
+    $imports = [System.Collections.Generic.List[string]]::new()
+    while ($descriptorOffset + 20 -le $bytes.Length) {
+        $originalFirstThunk = [BitConverter]::ToUInt32($bytes, $descriptorOffset)
+        $nameRva = [BitConverter]::ToUInt32($bytes, $descriptorOffset + 12)
+        $firstThunk = [BitConverter]::ToUInt32($bytes, $descriptorOffset + 16)
+        if ($originalFirstThunk -eq 0 -and $nameRva -eq 0 -and $firstThunk -eq 0) {
+            break
+        }
+
+        $nameOffset = Convert-RvaToFileOffset -Rva $nameRva -Sections $sections
+        $endOffset = $nameOffset
+        while ($endOffset -lt $bytes.Length -and $bytes[$endOffset] -ne 0) {
+            $endOffset++
+        }
+        if ($endOffset -ge $bytes.Length) {
+            throw "PE import 名稱未以 NUL 結尾：$Path"
+        }
+
+        $imports.Add([Text.Encoding]::ASCII.GetString($bytes, $nameOffset, $endOffset - $nameOffset))
+        $descriptorOffset += 20
+    }
+
+    return $imports.ToArray()
+}
+
+function Test-AppLocalVcRuntime {
+    param(
+        [Parameter(Mandatory)]
+        [string]$RuntimeRoot
+    )
+
+    $manifestPath = Join-Path $RuntimeRoot 'ms4w_MSSQL\VC_RUNTIME_X64.json'
+    if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
+        throw '缺少 app-local VC++ x64 runtime 清單：ms4w_MSSQL/VC_RUNTIME_X64.json'
+    }
+
+    $manifest = Get-Content -LiteralPath $manifestPath -Encoding UTF8 -Raw | ConvertFrom-Json
+    if ($manifest.schemaVersion -ne 1 -or $manifest.architecture -ne 'x64' -or $manifest.deployment -ne 'app-local') {
+        throw 'VC++ runtime 清單格式或架構不符預期。'
+    }
+
+    $runtimeFiles = @($manifest.files)
+    if ($runtimeFiles.Count -eq 0) {
+        throw 'VC++ runtime 清單沒有檔案。'
+    }
+
+    foreach ($relativeDirectory in @($manifest.deploymentDirectories)) {
+        $runtimeDirectory = Join-Path $RuntimeRoot ($relativeDirectory -replace '/', '\\')
+        if (-not (Test-Path -LiteralPath $runtimeDirectory -PathType Container)) {
+            throw "找不到 VC++ runtime 部署目錄：$relativeDirectory"
+        }
+
+        foreach ($runtimeFile in $runtimeFiles) {
+            $runtimePath = Join-Path $runtimeDirectory $runtimeFile.name
+            if (-not (Test-Path -LiteralPath $runtimePath -PathType Leaf)) {
+                throw "缺少 app-local VC++ runtime：$relativeDirectory/$($runtimeFile.name)"
+            }
+
+            $actualHash = (Get-FileHash -LiteralPath $runtimePath -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actualHash -ne $runtimeFile.sha256) {
+                throw "app-local VC++ runtime 雜湊不符：$relativeDirectory/$($runtimeFile.name)"
+            }
+
+            $actualVersion = (Get-Item -LiteralPath $runtimePath).VersionInfo.FileVersion
+            if ($actualVersion -ne $runtimeFile.fileVersion) {
+                throw "app-local VC++ runtime 版本不符：$relativeDirectory/$($runtimeFile.name)"
+            }
+        }
+    }
+
+    $entryPoints = @(
+        @{ Name = 'Apache'; RelativePath = 'ms4w_MSSQL\Apache\bin\httpd.exe' },
+        @{ Name = 'PHP'; RelativePath = 'ms4w_MSSQL\Apache\php\php.exe' },
+        @{ Name = 'MapServer'; RelativePath = 'ms4w_MSSQL\Apache\cgi-bin\mapserv.exe' }
+    )
+    foreach ($entryPoint in $entryPoints) {
+        $entryPointPath = Join-Path $RuntimeRoot $entryPoint.RelativePath
+        $imports = @(Get-PeImportedDllNames -Path $entryPointPath)
+        if ($imports -notcontains 'VCRUNTIME140.dll') {
+            throw "$($entryPoint.Name) 沒有預期的 VCRUNTIME140.dll import：$($entryPoint.RelativePath)"
+        }
+
+        $appLocalRuntime = Join-Path (Split-Path -Parent $entryPointPath) 'vcruntime140.dll'
+        if (-not (Test-Path -LiteralPath $appLocalRuntime -PathType Leaf)) {
+            throw "$($entryPoint.Name) 旁缺少 VCRUNTIME140.dll：$($entryPoint.RelativePath)"
+        }
+    }
+
+    return [pscustomobject][ordered]@{
+        architecture = $manifest.architecture
+        deployment = $manifest.deployment
+        packageVersion = $manifest.source.packageVersion
+        packageSha256 = $manifest.source.packageSha256
+        files = $runtimeFiles
+        deploymentDirectories = @($manifest.deploymentDirectories)
+    }
+}
+
+$vcRuntime = Test-AppLocalVcRuntime -RuntimeRoot $resolvedRoot
+
 function Invoke-VersionCheck {
     param(
         [Parameter(Mandatory)]
@@ -121,6 +294,7 @@ $result = [pscustomobject][ordered]@{
     bundleVersion = $bundleVersion
     rootPath = $resolvedRoot
     checkedAtUtc = [DateTimeOffset]::UtcNow.ToString('o')
+    vcRuntime = $vcRuntime
     executables = $executables
 }
 

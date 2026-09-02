@@ -90,6 +90,7 @@ $manifest = [ordered]@{
         source = 'git archive'
         excludedRuntimeCacheFiles = $excludedCacheFiles.Count
     }
+    vcRuntime = $runtimeReport.vcRuntime
     keyExecutables = $runtimeReport.executables
 }
 

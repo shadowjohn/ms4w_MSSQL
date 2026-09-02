@@ -1,12 +1,13 @@
-**Note: the following steps are required only for those who didn't use the installer "ms4w-xxx-setup.exe"
-        (if you used the file "ms4w_xxx.zip" instead, you are required to do the following steps)
+This MS4W bundle deploys the Microsoft Visual C++ v14 x64 runtime app-local.
 
-- must first install the package "Microsoft Visual C++ Redistributable for Visual Studio 2017":
-      
-    - use the file "vc_redist.x86.exe" located in the folder: /ms4w/tmp/
-    
-    - or download from https://support.microsoft.com/en-ca/help/2977003/the-latest-supported-visual-c-downloads
-        
-        - use the x86 installer ("vc_redist.x86.exe")
-        
-       
+No separate Visual C++ Redistributable installation is required to run the
+included x64 Apache, PHP, or MapServer executables on supported Windows 10/11
+systems. The runtime files are deployed next to the relevant executable roots:
+
+    /ms4w_MSSQL/Apache/bin/
+    /ms4w_MSSQL/Apache/php/
+    /ms4w_MSSQL/Apache/cgi-bin/
+
+Runtime file versions and SHA-256 values are recorded in
+/ms4w_MSSQL/VC_RUNTIME_X64.json. Do not download individual DLL files from
+third-party sites or replace these files independently.

@@ -27,6 +27,8 @@ vYYYY.MM.DD
 
 打包腳本只會收錄 Git 已追蹤的檔案，並排除 `ms4w_MSSQL/tmp` 內的 URL cache 圖片。Apache log、PHP error log、本機上傳資料、私有設定與帳密都不應進入版控或 Release。
 
+`ms4w_MSSQL/VC_RUNTIME_X64.json` 定義隨 ZIP 提供的 app-local Microsoft Visual C++ v14 x64 runtime。`Test-Runtime.ps1` 會在執行任何 runtime EXE 前，確認 Apache、PHP 與 MapServer 的實際載入目錄都有清單內 DLL、版本與 SHA-256 一致，並從 PE import table 驗證三個入口程式仍需要 `VCRUNTIME140.dll`。更新 runtime 時，必須從 Microsoft 已驗證的 x64 redistributable 來源取得可轉散發檔案，同步更新 JSON 清單與所有三個目錄；不得從任意機器的 `System32` 或第三方 DLL 站直接取檔。
+
 ## 發布步驟
 
 1. 更新 README 內的元件版本，並新增 `docs/releases/<tag>.md`。
