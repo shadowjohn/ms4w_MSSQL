@@ -39,7 +39,7 @@ MS4W 4.0.4
 | 元件 | 版本 / 狀態 | 位置 |
 |---|---|---|
 | Apache | Apache/2.4.68 Win64，Apache Lounge VS18 build 2026-06-17 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
-| PHP | PHP 8.3.32 ZTS x64，Visual C++ 2019，含 Zend OPcache | `ms4w_MSSQL/Apache/php/php.exe` |
+| PHP | PHP 8.3.32 ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.46.0 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
 | PHP legacy CGI | PHP 5.3.2，保留於 CGI 目錄，主要作為舊版相容檢查 | `ms4w_MSSQL/Apache/cgi-bin/php.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
@@ -61,7 +61,17 @@ MS4W 4.0.4
 
 其中 `pdo_geosqlite` / GeoSQLite 支援是這個整理版的重要用途之一，用來讓舊 Easymap / PHP 程式可以透過 PDO / SQLite 路線讀寫帶空間能力的 SQLite 資料，而不是只依賴純文字 WKT 或外部轉檔。
 
-PHP 8.3.32 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中 `php_pdo_sqlite.dll` 為可執行 `load_extension()` 的重編版本，已以 PDO 載入 SpatiaLite 5.1.0 驗證。Apache FastCGI 必須保留 `C:/sqlite3_ext` 於 PATH，否則 SpatiaLite 的相依 DLL 無法被載入。
+PHP 8.3.32 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中 `php_pdo_sqlite.dll` 為可執行 `load_extension()` 的重編版本，已以 PDO 載入 SpatiaLite 5.1.0 驗證；`php_sqlite3.dll` 則為含 RTree 的重編版本。兩者是獨立 extension，重編其中之一不會改變另一個的行為。Apache FastCGI 必須保留 `C:/sqlite3_ext` 於 PATH，否則 SpatiaLite 的相依 DLL 無法被載入。
+
+### PHP SQLite extension 重編與驗證
+
+目前 runtime 的 ABI 為 PHP 8.3.32、x64、ZTS、VS2019（vc16）。重編 DLL 時必須完全對齊這組 ABI；VS2022（vc17）產物不可混用。
+
+- `php_pdo_sqlite.dll`：在 PDO connection 開啟 `load_extension()`，供受控的程式載入 SpatiaLite。
+- `php_sqlite3.dll`：以 RTree-enabled SQLite static library 編譯，供 `new SQLite3(...)` 讀寫 `idx_*_GEOMETRY` virtual table。
+- 完整的 source、工具鏈、備份、部署與驗證流程：[`ms4w_MSSQL/rebuild_pdo_sqlite.md`](ms4w_MSSQL/rebuild_pdo_sqlite.md)。
+
+部署前先備份現役 DLL，並以實際 `CREATE VIRTUAL TABLE ... USING rtree` 驗證；不要只看 `PRAGMA compile_options`，部分 SQLite build 不會列出 RTree compile option。
 
 已知主要使用情境：
 
