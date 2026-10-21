@@ -1,0 +1,14 @@
+# Preserve the exact upstream PHP payload bytes across Windows Git checkouts.
+# Limited to the official runtime metadata/templates covered by PHP_RUNTIME.json.
+ms4w_MSSQL/Apache/php/extras/ssl/openssl.cnf -text
+ms4w_MSSQL/Apache/php/license.txt -text
+ms4w_MSSQL/Apache/php/news.txt -text
+ms4w_MSSQL/Apache/php/phar.phar.bat -text
+ms4w_MSSQL/Apache/php/php.ini-development -text
+ms4w_MSSQL/Apache/php/php.ini-production -text
+ms4w_MSSQL/Apache/php/README.md -text
+ms4w_MSSQL/Apache/php/snapshot.txt -text
+ms4w_MSSQL/Apache/php/readme-redist-bins.txt -text
+ms4w_MSSQL/Apache/php/extras/sbom/php.cdx.json -text
+ms4w_MSSQL/Apache/php/extras/sbom/php.spdx.json -text
+ms4w_MSSQL/Apache/php/extras/sbom/php.openvex.json -text

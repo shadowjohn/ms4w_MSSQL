@@ -352,7 +352,7 @@ $checks = @(
         Name = 'PHP'
         RelativePath = 'ms4w_MSSQL\Apache\php\php.exe'
         ArgumentList = @('-v')
-        ExpectedPattern = 'PHP 8\.3\.32'
+        ExpectedPattern = 'PHP 8\.3\.36'
     },
     @{
         Name = 'GDAL'
