@@ -30,6 +30,8 @@ MS4W 4.0.4
 
 可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
 
+目前發行版：[v2026.10.22](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.10.22)。包含 PHP 8.3.36、SQLite GIS 與 Apache batch 修正，完整內容見 [版本說明](docs/releases/v2026.10.22.md)。
+
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
 這個 ZIP 已採用 **app-local Microsoft Visual C++ v14 runtime**：x64 Apache、PHP 使用 x64 DLL，x86 MapServer 與 legacy CGI 使用 x86 DLL，均已放在各自的實際載入目錄，不需要使用者另外安裝 Visual C++ Redistributable。runtime 來源版本與每個 DLL 的 SHA-256 請見 `ms4w_MSSQL/VC_RUNTIME_X64.json` 與 `ms4w_MSSQL/VC_RUNTIME_X86.json`；不要自行以來路不明的 DLL 覆蓋。
