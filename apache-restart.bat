@@ -1,11 +1,19 @@
 @ECHO OFF
 SETLOCAL EnableExtensions
 
+CALL :MAIN
+SET "SCRIPT_EXIT=%ERRORLEVEL%"
+IF /I NOT "%~1"=="/nopause" PAUSE
+EXIT /B %SCRIPT_EXIT%
+
+:MAIN
+
 SET "SERVICE_NAME=ApacheMS4WMSSQLWebServer:port82"
 
-NET SESSION >NUL 2>&1
+REM Check elevation directly; NET SESSION also requires the Windows Server service.
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -Command "if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { exit 0 }; exit 1" >NUL 2>&1
 IF ERRORLEVEL 1 (
-    ECHO ERROR: Run this script from an elevated Command Prompt or PowerShell.
+    ECHO ERROR: Right-click this file and choose "Run as administrator".
     EXIT /B 1
 )
 

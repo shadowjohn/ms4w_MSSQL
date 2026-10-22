@@ -1,6 +1,13 @@
 @ECHO OFF
 SETLOCAL EnableExtensions
 
+CALL :MAIN
+SET "SCRIPT_EXIT=%ERRORLEVEL%"
+IF /I NOT "%~1"=="/nopause" PAUSE
+EXIT /B %SCRIPT_EXIT%
+
+:MAIN
+
 REM 安裝前不覆蓋既有 runtime，避免破壞有效的本機設定。
 SET "SOURCE_ROOT=%~dp0ms4w_MSSQL"
 SET "TARGET_ROOT=C:\ms4w_MSSQL"
@@ -9,9 +16,10 @@ SET "SERVICE_NAME=ApacheMS4WMSSQLWebServer:port82"
 SET "SERVICE_DISPLAY=Apache MS4W MSSQL Web Server: port 82"
 SET "HTTPD=%TARGET_ROOT%\Apache\bin\httpd.exe"
 
-NET SESSION >NUL 2>&1
+REM Check elevation directly; NET SESSION also requires the Windows Server service.
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -Command "if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { exit 0 }; exit 1" >NUL 2>&1
 IF ERRORLEVEL 1 (
-    ECHO ERROR: Run this script from an elevated Command Prompt or PowerShell.
+    ECHO ERROR: Right-click this file and choose "Run as administrator".
     EXIT /B 1
 )
 

@@ -84,7 +84,7 @@ PHP 8.3.36 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中
 
 ## 安裝方式
 
-請在系統管理員權限的 Command Prompt 或 PowerShell 執行：
+將整包放在例如 `D:\mytools\ms4w_MSSQL` 或 `D:\tools\ms4w_MSSQL`，在外層的 `apache-install.bat` 按右鍵，選擇「以系統管理員身分執行」。也可以在系統管理員權限的 Command Prompt 或 PowerShell 執行：
 
 ```bat
 apache-install.bat
@@ -122,6 +122,8 @@ apache-uninstall.bat
 ```
 
 移除腳本只刪除 service，保留 `C:\ms4w_MSSQL`、`C:\sqlite3_ext` 與所有 runtime／資料檔案。
+
+三支 batch 都可按右鍵「以系統管理員身分執行」，結束後會保留視窗顯示結果。管理員檢查不依賴 Windows「Server」服務，因此該服務停用時仍可使用。若由命令列或自動化呼叫、不需要暫停，請加上 `/nopause`，例如 `apache-install.bat /nopause`；退出碼仍會反映執行結果。
 
 如果服務啟動失敗，先檢查：
 
