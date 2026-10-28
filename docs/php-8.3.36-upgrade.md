@@ -58,3 +58,11 @@
 CLI 與實際 port 82 Apache FastCGI 均為 PHP 8.3.36；HTTP 200、SAPI cgi-fcgi、SQLite 3.54.1、SpatiaLite 5.1.0，全部上述 GIS 檢查通過。SQLSRV/PDO_SQLSRV 5.12.0 載入，PDO drivers mysql/odbc/pgsql/sqlite/sqlsrv 可用。81 個部署檔雜湊吻合，原 ini／Apache 設定保持，Apache Syntax OK，臨時 probe 清除後回覆 404，AIHub worker 恢復 active/running。
 
 未連線或修改真實 MSSQL 資料庫；未操作其他主機。應用程式真實資料與其他主機環境仍需由各主機正常驗證。舊 PHP 5.3.2 legacy CGI 是另一組相容性範圍，此次沒有升級，請勿把主 PHP 升級視為所有 legacy CGI 都已修補。
+
+## 2026-10-28 Brotli 1.2.1 overlay
+
+本次 PHP 核心仍為 8.3.36 x64 TS VS16，僅從官方 php-8.3.36-1 重打包來源取 brotlicommon.dll 與 brotlidec.dll，修補 Brotli 至 1.2.1。這不等於部署整份重打包 ZIP；原 PHP SBOM 保留為基底，實際 inventory 必須合併 PHP_RUNTIME.json 的 dependencyOverlays 與 customExtensions。
+
+更新既有正式環境時，先核對核心與 ABI。若尚非 PHP 8.3.36，應先按本文件同步完整 runtime 清單並保留相容的自訂 SQLite/SQLSRV 與設定；若已在同一基底，僅套用兩個 Brotli DLL 和對應清冊。保留 php.ini、憑證與 SpatiaLite；確認所有共用目標 PHP 的 Apache/IIS worker 或 CLI 工作已釋放檔案後再更換。
+
+驗收須看實際 curl_version() 的 Brotli 1.2.1、兩個 DLL 雜湊及 Web SAPI；php -v 仍顯示 8.3.36，不能單獨判斷修補。正式機的完整更新範圍與回復步驟見 docs/releases/v2026.10.28.md。

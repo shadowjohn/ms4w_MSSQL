@@ -21,12 +21,6 @@ if ($LASTEXITCODE -ne 0 -or $sourceCommit -notmatch '^[0-9a-f]{40}$') {
     throw '無法取得目前 commit。'
 }
 
-$runtimeReportJson = & (Join-Path $PSScriptRoot 'Test-Runtime.ps1') -RootPath $repoRoot -AsJson
-if ($LASTEXITCODE -ne 0) {
-    throw 'Runtime smoke check 失敗。'
-}
-$runtimeReport = $runtimeReportJson | ConvertFrom-Json
-
 if (-not (Test-Path -LiteralPath $OutputDirectory)) {
     New-Item -ItemType Directory -Path $OutputDirectory | Out-Null
 }
@@ -51,7 +45,15 @@ $archivePaths = @(
     'apache-uninstall.bat',
     'ms4w_MSSQL',
     ':(exclude,glob)ms4w_MSSQL/tmp/https%3A*',
-    ':(exclude,glob)ms4w_MSSQL/tmp/ms_tmp/*.png'
+    ':(exclude,glob)ms4w_MSSQL/tmp/ms_tmp/*.png',
+    ':(exclude,literal)ms4w_MSSQL/Apache/bin/.rnd',
+    ':(exclude,literal)ms4w_MSSQL/Apache/htdocs/test_geo.php',
+    ':(exclude,literal)ms4w_MSSQL/Apache/htdocs/test_pdo_geo.php',
+    ':(exclude,literal)ms4w_MSSQL/Apache/htdocs/old/phpinfo.php',
+    ':(exclude,literal)ms4w_MSSQL/Apache/htdocs/old/phpinfo_mapscript.php',
+    ':(exclude,literal)ms4w_MSSQL/Apache/htdocs/old/phpinfo_php_ogr.php',
+    ':(exclude,literal)ms4w_MSSQL/Apache/cgi-bin/printenv.pl',
+    ':(exclude,literal)ms4w_MSSQL/Apache/cgi-bin/test.png'
 )
 
 $gitArguments = @(
@@ -67,6 +69,38 @@ $gitArguments = @(
 & git @gitArguments
 if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $packagePath -PathType Leaf)) {
     throw '建立 Release ZIP 失敗。'
+}
+
+$tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) "ms4w-release-build-$PID-$([guid]::NewGuid().ToString('N'))"
+$expectedTempPrefix = [System.IO.Path]::GetFullPath((Join-Path ([System.IO.Path]::GetTempPath()) 'ms4w-release-build-'))
+$resolvedTempRoot = [System.IO.Path]::GetFullPath($tempRoot)
+if (-not $resolvedTempRoot.StartsWith($expectedTempPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+    throw "Release snapshot temp path is outside the expected location: $resolvedTempRoot"
+}
+
+try {
+    New-Item -ItemType Directory -Path $resolvedTempRoot | Out-Null
+    & tar.exe -xf $packagePath -C $resolvedTempRoot
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Unable to extract the HEAD release snapshot.'
+    }
+
+    $snapshotRoot = Join-Path $resolvedTempRoot $packageBaseName
+    $runtimeReportJson = & (Join-Path $PSScriptRoot 'Test-Runtime.ps1') -RootPath $snapshotRoot -AsJson
+    if ($LASTEXITCODE -ne 0) {
+        throw 'HEAD snapshot runtime smoke check failed.'
+    }
+    $runtimeReport = $runtimeReportJson | ConvertFrom-Json
+}
+finally {
+    if (Test-Path -LiteralPath $resolvedTempRoot) {
+        $cleanupRoot = (Resolve-Path -LiteralPath $resolvedTempRoot).Path
+        if ($cleanupRoot -ne $resolvedTempRoot -or
+            -not $cleanupRoot.StartsWith($expectedTempPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+            throw "Refusing to delete an unexpected snapshot temp path: $cleanupRoot"
+        }
+        Remove-Item -LiteralPath $cleanupRoot -Recurse -Force
+    }
 }
 
 $archiveHash = (Get-FileHash -LiteralPath $packagePath -Algorithm SHA256).Hash.ToLowerInvariant()

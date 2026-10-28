@@ -12,3 +12,12 @@ ms4w_MSSQL/Apache/php/readme-redist-bins.txt -text
 ms4w_MSSQL/Apache/php/extras/sbom/php.cdx.json -text
 ms4w_MSSQL/Apache/php/extras/sbom/php.spdx.json -text
 ms4w_MSSQL/Apache/php/extras/sbom/php.openvex.json -text
+
+# Preserve official Apache/Brotli text payload hashes on Windows checkouts.
+ms4w_MSSQL/Apache/bin/c_rehash.pl -text -whitespace
+ms4w_MSSQL/Apache/bin/curl-config -text -whitespace
+ms4w_MSSQL/Apache/bin/dbmmanage.pl -text -whitespace
+ms4w_MSSQL/Apache/bin/pcre2-config -text -whitespace
+ms4w_MSSQL/Apache/bin/wcurl -text -whitespace
+ms4w_MSSQL/Apache/bin/xml2-config -text -whitespace
+ms4w_MSSQL/Apache/bin/LICENSE.brotli -text -whitespace

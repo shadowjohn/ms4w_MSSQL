@@ -31,11 +31,11 @@
   "files": [
     {
       "path": "Apache/php/brotlicommon.dll",
-      "sha256": "4d906959e4d11f9ca48e22e50277226f70e7c61842b80159c8ddf27c7ab1661e"
+      "sha256": "87efcb8ea652e661648ab9146850fdcee0310c76853b8f4933492f516a641c39"
     },
     {
       "path": "Apache/php/brotlidec.dll",
-      "sha256": "0bad9a53141114e30f37386733040d1c45ddde1ca6c5de7f5feeeb0063b9cc4f"
+      "sha256": "58bd479f8947c805033efd0b3d59481093a506282b792fe4dcea64d4572494e4"
     },
     {
       "path": "Apache/php/deplister.exe",
@@ -352,6 +352,46 @@
     {
       "path": "Apache/php/extras/sbom/php.openvex.json",
       "sha256": "df8fb31b5c0e7ec6148293588a3dbd2fb46b638bb0acacfca3f6ec14fd218146"
+    }
+  ],
+  "dependencyOverlays": [
+    {
+      "name": "brotli",
+      "previousVersion": "1.2.0",
+      "version": "1.2.1",
+      "cve": "CVE-2026-111497",
+      "installedAtUtc": "2026-10-28T08:28:39.5800796Z",
+      "source": {
+        "url": "https://downloads.php.net/~windows/releases/archives/php-8.3.36-1-Win32-vs16-x64.zip",
+        "sha256": "126dd3cc8c19df5085b9420b2bc74ed591de3d98528858c52fc42739b7bba92e",
+        "sbomUrl": "https://downloads.php.net/~windows/releases/archives/php-8.3.36-1-Win32-vs16-x64.zip.spdx.json",
+        "sbomSha256": "8755b30d871da4b93dd87dcc4e1c86c32eec3874719572bdd9eacf3f497b19ff"
+      },
+      "baseSbom": {
+        "path": "Apache/php/extras/sbom/php.spdx.json",
+        "sha256": "7ab6960b9d02a352a00b1d942aa4cfa158b5e71149a9ddfd9c98e16e25273d1b",
+        "interpretation": "Retained upstream base inventory; apply this Brotli overlay and customExtensions to obtain installed inventory."
+      },
+      "files": [
+        {
+          "path": "Apache/php/brotlicommon.dll",
+          "previousSha256": "4d906959e4d11f9ca48e22e50277226f70e7c61842b80159c8ddf27c7ab1661e",
+          "sha256": "87efcb8ea652e661648ab9146850fdcee0310c76853b8f4933492f516a641c39"
+        },
+        {
+          "path": "Apache/php/brotlidec.dll",
+          "previousSha256": "0bad9a53141114e30f37386733040d1c45ddde1ca6c5de7f5feeeb0063b9cc4f",
+          "sha256": "58bd479f8947c805033efd0b3d59481093a506282b792fe4dcea64d4572494e4"
+        }
+      ],
+      "scope": "Only the PHP Brotli DLL pair is replaced. PHP core, php_curl, custom SQLite, SQLSRV, php.ini, certificates, GIS dependencies and Apache/bin remain unchanged. glib, zlib and libzip changes from the source rebuild are not installed.",
+      "validation": {
+        "isolatedReportSha256": "56b980cd5739d479610d1e934f86ee1a8128009b6ee57487688b770418c58829",
+        "isolatedChecksPassed": 32,
+        "sqlsrvConnection": "Not tested: no authorized database connection details supplied; SQLSRV and PDO_SQLSRV loaded.",
+        "truncatedBr": "Matches baseline libcurl behavior: empty body, errno 0. Invalid br returns errno 61; valid br matches expected SHA-256.",
+        "cveSpecificMaliciousPoc": "Not supplied or executed; official fixed DLL provenance, reported version, ABI and decoder behavior verified."
+      }
     }
   ]
 }

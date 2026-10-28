@@ -30,7 +30,7 @@ MS4W 4.0.4
 
 可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
 
-目前發行版：[v2026.10.22](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.10.22)。包含 PHP 8.3.36、SQLite GIS 與 Apache batch 修正，完整內容見 [版本說明](docs/releases/v2026.10.22.md)。
+目前發行版：[v2026.10.28](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.10.28)。包含 PHP 8.3.36 / Brotli 1.2.1 / Apache 2.4.69、SQLite GIS 與 Apache batch 修正，完整內容見 [版本說明](docs/releases/v2026.10.28.md)。
 
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
@@ -40,15 +40,15 @@ MS4W 4.0.4
 
 | 元件 | 版本 / 狀態 | 位置 |
 |---|---|---|
-| Apache | Apache/2.4.68 Win64，Apache Lounge VS18 build 2026-06-17 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
-| PHP | PHP 8.3.36 ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
+| Apache | Apache/2.4.69 Win64，Apache Lounge VS18 build 2026-10-01 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
+| PHP | PHP 8.3.36 (Brotli 1.2.1 overlay) ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
 | PHP legacy CGI | PHP 5.3.2，保留於 CGI 目錄，主要作為舊版相容檢查 | `ms4w_MSSQL/Apache/cgi-bin/php.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
 | GDAL / OGR | GDAL 2.4.0，released 2018-12-14 | `ms4w_MSSQL/GDAL/` |
 | Python | Python 3.7.8 | `ms4w_MSSQL/python/python.exe` |
 | SQLite CLI | SQLite 3.42.0 | `ms4w_MSSQL/sqlite3_ext/sqlite3.exe` |
-| OpenSSL | OpenSSL 3.6.3 | `ms4w_MSSQL/Apache/bin/openssl.exe` |
+| OpenSSL | OpenSSL 3.5.9 | `ms4w_MSSQL/Apache/bin/openssl.exe` |
 
 這包也包含編譯後的 PHP SQLite / PDO / GeoSQLite 相關 DLL，包含：
 

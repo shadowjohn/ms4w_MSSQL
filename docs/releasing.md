@@ -58,3 +58,9 @@ gh release download v2026.07.20 -R shadowjohn/ms4w_MSSQL -D ./artifacts/download
 ```
 
 目前主要執行檔沒有 Authenticode 簽章。Release 說明與 `release-manifest.json` 必須保留實際的 `NotSigned` 狀態，不能寫成已簽章版本。
+
+## 2026-10-28 起的封裝驗證
+
+封裝只取指定 HEAD commit，runtime report 由 ZIP 的隔離解壓快照產生，不依賴現役工作目錄或未追蹤 DLL。驗證包含 8 個工具、VC runtime，以及 APACHE_RUNTIME.json 與 PHP_RUNTIME.json 的逐檔原始 SHA-256。新增官方 runtime 檔案即使被 bin/ ignore 規則隱藏，也必須按 manifest 精確追蹤，不能廣泛解除 ignore。
+
+ZIP 另外排除 Apache 的 .rnd 狀態、phpinfo/printenv 示範端點、兩個 GIS 測試頁與 test.png；本機工作目錄中的原檔保留。公開 manifest 不含本機 evidenceDirectory。使用者未提交的 php.ini 與未追蹤網站資料不納入 commit 或 ZIP。
