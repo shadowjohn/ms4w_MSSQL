@@ -398,3 +398,50 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Retired CGI runtimes, build generators and samples.
+/ms4w_MSSQL/Apache/cgi-bin/php.exe
+/ms4w_MSSQL/Apache/cgi-bin/php.ini
+/ms4w_MSSQL/Apache/cgi-bin/php-cgi.exe
+/ms4w_MSSQL/Apache/cgi-bin/php-win.exe
+/ms4w_MSSQL/Apache/cgi-bin/php5apache.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5apache2.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5apache2_2.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5apache2_2_filter.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5apache2_filter.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5apache_hooks.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5embed.lib
+/ms4w_MSSQL/Apache/cgi-bin/php5isapi.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5nsapi.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5pi3web.dll
+/ms4w_MSSQL/Apache/cgi-bin/php5ts.dll
+/ms4w_MSSQL/Apache/cgi-bin/php7embed.lib
+/ms4w_MSSQL/Apache/cgi-bin/php7ts.dll
+/ms4w_MSSQL/Apache/cgi-bin/lemon.exe
+/ms4w_MSSQL/Apache/cgi-bin/mkkeywordhash.exe
+/ms4w_MSSQL/Apache/cgi-bin/mksourceid.exe
+/ms4w_MSSQL/Apache/cgi-bin/protoc.exe
+/ms4w_MSSQL/Apache/cgi-bin/protoc-gen-c.exe
+/ms4w_MSSQL/Apache/cgi-bin/gifsample.exe
+/ms4w_MSSQL/Apache/cgi-bin/printenv.pl
+/ms4w_MSSQL/Apache/cgi-bin/test.png
+
+# Local development metadata and private site/config files.
+/.claude/
+/ms4w_MSSQL/.claude/
+/ms4w_MSSQL/CLAUDE.md
+/ms4w_MSSQL/Apache/cgi-bin/easymap_server/
+/ms4w_MSSQL/Apache/htdocs/index.html
+/ms4w_MSSQL/ms4w.conf
+
+# Local extension backups and duplicate certificate downloads.
+/ms4w_MSSQL/Apache/php/ext/*.orig
+/ms4w_MSSQL/Apache/php/ext/*.dll_old
+/ms4w_MSSQL/Apache/php/ext/*.dll.backup-*
+/ms4w_MSSQL/Apache/php/extras/ssl/cacert.pem1
+
+# Runtime URL/image caches and OpenSSL state.
+/ms4w_MSSQL/tmp/http%3A*
+/ms4w_MSSQL/tmp/https%3A*
+/ms4w_MSSQL/tmp/ms_tmp/*.png
+/ms4w_MSSQL/Apache/bin/.rnd

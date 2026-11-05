@@ -33,6 +33,35 @@ $excludedReleasePaths = @(
     'ms4w_MSSQL/Apache/cgi-bin/test.png'
 )
 
+$retiredCgiNames = @(
+    'php.exe',
+    'php.ini',
+    'php-cgi.exe',
+    'php-win.exe',
+    'php5apache.dll',
+    'php5apache2.dll',
+    'php5apache2_2.dll',
+    'php5apache2_2_filter.dll',
+    'php5apache2_filter.dll',
+    'php5apache_hooks.dll',
+    'php5embed.lib',
+    'php5isapi.dll',
+    'php5nsapi.dll',
+    'php5pi3web.dll',
+    'php5ts.dll',
+    'php7embed.lib',
+    'php7ts.dll',
+    'lemon.exe',
+    'mkkeywordhash.exe',
+    'mksourceid.exe',
+    'protoc.exe',
+    'protoc-gen-c.exe',
+    'gifsample.exe',
+    'printenv.pl',
+    'test.png'
+)
+$retiredCgiPaths = @($retiredCgiNames | ForEach-Object { "ms4w_MSSQL/Apache/cgi-bin/$_" })
+
 $checksums = @{}
 foreach ($line in Get-Content -LiteralPath $resolvedChecksum -Encoding UTF8) {
     if (-not $line.Trim()) {
@@ -71,6 +100,9 @@ foreach ($entry in $archiveEntries) {
         throw "ZIP 不應包含 runtime cache：$entry"
     }
     $relativeEntry = $entry.Substring($expectedRootPrefix.Length).Replace('\', '/')
+    if ($retiredCgiPaths -contains $relativeEntry) {
+        throw "ZIP contains a retired CGI runtime or build/demo file: $entry"
+    }
     if ($excludedReleasePaths -contains $relativeEntry) {
         throw "ZIP contains an excluded demo or runtime state file: $entry"
     }
@@ -82,6 +114,7 @@ $requiredEntries = @(
     "${expectedRootPrefix}apache-install.bat",
     "${expectedRootPrefix}ms4w_MSSQL/VERSION.txt",
     "${expectedRootPrefix}ms4w_MSSQL/Apache/bin/httpd.exe",
+    "${expectedRootPrefix}ms4w_MSSQL/Apache/cgi-bin/remove_cgibin_useless.bat",
     "${expectedRootPrefix}ms4w_MSSQL/PHP_RUNTIME.json",
     "${expectedRootPrefix}ms4w_MSSQL/APACHE_RUNTIME.json"
 )
@@ -139,6 +172,33 @@ try {
             }
         }
     }
+
+    $configuredPhpExe = Join-Path $runtimeRoot 'Apache\php\php.exe'
+    $configuredPhpIni = Join-Path $runtimeRoot 'Apache\php\php.ini'
+    $configuredPhpExtensionDirectory = Join-Path $runtimeRoot 'Apache\php\ext'
+    $configuredPhpCheck = @'
+$loaded = php_ini_loaded_file();
+$actual = $loaded === false ? false : realpath($loaded);
+$expected = realpath($argv[1]);
+if ($actual === false || $expected === false || strcasecmp($actual, $expected) !== 0) {
+    fwrite(STDERR, 'Unexpected php.ini: ' . (string) $loaded . PHP_EOL);
+    exit(1);
+}
+if ((bool) ini_get('session.upload_progress.enabled') !== false) {
+    fwrite(STDERR, 'session.upload_progress.enabled must be Off' . PHP_EOL);
+    exit(1);
+}
+echo 'UPLOAD_PROGRESS=Off', PHP_EOL;
+'@
+    $configuredPhpOutput = @(& $configuredPhpExe -c $configuredPhpIni `
+        -d "extension_dir=$configuredPhpExtensionDirectory" -d 'log_errors=0' `
+        -r $configuredPhpCheck -- $configuredPhpIni 2>&1 | ForEach-Object { $_.ToString() })
+    $configuredPhpExit = $LASTEXITCODE
+    $configuredPhpText = ($configuredPhpOutput -join "`n").Trim()
+    if ($configuredPhpExit -ne 0 -or $configuredPhpText -notmatch '(?m)^UPLOAD_PROGRESS=Off\r?$') {
+        throw "Configured PHP ini check failed (exit $configuredPhpExit): $configuredPhpText"
+    }
+    Write-Host $configuredPhpText
 
     $runtimeReportJson = & (Join-Path $PSScriptRoot 'Test-Runtime.ps1') -RootPath $extractedRoot -AsJson
     if ($LASTEXITCODE -ne 0) {

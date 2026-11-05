@@ -30,7 +30,7 @@ MS4W 4.0.4
 
 可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
 
-目前發行版：[v2026.10.28](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.10.28)。包含 PHP 8.3.36 / Brotli 1.2.1 / Apache 2.4.69、SQLite GIS 與 Apache batch 修正，完整內容見 [版本說明](docs/releases/v2026.10.28.md)。
+目前發行版：[v2026.11.05](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.11.05)。預設停用未使用的 PHP Session 上傳進度追蹤，移除 CGI 舊 PHP 與建置／測試檔案，並提供跨主機清理工具；Apache 2.4.69、PHP 8.3.36 與 Brotli 1.2.1 維持不變，完整內容見 [版本說明](docs/releases/v2026.11.05.md)。
 
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
@@ -43,7 +43,7 @@ MS4W 4.0.4
 | Apache | Apache/2.4.69 Win64，Apache Lounge VS18 build 2026-10-01 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
 | PHP | PHP 8.3.36 (Brotli 1.2.1 overlay) ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
-| PHP legacy CGI | PHP 5.3.2，保留於 CGI 目錄，主要作為舊版相容檢查 | `ms4w_MSSQL/Apache/cgi-bin/php.exe` |
+| PHP FastCGI | PHP 8.3.36 x64，供 Apache 執行 PHP；舊 `cgi-bin` PHP 5／7 runtime 已移除 | `ms4w_MSSQL/Apache/php/php-cgi.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
 | GDAL / OGR | GDAL 2.4.0，released 2018-12-14 | `ms4w_MSSQL/GDAL/` |
 | Python | Python 3.7.8 | `ms4w_MSSQL/python/python.exe` |
@@ -133,6 +133,12 @@ apache-uninstall.bat
 2. `C:\ms4w_MSSQL` 是否正確指到本專案的 `ms4w_MSSQL/`。
 3. port 82 是否被其他服務佔用。
 4. `ms4w_MSSQL/Apache/logs/` 內的 Apache log。
+
+## 舊 CGI 清理與 PHP 設定
+
+主 PHP 位於 `Apache/php/`。既有主機可將 [`remove_cgibin_useless.bat`](ms4w_MSSQL/Apache/cgi-bin/remove_cgibin_useless.bat) 放進 CGI 目錄清除固定的舊檔名；支援 `/dry-run`、`/nopause`，不建立備份。用途與保留清單見 [CGI 盤點](docs/cgi-bin-inventory-2026-11-05.md)。
+
+主 `Apache/php/php.ini` 預設設定 `session.upload_progress.enabled = Off`，停用未使用的 Session 上傳進度追蹤。清理 BAT 不會修改主 PHP 設定；既有主機若沿用自己的 `php.ini`，需同步設定此行並讓對應 PHP／Apache 程序重新載入。
 
 ## 命令列環境
 
