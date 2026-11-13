@@ -1,109 +1,73 @@
 {
   "schemaVersion": 1,
-  "apacheVersion": "2.4.69",
+  "apacheVersion": "2.4.71",
   "architecture": "x64",
   "compiler": "Apache Lounge VS18",
-  "installedAtUtc": "2026-10-28T09:13:14.7199874Z",
+  "installedAtUtc": "2026-11-13T05:18:43.683164+00:00",
   "officialRuntime": {
-    "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.69-261002-Win64-VS18.zip",
-    "sha256": "77d715d0d9cee731e2251e7ddc2090a7a8e6d41fedef2e9827cd918593c5a652",
-    "scope": "Standard Apache bin and modules only; configuration and MS4W extra files retained."
+    "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.71-261112-Win64-VS18.zip",
+    "sha256": "44961a929dff16b767b3adbcea55760a942a00239b2891dc55806be34029e1fc",
+    "scope": "Standard Apache bin/modules and vendor notices; existing configuration and GIS extras retained."
   },
-  "dependencyOverlays": [
-    {
-      "name": "brotli",
-      "version": "1.2.1",
-      "previousVersion": "1.2.0",
-      "cve": "CVE-2026-111497",
-      "url": "https://github.com/google/brotli/releases/download/v1.2.1/brotli-x64-windows-dynamic.zip",
-      "sha256": "eb17f7850f7f1b1ec5d07584f6beb1b49ed6e8edcb40c524fee8c7cfd345da22",
-      "files": [
-        {
-          "path": "Apache/bin/brotli.exe",
-          "previousSha256": "4a0059a15939848d377e6018317ed426d15eda6965992a1290b4adb517ac0fd6",
-          "sha256": "ec51d27bff0fb0fa845f44b260bd97f90c33434868a35acc8b84ad1664d26a30"
-        },
-        {
-          "path": "Apache/bin/brotlicommon.dll",
-          "previousSha256": "851a438dd4483438a3d74075888b5366b21bf79bc46f6fe7a4d728e485f31cb8",
-          "sha256": "0dbf54087c2ac8f7525b0317f407507a57bf3976af1b7133d0d35d370d23f5fc"
-        },
-        {
-          "path": "Apache/bin/brotlidec.dll",
-          "previousSha256": "e891f748140e45ac7ba03e030b96157c18f6783122c6a816c950ed1b5bdf6a93",
-          "sha256": "8e9cbdc9b4e2aaeaf91211b9b0671045ce7f3301eba6dd6f0fec1c28c6bc2f8f"
-        },
-        {
-          "path": "Apache/bin/brotlienc.dll",
-          "previousSha256": "cbe5244a8ed17b00429049616682a19d996b7ceed3fa4494725c41658a57b956",
-          "sha256": "90026c62a0a442550cd80c9ef3eee243217ca50e9b7997b21168dd9eec1db002"
-        },
-        {
-          "path": "Apache/bin/LICENSE.brotli",
-          "previousSha256": null,
-          "sha256": "60ae0f13e76cc2eaaa108677eefa4ce16b647f6bbe8cf0a1ac9429d82eca7248"
-        }
-      ],
-      "license": "Apache/bin/LICENSE.brotli",
-      "excluded": "Legacy GIS libbrotli.dll and PHP runtime remain separate and unchanged."
-    }
-  ],
+  "dependencyOverlays": [],
   "configuration": "Existing Apache configuration, htdocs, MS4W extras, GIS dependencies and PHP are not replaced.",
   "validation": {
-    "isolatedChecksPassed": 13,
-    "isolatedReportSha256": "7d181b4e5e0005753791c7e9740562ca86646cc640001858b150d3fc4a234ac9",
-    "scope": "Syntax and modules, curl HTTPS/br, Brotli encode/decode, Apache/PHP FastCGI and MapServer CGI initialization; no exploit PoC or live database query."
+    "isolatedChecksPassed": 16,
+    "isolatedReportSha256": "bd15867fc8eb0fcfe410858cc9b3abcf7ffe0206c44c3c5e1abcc7e19ee09f46",
+    "scope": "TLS HTTP/2, parallel requests, Brotli, PHP FastCGI/GIS, MapServer CGI, ModSecurity allow/deny and X-Sendfile. No exploit PoC, live DB or remote deployment.",
+    "installedChecksPassed": 16,
+    "installedReportSha256": "8c5a38514cb7624524c2235f640f180687ab765039af838101b4c616eede8f55"
   },
   "files": [
     {
       "path": "Apache/bin/ab.exe",
-      "sha256": "e8927e5da037ea00ae8cccbb222d6c97fd5f7edc98ce7fed25a1a415e3564c1a",
+      "sha256": "8e35ad0fa19a7c5eec7734e579fa6bb00d14d055652c8751f881a2c6dd360d13",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/abs.exe",
-      "sha256": "fd269c2d351dca8d739bcdb814b7068a19579f7fddaf7eb2e7dc6b8a5deca918",
+      "sha256": "7cf2f11a95877a98a603798734cab2c6625892ae8219a62a8aa0b936abb47e41",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/ApacheMonitor.exe",
-      "sha256": "ece71389023b7d4cd150cde082f0cda818a88e7e917fac91026ea31a2f946bbb",
+      "sha256": "090a7350ace43b8730d1cb521879b9982d8cb0e248644dd7a90bd8537527c034",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/apr_crypto_openssl-1.dll",
-      "sha256": "77526f7838edab50d02de0fc007c07546a3f0a3bca4eac27493e890c508d0160",
+      "sha256": "4ccb2d16a4d53fbd861e777d39ae7872d3bf918cc92440928a3e91028d118f16",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/apr_dbd_odbc-1.dll",
-      "sha256": "50749e4a6b9eb20cf684dc4b806618967d614100832e0b7dd2195e38f0472a2e",
+      "sha256": "7ee0a48e5f4a614102c0283556f1204f0b28eed7b5f909b67618a969992f0d5f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/apr_ldap-1.dll",
-      "sha256": "88da87256b944b49286f8225dde532b61e5404512f4e593b323a8b4fc45670be",
+      "sha256": "be9ee0054968889ef9cf3b95af7bb19a5b3dab9a0a98669e8d7e708b636aaede",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/brotli.exe",
-      "sha256": "ec51d27bff0fb0fa845f44b260bd97f90c33434868a35acc8b84ad1664d26a30",
-      "source": "GoogleBrotli1.2.1"
+      "sha256": "a23e57af27ae63507c02968814d76a30500675148a0550264163a737219b105f",
+      "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/brotlicommon.dll",
-      "sha256": "0dbf54087c2ac8f7525b0317f407507a57bf3976af1b7133d0d35d370d23f5fc",
-      "source": "GoogleBrotli1.2.1"
+      "sha256": "e8d7e90cddbc49ce43ad4dd9878b728206827b36d645d5fe259d21d612cd5d60",
+      "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/brotlidec.dll",
-      "sha256": "8e9cbdc9b4e2aaeaf91211b9b0671045ce7f3301eba6dd6f0fec1c28c6bc2f8f",
-      "source": "GoogleBrotli1.2.1"
+      "sha256": "4400b55ba33e8fa1efbbe9f716bd7d3479919900e49629b80b3a05c68d2fac44",
+      "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/brotlienc.dll",
-      "sha256": "90026c62a0a442550cd80c9ef3eee243217ca50e9b7997b21168dd9eec1db002",
-      "source": "GoogleBrotli1.2.1"
+      "sha256": "150ad5d4097ed44bc53c00d48f040dac6321bf75c6c3980a9b99f9733a0b321f",
+      "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/c_rehash.pl",
@@ -112,12 +76,12 @@
     },
     {
       "path": "Apache/bin/curl-config",
-      "sha256": "b3cb55ab656f8ed92841fd055ca42859c304680533539305eb4b64f513804567",
+      "sha256": "8b603cee5c79f7e26d4803ec24277008a127416ae1abc2444b9227183502acc9",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/curl.exe",
-      "sha256": "83dffa2e631e8fc7640ab37cf73bf72a06e149f56db218ef3cbc9fe9e139d5f4",
+      "sha256": "1dc15bc3dcc5983cd3b285bbc8af7d41ce11d8f69def54d8cd151bbc464efbd2",
       "source": "ApacheLounge"
     },
     {
@@ -127,92 +91,97 @@
     },
     {
       "path": "Apache/bin/htcacheclean.exe",
-      "sha256": "0e6a0f7faec55b8ac1a56c710247e2146111291d7cb3b042fc8827daa8efc52d",
+      "sha256": "91875bc46bd147ebbb5cf61cb5b9e3c17065c807eec810ab2005f70ff6a61470",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/htdbm.exe",
-      "sha256": "b0bdeff0f52e3c6b686f00a68e0c901eee6880d94a9cc76484f1e661966fe456",
+      "sha256": "9155a0b5f935794f9a7b2497c24de4b2ecdcf4a52b9757190c1b6155dd1a6382",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/htdigest.exe",
-      "sha256": "b735dda1349af9432e7c9a5d20d606cef54af2de2b6048212a68160de948d4f8",
+      "sha256": "5d835d7e709190fff95e01c771518338929f2d6f8cb48e9f001ccb61be8a767b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/htpasswd.exe",
-      "sha256": "7286e098cdc881fc0108a8e23cf6060e0decdaccaa6f429897ad71b018308ac4",
+      "sha256": "19c8ec4b8d5cac77d693fe26df6ea6f15e178e25c6626888452a2a7c999890a5",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/httpd.exe",
-      "sha256": "cd4657e5602f496d78e185462044296df031e9e5c3bd9720811473dee92beb8f",
+      "sha256": "4708bc74f2b394ccc16e8be65db9557197f2256acf96f2405839aae6dea992fe",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/httxt2dbm.exe",
-      "sha256": "c7b938cbf36925509af43150a3383eea1f133dffd689dd30542db0833bec5e28",
+      "sha256": "673d7ff1444471211e4db93c05b29f8cd3ffc044b53f65a85d13cec3c68dfb84",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/jansson.dll",
-      "sha256": "b07b4fb9c9cd4dd0b99f728855230476c466de59fba4dc105e673cd0fb7825fd",
+      "sha256": "bf58933d719330473974695c437605d22ba3372726801a481bf00aed6a00bcbf",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libapr-1.dll",
-      "sha256": "77b588440dadb9df8c0cdf48e4c2c542c7ea29340cd62a3f2a600fe22ed7bc6b",
+      "sha256": "64209904c53c280b63d82b1e13a5b81a11db3d4854e027f522183544a4849166",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libapriconv-1.dll",
-      "sha256": "349c79ed8624fd8f760d053b60277046ac5b10e9a57842f3f0decc79ef55c562",
+      "sha256": "84dc46ac5f2acb4cb6e31a68b9f9f68d03c7960c3a0e4b136e6df6ea7ba6b00d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libaprutil-1.dll",
-      "sha256": "a0767d9b47a0cd6d251dc836471994e04d258732daa685ad35f1401cea0342e2",
+      "sha256": "56d0aa9195595156114933fa488ed2eccfe11f649f322812cb1e855300db0733",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libcrypto-3-x64.dll",
-      "sha256": "21c0eed7296adffb479d056d5fbd074ebdd34142278102db463207d2313e612d",
+      "sha256": "4015080152ddeac2f2a9f399c49080b97c6c4bb236135d2428f24c9343c0c095",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libcurl.dll",
-      "sha256": "6be9e8a7bc6a99d4f4837596619d6a34c5fac55e1616ad8059765744bb536a09",
+      "sha256": "f5ab6e0cf0f7ae85d8a9b667748d41cdfc27180453bde60000eae285ecd1bb75",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libexpat.dll",
-      "sha256": "08efa9304b67bfaeab31c9ec08afa2bfb13e283ce608763df689f928a098a99f",
+      "sha256": "e7a5f1595fe7506d6ed9f3668f64947f15d0c7b141d48ad33645cd702a92c84d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libhttpd.dll",
-      "sha256": "1d90d8e5ad17b88797912246cb6f617feb3e692178a3108d50af339988259a97",
+      "sha256": "e45f75689e5a8eb5cf1449cc73ba4e8348df28643423dcd6ba8a79374f3cf41f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libssl-3-x64.dll",
-      "sha256": "9acf5b775207c500478bc6f89e2f25eac77aec963b1484fa74eaf432f90f95af",
+      "sha256": "89990ce559efc9f3805191b9ad5d519e8d29d51f1cb2c4e88167c022913b0fce",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/libxml2.dll",
-      "sha256": "5aac0ee99ee2f054020de54b2d60015cfe3d754925026b20e277629f4c2e5599",
+      "sha256": "1d8e76fd5940064919f6a480220d3a1158fe10875fc102841503ebf9096a3c2c",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/bin/libz.dll",
+      "sha256": "6e8151c0cdc0bce5fe7149a2c5850f631da28d5c0ec1a06b876101fff801fefe",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/logresolve.exe",
-      "sha256": "5e36f4670ac83fc486dfb2092a87cda63b76c3f84cec1786c99c0529d4171dc9",
+      "sha256": "977df0f6e0ac4bd97c6aa555256e6ddf649d27b54fdd1dbc1da71cbe7c77d5c8",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/lua.exe",
-      "sha256": "9ba53d1daefb79da2c6a43422b51688454c93027c1e01973a84574fd9c7d06d0",
+      "sha256": "034a1091f972d56560c1ce5769c32ff2fd7787c112e02fe4597f1c914b0b38d9",
       "source": "ApacheLounge"
     },
     {
@@ -222,37 +191,37 @@
     },
     {
       "path": "Apache/bin/lua55.dll",
-      "sha256": "935470daae828e70a1c989dd8adb1d637c769535e4b2a8bc7f2780d2b00069f1",
+      "sha256": "4cb28a8b9cf349c116d912ad0614efd67ef9cd0e2987b5a196dd34a44f5422c7",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/luac.exe",
-      "sha256": "a92c9d155aa24c40f8ff10938adb9ce05fb1d5da503613dacd0dc3c657b2ab02",
+      "sha256": "ed17421fd9598983596a041227e1a8dbe0f74dbd7023a1dbccd4b01010ae1bf7",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/nghttp2.dll",
-      "sha256": "9036ecf0f131796d580fc8944604093402775398995ef27c99c1c0e9fefe51b7",
+      "sha256": "3ab75a38a2e833b9bca61ff9d800ba01254c3914b6bccbe454d559ea07d8e460",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/nghttp3.dll",
-      "sha256": "8a52ec31db168f5163c16a1006399330df258e2435f947617650e25b79ba3693",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/bin/ngtcp2_crypto_ossl.dll",
-      "sha256": "72031a7301ac9c3531807bcd4941f3366e8cc2e9d297a9551cd5315740f00af3",
+      "sha256": "df5164598bfc881f09eb1a243652f19d6b76bee0e972cb163c1cdc0b7c319e85",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/ngtcp2.dll",
-      "sha256": "097400e7997da2210879d3618a53045817db8f5f0df10d953ab44e9bb3f263ca",
+      "sha256": "ab03b948d5dea3d7e28cc732e70b231bd53963ba00f05c3a0cd71f448a89bc24",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/bin/ngtcp2_crypto_ossl.dll",
+      "sha256": "0f5563bdbc1691023bcf86469ef23d5d8744276fc6e996c174be555cd676ba37",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/openssl.exe",
-      "sha256": "3c86e80afed4d3ad8f547db727d5c984ade7be9b6b3d5d7d47f2f5ea982ccff6",
+      "sha256": "6857573604b41401de4a4d1664391eaf721f9f219d9e0da881ac45199708bbc6",
       "source": "ApacheLounge"
     },
     {
@@ -262,7 +231,7 @@
     },
     {
       "path": "Apache/bin/pcre2-8.dll",
-      "sha256": "8f34b29e85ced516e0d1c23ff31a8639d83385f5e3e83d3537877453035ea0cd",
+      "sha256": "dc8b34d800c7cf77784e5e43f37e180119204c02222d1ac6dde9234d3d094c08",
       "source": "ApacheLounge"
     },
     {
@@ -272,22 +241,22 @@
     },
     {
       "path": "Apache/bin/pcre2-posix.dll",
-      "sha256": "68392b9999900843d274ebcb712798314badaed2308d66e0b83acb3c5580e038",
+      "sha256": "605f307e9012d3a464d4e862592cd44936c1481fae7b77c71c0f0e1c5642b20b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/rotatelogs.exe",
-      "sha256": "f9751030bb6848224a366be669973a00f4be15be32a935be22c6e135bcc6f37e",
+      "sha256": "8d705eeb76d3a001c9c31360334b2bdc1c4d265ecbdb4b0181e8b43c9f4f5334",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/wcurl",
-      "sha256": "739a03b12f98c8ba864b8775440a5b4e337248e4986e51528da5806387894f65",
+      "sha256": "7aa2b82925e314578fff272bf6775a6e56f891182b42e11a3ecfd2cac5ea3927",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/WinTTY.exe",
-      "sha256": "e52361592d93d145917df5681d94c0855f7e996d79bda655ddfad2247a1f6793",
+      "sha256": "46458902dd1485544b94bac8cf2b115f2dede5c80521ed462a95e6ad63abd764",
       "source": "ApacheLounge"
     },
     {
@@ -297,653 +266,749 @@
     },
     {
       "path": "Apache/bin/xmlcatalog.exe",
-      "sha256": "20a4f10438836619864905217b53a0fc48944bbf3a4aed8fae823958111b71a2",
+      "sha256": "1ec6a7254ec8aa727babc86aac36555e5d499061b9c6089b964564b73d831f0f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/xmllint.exe",
-      "sha256": "0eeae1e8b7cf3f3f54a891dafbf670ad4951b314e34e9fec9f98bc5f097bab97",
+      "sha256": "817d24ee663a4e91e05be92f0c23fd3d4a5a167bc884fd9b10c1b6bcfc3e85af",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/xmlwf.exe",
-      "sha256": "dfa4bc9262fa23dc391e4ff71ad9a0cd036e8e90bc82db132e120446f1c6a198",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/bin/z.dll",
-      "sha256": "8be71566d9e2bbb080d93fe64a3ec0fd94d73b96e1a9d60dd30cef010198618e",
+      "sha256": "eb5ea01f25afabfaeb81f280f4b41f297f565de55c427db73694b48b8c6a0de7",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/zstd.dll",
-      "sha256": "486c3d8d62416dc5ef19042792e917994c1520e1229caefca5d10a0ad156c4aa",
+      "sha256": "a0cb5f61cf08e4d4db9c5db4259441ac5f9de0f6bce9ff58abe1e1ec97199df0",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/bin/zstd.exe",
-      "sha256": "deb1da0410f9813ed80610f3761d4d03c8c346acef6b813be1a41a6a31da207b",
+      "sha256": "28ae6fb01e7fee7beb12f4d41f5d090cbb7bb042fc4d3eb34a2968696a9e4dba",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_access_compat.so",
-      "sha256": "64caeb8b973ab24c98dce746b4107afc69541703492c6e0eeb8c0db1f2c1516e",
+      "sha256": "76a1eed4e26d0bddbce47f544ce69c2d37d7d9a1c8e4b8885930c06539c99d82",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_actions.so",
-      "sha256": "f1275cf4a91ef01cad126fcc3c2b9cc1ba6e5ca622c46f81f3b61c2f9b26a465",
+      "sha256": "6639a3f9e1a4e424fc2616910f2a81a2b66c78137e4770eee4418b0e8ff8a9d7",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_alias.so",
-      "sha256": "28bf87c6dd82c2ea173c81fea303b999e1698a9f2016dc7c41e12e8abb9ce999",
+      "sha256": "5a5203885aee1ddb9aee194e4477e709306b0cab27b51a14581a580c442b8c66",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_allowmethods.so",
-      "sha256": "9637a1b595ea0fb2dc82812fa707492fd0bc70f29fd29b99c8dcaeac2accbbb1",
+      "sha256": "3037230538b40e4156a13b6b349074cd413e6414015e1f3ba61703ea00026185",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_asis.so",
-      "sha256": "7ea11da88bffc3692703c233c864157e47647ad87318c7791c824aa04284bab7",
+      "sha256": "7a80162f03aed714282eb2dee5c9ebd97171d680609dc56f96855caaf4bb82b9",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_auth_basic.so",
-      "sha256": "191fd7181d3cdd87bc328cc87f69729e5ef30d3bad7e6e80bf7fecb7e9d17e15",
+      "sha256": "3a09f780d672b56e161f45f159e14ed2ce0c52e44f3f5ce955b924ddd8d613a8",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_auth_digest.so",
-      "sha256": "7dede3a2c6fc2d2ed2d1415f87a74c1f93132506f1c30340cd6bdfec9471926d",
+      "sha256": "eb5665dcc2cfe0b36e7f00f19d2c9b2729bc3d3b372331ef0b5d5a710e21c88c",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_auth_form.so",
-      "sha256": "01995cd0c8d7abc553586c559559c56507ab1fe7f00ccf581eab836abee4e897",
+      "sha256": "1b7693812ca4475fce8646f2bd46257c6403b929893a2889792cd2101ebea1fb",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_anon.so",
-      "sha256": "78a790cb5b95b3b08e0045d6d25aeddf0380c49685e564ff77fb55241bd25ee4",
+      "sha256": "5a056bd9733c418d1095f631245ef4d4a5159da0f75ae53dd384362a271dea77",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_core.so",
-      "sha256": "dadc3471b702e09135f338926bcf35c33382761f562d55042a8d4bdc7c1dae47",
+      "sha256": "3c51b3a9ef0b0bf3468ce09bfc5af441defc5d688c7c0879d57a998daaaef894",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_dbd.so",
-      "sha256": "10e07bcd75677a3db01cde680b7f2c5f05cc5795dceffadd3cc8e35c3167f964",
+      "sha256": "60e8a041e00b663c1c7a321d18028801905db27e446eb5440c8eaf3422157736",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_dbm.so",
-      "sha256": "8f5b19e8b731787cb0f3977469093af4b409142962151346d11e9716de2ac8a8",
+      "sha256": "bb3364e1b775c6efea0bb68758387996a3b666ed2e1475bc5f4e7a31f42f76bb",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_file.so",
-      "sha256": "ff008b9c26c6b4739e6971c956dd7626dd03ae49c08d288102a84927dbcc1e8c",
+      "sha256": "12e57eea288dc044a69925f833ca301ef128cb1a684f3570add42c206489777f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authn_socache.so",
-      "sha256": "fac6aaebda2223a57a2feb9cfbe591de8b33dbe781b12e83cae7a21b4430b30e",
+      "sha256": "411def3190a22b8d5bd5d2e3de9dc6a7d245b2465dea3e2a5a96372b06884d6e",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authnz_fcgi.so",
-      "sha256": "7bc166f5d638b762830db18722868a68d28a630316a603cfbf66d7deac41e7b9",
+      "sha256": "a391f01d6576010e95e7b5e63e3dbc5db814f011e04cd4827b2cb8c53b1cc0cd",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authnz_ldap.so",
-      "sha256": "44715c9c6bd942b8db5a0f5daea4eea779d21b9556b8b9cbf3c6a60651bb34a3",
+      "sha256": "fa012baeea97fc6af8010c1f7064ef6c430aff4507d02d0cac81a503f16081d3",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_core.so",
-      "sha256": "5e62dd4d0fae9d5c643eabee1a1e0955abbd1ad23961d6d1bbeb36573bb7197e",
+      "sha256": "160434f5843cdf3911967da4e5e7e2bb52b391ffb530467627d7e01cf23ff740",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_dbd.so",
-      "sha256": "b52c8ab82ecff0f62d52d79ee636a6928189739a2a6b1ec9f3e8d4e83614203e",
+      "sha256": "5ae73c8942e53370fdb3eda45ad4eaad204c9a870d32cce47af00411d5819e17",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_dbm.so",
-      "sha256": "56c522115ef261a4a6e3b53acf9269bfc77a49db753f0f669fe21e9b935f02b1",
+      "sha256": "95a748c2e49da8e4b52618c16fb3447aec0877cad3569d23f4111d46cedc8949",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_groupfile.so",
-      "sha256": "4d3e3dc260c352e93b922986b1982b94034fb666bc7c7361d02ef10a412ec3d4",
+      "sha256": "cb6338f3bb2f1012ad931002fb1b319b84f0da9ad6037fbad442f2584c920166",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_host.so",
-      "sha256": "f0e93082bb0320de9d7bae658a4f9a8198e17cb2c2069b930b5201f2384197e5",
+      "sha256": "caea5b56e7c185b49816a15919671dcfaad1a4a4c7adb121a2690f721a18b451",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_owner.so",
-      "sha256": "d31e94bf51e3867486402016654d062621101c98622653fb742fd9e299171af9",
+      "sha256": "08361c1fbc41859876fe4676204f1fc1cfe3412c1f9de7be6231712935e9ca71",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_authz_user.so",
-      "sha256": "d0ba607b320dd7f5fc977e440b100fa92c8dc54a959236f9e10b10fe7c4fcf9e",
+      "sha256": "8a2055f5362bb4c229a6dc94460cf8071c0125f204c690520cd87a7c3c887f28",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_autoindex.so",
-      "sha256": "b60121074e832673216c879acb01e579c04b4e9c04d866f70f59fc205a3f83b6",
+      "sha256": "2a703b22698a1c8aeecce6fe8089f6b73379db6e45e18d9b09d544c2d862c72a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_brotli.so",
-      "sha256": "9dd7caeddd711fe1801127139a69219ad25a6d8462ab1d1da7bc24d603b80fa6",
+      "sha256": "98f6d31e5633539d1a9d2e18aec3e69633391f0ec187bc8c5f1eba5f89f13a7c",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_bucketeer.so",
-      "sha256": "699bb29276257edd69276852c258326162874f527465ea5cfb4dd6722f7087e7",
+      "sha256": "0baf55769acba835bc8ca863fe2bf9b84f944a6121323eb6f40e3eccf9842563",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_buffer.so",
-      "sha256": "e31e5df3b42c853d5ac0d8867a33e9f0be2efd19af695dc9d488d2a6857db7a5",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_cache_disk.so",
-      "sha256": "09f1736be03bba831e6b156f5277841eab843187437396b2fedddd2e449ff2b3",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_cache_socache.so",
-      "sha256": "e2fd848f3bc1a11bee250c414175c1ab733b879091e339564b5276a0df42795e",
+      "sha256": "fbadd8750ef40bf7f685edb379f5757dafc0ebc7c8590a76c4ec9f779817aeee",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_cache.so",
-      "sha256": "b7ee30748b6e793aaef84596a24e29cf7a9bb5b0fce8b91463e7948421961974",
+      "sha256": "3372942ebbab04283133fb46ee285814f98bee10f4d70448c26708be0f8b0072",
       "source": "ApacheLounge"
     },
     {
-      "path": "Apache/modules/mod_case_filter_in.so",
-      "sha256": "1e1597198c524354e38f352dca30f79d12283f0e0d66674fe2c61331125ee9f0",
+      "path": "Apache/modules/mod_cache_disk.so",
+      "sha256": "2fffb693556c6a430a7e2ceb9a1652215dec29d13badbc2fd6b1ba3765ec4517",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_cache_socache.so",
+      "sha256": "54dc64f5fe70fe5668f93b76cfa82edde8f4234c94f2769f8cc4874bf3b29465",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_case_filter.so",
-      "sha256": "d4b409b4957efed5900972c208b1b3cf2e9126127114b809425388ab603dc121",
+      "sha256": "078fd686f02b205946945130f2cd290e92c0d6eb430290f11febdf97b2a29e79",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_case_filter_in.so",
+      "sha256": "4be09b1bba1c80ed552741bf0dbcbd3f03325f47043a3c468ebb2f5d817da55a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_cern_meta.so",
-      "sha256": "417c403001f9dc0491445a5494ea5bcd52bef02ff647c606898243d663c08df6",
+      "sha256": "47c269407137ab58d292f0a6499d6fbed6d78eac487d17f9d33224f03affd542",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_cgi.so",
-      "sha256": "7769c4e9be6f28756d774b96afa6229c0d6d0d1ca957f2046a79e5e727a7f81f",
+      "sha256": "e22fe0c357a3ea82ab0d22f319a1d8375d87d99a10193ab5a1f2e67b0b31235b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_charset_lite.so",
-      "sha256": "4b8138ba460b5d15774ddee50d4406929547bbd3f2721caae8c8d97390be1c7b",
+      "sha256": "71240d345db4c26f41651d9120bca6858b78ff6d1bde7824a8121f10317cb3b4",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_data.so",
-      "sha256": "c387483bc6f1518ea7ba44c5544f611410cbe0bd56c68381a15ec0e922f72376",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_dav_fs.so",
-      "sha256": "dd504e7abb3617f5a2c8db7543bbb5bda953b1cbed5180044abc824c8d9f0ae5",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_dav_lock.so",
-      "sha256": "29161c9f187d35e34e544ea789ed905a79faa273af351444e127a0ab643e29a5",
+      "sha256": "1ce5c006fa706022248ebced877d789004fd3a17390ffb12770177c617a9cceb",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_dav.so",
-      "sha256": "09c7a7b94caabeea53155bdbdea2100c785f9242c551f9df3fe37b0458a7c014",
+      "sha256": "20b4f732deadd75a6f35b77ea48c79487671f6ba359b8d31596f6036c72ff922",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_dav_fs.so",
+      "sha256": "e6772591e46ec27760f58fad09704767be99879f60e7b39c10adaf561e9672bb",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_dav_lock.so",
+      "sha256": "6a77e0a064668ed449a14525479b4b33a2a10c406e097eb8c0454713e9f87d4b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_dbd.so",
-      "sha256": "203c29ced972e522b793b8c66f729ee3b79cf29984474781bd673ae6a407fab1",
+      "sha256": "b84b1c1c6dbd122be8d997300595c05b4cc8c5360da875f534d88278e075f460",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_deflate.so",
-      "sha256": "136e428989063f69f547e8e14415fc59732e458e3bac4804e99c221877ea331a",
+      "sha256": "9d773ee53e4668e049aa46f4393c552e62f35f0202ab57af13823e9f3954929a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_dialup.so",
-      "sha256": "19cfb98332d52fbc33f51d0a4ffc341b45420c349905e1508b91e478239bb1a4",
+      "sha256": "4e08afdb09c04c1ef2a0a6315cab3cef79c136cfd0d2a307b5664243203b54cc",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_dir.so",
-      "sha256": "3ffd132288857d3c4cd2800072af6dfc2c643fd2f91c099fa1bb1043a3593487",
+      "sha256": "0bbbc2cf64dc4ddd79439fc29e45937939fad41ee4267357849ffb4c09d2c70b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_dumpio.so",
-      "sha256": "fc6fb1a711724b2d3e3455ec80e2a3563ea26ad3b3efd71fcf09989429e05fe1",
+      "sha256": "6b5fde1ac908a9616c034f294124f6d6ecbfe205484d4373515503e2cab3d05d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_echo.so",
-      "sha256": "427141fb133d3aad0dc0b0e5c5b9ec59399082bcd708bc8e3e1b0fe6becebfc3",
+      "sha256": "e838c2545e5447453923a29c40157e4bc82bf15f29405460ed7b8a772974f199",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_env.so",
-      "sha256": "95edfc45ba84cfe03a22315349219572448ac48a1559ce00a1d27427eed42d40",
+      "sha256": "97aae7e2a33949a91fcc3e84858b0ad7d2c43495083019a74c305de862276243",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_example_hooks.so",
-      "sha256": "54cfed039872fcf6b84b770cb59373855828cbbf2cd5313355b1670567a53faf",
+      "sha256": "8152d5560116c873d50b8cb28c2db12069437becc6b5e25b1d24d5707784a264",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_example_ipc.so",
-      "sha256": "be68264d22e56cfa3b481f6f4284eb6960f7fb0debb6eef99c989cff9829b32f",
+      "sha256": "55d77db430c49dd13525fd62fdf957af760724f5d65bf8d1ce8b7c8d1674b74a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_expires.so",
-      "sha256": "f5b174a3b156b501b043e343b1000675978d574fe09a012cf359810c998facf3",
+      "sha256": "ea143683dfef382f86eaa6978fb0dd2ae1ffa4cc01cab823bb379429ae6d8e0e",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_ext_filter.so",
-      "sha256": "dc36983dff49fdf1c14c868dc5bb4bb91693f8190729c561868240a36ea66014",
+      "sha256": "06626ae279484a4a94fa39c38d8ca94fce231611245b5616b1a0c5798a383e8d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_file_cache.so",
-      "sha256": "c092e98a87f115bebdd0c83dd54dbcfe4a762fc3cb92dc96fcc187690ae01ba0",
+      "sha256": "a1519a82cc961d5dbe9f709de23f3cd9082a64252e54637458916b47bca22cac",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_filter.so",
-      "sha256": "a3087ef5172aee7cc475dc6ec9f45c2bfce2f2c5cc63f5f4419ab421774c0e53",
+      "sha256": "36f31871c64ae1a4a74ad525d91fc5f42bb67317537a2a4cd9202edd782c74fc",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_headers.so",
-      "sha256": "a1dec6681f91e7f9556b57f01c2f00ba1a7a947e91432bd46b878f47b91ffefa",
+      "sha256": "60c54c1a4e518842dd853546966ff00687526ae44db6442f563f1d9413db2a10",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_heartbeat.so",
-      "sha256": "494814da47cedccca8dcb38fa6d04aa274e67c4847512c294de91dea28bdce4b",
+      "sha256": "6f286ffbfd3d9e8d4fb2574bd86bd7dfa4759ad3a9444e143ddf9042d65a4f36",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_heartmonitor.so",
-      "sha256": "1ecaf0015ef689c23e30a2b86c5ab19bafb79392ee7bdc87fed70fa36d952e4f",
+      "sha256": "1faf8e67ed3c8dd5601438c1c0bba4d10c3d0eccc5c05da62e632d94411c1e2b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_http2.so",
-      "sha256": "5562f579452dc71eac8541c9f3ab3b6da3e9773fd60d36d9b5d29bd12857686b",
+      "sha256": "8db094567e4b7854ece0595634272d50b9d98c8224d35352c32576951d63bc8d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_ident.so",
-      "sha256": "53ef5342a8a7cbb9cd022dbdcb33629ae86f71e1d62c38f1bbe7bde1fee52797",
+      "sha256": "4f50752a91dba78635fe1d97903560df77d27a0d0f50a57a4f53451a58fee3d8",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_imagemap.so",
-      "sha256": "75deb0ec09eaa98d3c4726915cdfb5135f8d2fd2cc1f47af00c9ab27137e8f61",
+      "sha256": "f5a33e0f6faed4157aa681db0401c956c3a80f37ef2856581f81c59e9357bd21",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_include.so",
-      "sha256": "25ace44f5e942ebb44c0b33fb95e921bb0a841c44b54200d1d07e36edb2efba1",
+      "sha256": "07377d9e96d26fd0f665a840827288fade4d9317482d5ec13a9ab65c31a3aeb5",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_info.so",
-      "sha256": "93648c71a4460b9bb991628e55cef9a1e47f7f426d123a333e78aba2491b44ad",
+      "sha256": "1a338bc4380be4b983e73728ae019e19e5ded2a5dd0678684e59b03f65cc1358",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_isapi.so",
-      "sha256": "e5d0f95e4d9c8eb33d93076710a7f259a7864b58ce6fbb6a111fccb1222313ce",
+      "sha256": "dbedf9ee2c9832e7b54d6019abbf3945ba5e202fec7b5d56710733bc397f0f2b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_lbmethod_bybusyness.so",
-      "sha256": "8533a419a97a41bbc9b3520db265d4ce925fd442b803918b163e6f76a69705da",
+      "sha256": "469cca7c142d1fd63d993e8f6c5ec25217eb5b71ef3fe8ab254fe23b5b8cb3e4",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_lbmethod_byrequests.so",
-      "sha256": "2a505a17d6ccd4771950d371b39fe6b75999b9d44a778fc8ef36a6d2515da203",
+      "sha256": "f992b95f63546240a3a06d5edf583fb3c8b6edfe33d02abf3a8ad16ee51fb52d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_lbmethod_bytraffic.so",
-      "sha256": "18c703a1bd8c48e673d8bc08df6187daca2db2bd3c0ef622ac844c9f0431e28e",
+      "sha256": "009f3df06320bc30480228ce9e680b8b7394dcd6958f87c98b1857bba582b212",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_lbmethod_heartbeat.so",
-      "sha256": "72f5ba373d027a3a4ee8d41583251bbd68370c9d2d9c0eaa33227db787893113",
+      "sha256": "d9df865d25e23506107629e03fffbac6be0556be0bcef783ab7827036dbdd923",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_ldap.so",
-      "sha256": "7cd69832a55a4ed2b0a7a15474d90036943c7d4e598b66cea0b12bb2e9c9a5a7",
+      "sha256": "b0584b6235d42f97a1e2bf8ea3294be300769ab89cd287be2c0fe85a12032e02",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_log_config.so",
-      "sha256": "ebdc2b0fe01146fe8058c4dd8f0b8b5c616478e7e3f07aa30e35f40e22669be5",
+      "sha256": "2d04dd08047aee56e5d7811d6b5c643cff9bdc24be3ca18e468242b8c6c8f39d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_log_debug.so",
-      "sha256": "2f0f8fe6e63094bc999318c269f3e332e30e2aa6eee7a7fb6a981be1f843ee7b",
+      "sha256": "bac2cefd79f9bdc0beba7ba3a76fa79a664b7a3620889e863f06a73a2f156b0b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_log_forensic.so",
-      "sha256": "0856f518faa1f9c25f944c1090a9f93f2bf2f830da56ad83688e2608d3c4abb0",
+      "sha256": "e651ca6792a596860e0a7568c51457b98cef2af32012b715ff22c4ad6f277d7a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_logio.so",
-      "sha256": "2d2f73031e7e61633e83ee45e320fca5f8d17a64bcb15000d45a22cce9530524",
+      "sha256": "83fa80f631e340caa43f4999abe2e058bcaf17b11247681d9f268a7b1e0194ed",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_lua.so",
-      "sha256": "fce2314a212589a254aec13a6ec0e27cb6ebc4c67ba7061236c4e1363c6cbc45",
+      "sha256": "05c476e5037e1342f04f2f6d689da985d6dcff5187a8115a6a478cd30be20d47",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_macro.so",
-      "sha256": "92a064d30f7173ec7aa24c4ed2d2b33a97997dc76f834edc767be546f1d95cbf",
+      "sha256": "70615f620299d89813db88af94a49c25b4c6f9d8a179e786a4de4418c45af7cb",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_md.so",
-      "sha256": "770fc4cc3834d850b87e405b72f2a4c5258275f415c29a6788bf2e451e23e7d2",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_mime_magic.so",
-      "sha256": "03ed4e1e84643a4dc5bd57f9bac7822e9a3f18a1d2da7f7844077835163c357b",
+      "sha256": "349af9798f2070a988ac26598c488e2bb5de80905d67091a03285b11233a1fd0",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_mime.so",
-      "sha256": "278a6e8e8ae0bb60ebad88c06c1b8216bb3337a8dd6c4b11dff0a87cb5f668b1",
+      "sha256": "770cf0c864bbca34a390b5f31e2f918de3a14f72647601a939dea63f0727b2c4",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_mime_magic.so",
+      "sha256": "6f52c7243090bcf38e51de272821b95dae4e61dc1bb92e6b8aba52f94e56609f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_negotiation.so",
-      "sha256": "40c37b69bd095a722fc8a765db216f69c75f250ee9c15a732b593956e8deaf84",
+      "sha256": "a484a9d435a44955439fe535e3d5cfd40c816224b77bc4a67cf1eef5c67658fe",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_optional_fn_export.so",
-      "sha256": "9c395adfdb4c3378dc77a597b2210e20af67729b82da43a58876d01d65387bde",
+      "sha256": "5f5a99809e3783e0c834fc895bac6be641a96da921344b2f9427a2ef060186ba",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_optional_fn_import.so",
-      "sha256": "d4a23bfb15883aec523e907def26c86547ffdd0ebde79ca6936dc16485c10cab",
+      "sha256": "4a927d19325a2c66caef3f0eaa7c909e4ad334705cc184f2036652e1bc810821",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_optional_hook_export.so",
-      "sha256": "caf065741e33539661a7a2a5d018d49a72f9f9c209ca21396a1572dce012cb03",
+      "sha256": "7551cd6e04e3ec14a200d2dc116e8a792723adac2ef22e3817d086d5287cc9d5",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_optional_hook_import.so",
-      "sha256": "a7c69866f3334d5b841c75b9dc5935b53a25f35c2fe8f9ed476e1a1f72f251f7",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_ajp.so",
-      "sha256": "17755be3a0a3e6ef15630bd36a5d0900670aca62cc5f57fc7192cc0a56a3eae3",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_balancer.so",
-      "sha256": "12d3b0cf3a0f26b0a308611c5d2026c1f1ed228c4668aaaff7c808a43db8e232",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_connect.so",
-      "sha256": "0b2d9b5b1524b8418efef0d993fc4e449b4303eaf4548391dd4a87ec13926386",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_express.so",
-      "sha256": "a16d8b573bd18bd821e4392768c6f782ab62d237f1b316c107d333888f8ac1a8",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_fcgi.so",
-      "sha256": "14c1e0ad40db0913f1d69760c9eeb0d9189694e57daab58e12bda63f80845dd4",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_ftp.so",
-      "sha256": "70f74e90d44f018bc4bc10a20491cd58171432f66f9eb1939d878aeabb3e0969",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_hcheck.so",
-      "sha256": "fc7ba372ed1c462f6728db25cf0602cb4b1e960adc9972afbc57afa3f552c78c",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_html.so",
-      "sha256": "307ba60870fb9f8cb1cf98f0cd50e99b9f7a7a025b44970073c1584fb78c5ebc",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_http.so",
-      "sha256": "12eb372a833f754be04f81fabd72bade650b2ae29ed33a9af5c0a49ebcea3e9e",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_http2.so",
-      "sha256": "b8d8262847e6e4c9add2a37cc39a02b8f7930a7627f7019904595db437d51c66",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_scgi.so",
-      "sha256": "58b01886d1aa7d55c4157d84252c60e9435730049085f55cb3d0a233212a517d",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_uwsgi.so",
-      "sha256": "ef1a1cda6a5b8d742d52d372ce0a77b04a1b584f23f229ad99206639cf2d0b00",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_proxy_wstunnel.so",
-      "sha256": "cbd6211e63d333a765b8992491a54d1ea60a2b15d2e2d37f1f409475cf326a57",
+      "sha256": "1e0ce08faa8ff470df4275b1f7799ebd23a0cfcd34bc7a2deab86490e41d47e7",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_proxy.so",
-      "sha256": "ab64ec4ed89b86f028166938183203698d61404e3ad0b2ceee7218dce24bf3d5",
+      "sha256": "bba19e8209af302f97f5b76357db76f384d552b6b813572bfe43b84b79577256",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_ajp.so",
+      "sha256": "0a2e3f9493df4df214f9733a8c11abb879b287151d95a6a16d52d93fdf692fb3",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_balancer.so",
+      "sha256": "1a03903c4f739be3184af1b67f4b58eeca8d47721e34325df344e0f9844b6394",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_connect.so",
+      "sha256": "c60029493e900ae39f5ab568713953d661bfce5780fe660b7958b1fc64af14c2",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_express.so",
+      "sha256": "c32790160a03fc0eb6bab0e4f77de1c0c3915ae28524f34e9fac9c48ec2b8efa",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_fcgi.so",
+      "sha256": "5430aabacdc132cb7968911222485a9dbb1b613773f311190d7c4abb632cd6a9",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_ftp.so",
+      "sha256": "08779f9cc642c42418bd8b65aba06ede6325acf04c128f31bf23cf7e8c548c20",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_hcheck.so",
+      "sha256": "974013e66fecd88ff1e36b7f2eda68574bc95a1138efadce811cbdfcd283b7c3",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_html.so",
+      "sha256": "8dc4fa4e25cc1218dbe03205db8da1f115d1fd01523889884d380cbac006b70e",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_http.so",
+      "sha256": "2797f33e1dcdaea858a68e8d8fd80e34771b3a93c7bd0a799504deaf59d7019a",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_http2.so",
+      "sha256": "7d4ac1eb43c75deeb458b00dd2d4c8bcf0f98a89de6a2ea6b3695792585a5797",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_scgi.so",
+      "sha256": "85b0cc9444186e8370be09321f48276a675e9e7e7e8c0c7303f52272ce5cf20a",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_uwsgi.so",
+      "sha256": "395f9d38816a2dfde99b0007115ff29132cf302fdeb1d5c4738d49f61f55a344",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_proxy_wstunnel.so",
+      "sha256": "91e175d8d7bf71386747c931343d94d3f775584943c97e609666e8f85ad47d21",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_ratelimit.so",
-      "sha256": "c03b3938f36fa7880469adeb9a482eeb0ea1a63b1ff1465a3a3460dc3059e0de",
+      "sha256": "b11cd8d573229e1830167abdba04dae56f78a852dbc8af084e2531ec083a98de",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_reflector.so",
-      "sha256": "329abbed27b6d2d48209154672f3d35524ac65fc804102153540cb9fab87d58d",
+      "sha256": "2976292d3aa2f355e641b64b7994df99ab564a253e3868cc46c94b508dd03e7f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_remoteip.so",
-      "sha256": "90a3f441c4af0722bc0c259c3691831159933b97c0d09260e98c5ecda80c4fbb",
+      "sha256": "6562628b1961ec19d0d46079026e7923b1143f943c70c923a2e076a717b6c96a",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_reqtimeout.so",
-      "sha256": "c44f2cc2517f3f503040814da0b2e68f92683096afe95cb6fbf9935e0d76dac6",
+      "sha256": "dd544c3e62a310e579e804bce14ecf18180c187bb8098e36ce907411c0e3f158",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_request.so",
-      "sha256": "b9f487c5af1f4d808f05089a10413b67e05b1bcc3ce710faa3eefed6a17931e2",
+      "sha256": "454bc8c38c6563260e6aa5030a855399cecf81a92386eead73a9664d6101f5aa",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_rewrite.so",
-      "sha256": "70dcc77bcd3e89ba8910f68fdb615e528b34ff89481480cf44edc5eaa34f16f1",
+      "sha256": "a9bb91ed6fee0409ff08d75119964aff8e5f6797add4bf10224e6a7d9cba3474",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_sed.so",
-      "sha256": "00556083d236dfe4c446efb1afd219390251f87ff0cee9b909c1d145bd8f79a3",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_session_cookie.so",
-      "sha256": "80f9ec08e19deb4291107ee92e2dcf38a6eb223def0276137c24d1684e699533",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_session_crypto.so",
-      "sha256": "52778dfa1b12c396c04880c6af2ff7c0bae1e767c927f0e73a7881d8a7548f29",
-      "source": "ApacheLounge"
-    },
-    {
-      "path": "Apache/modules/mod_session_dbd.so",
-      "sha256": "500a086208e502855514f31f851aefca5b1e85a1ac8a74c70150d4e6bcdac3cb",
+      "sha256": "e1b8e250738e29060915c927462e670e186a05a9b8e7ff8d06d9e5f7c09c8a9c",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_session.so",
-      "sha256": "a9691ef9c6864c0cd2fc68dc714dfc66a656dd7f1be6ce011a76aa21df3aa5c0",
+      "sha256": "4ee6cf84ad4663025f72440f7ddca25cb325d44d57a26f3c1dbb6923a74d9aed",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_session_cookie.so",
+      "sha256": "1d641eb9fd416113ba44f9a58990a30ee529bcdd5596996412dc375a150038ae",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_session_crypto.so",
+      "sha256": "d80ec16c265fb3f6d20c3be0ea7032990b58de010d30cab2dceaaa41151588f5",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_session_dbd.so",
+      "sha256": "a7df125d94702be054bb498e8cdc29243b7c0d0873d7b4a8ddd3438b3d2bca8b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_setenvif.so",
-      "sha256": "d0e9da11eb308483a92252d9e10b625e2e9e29f6327f26d3c4f0660634f14601",
+      "sha256": "c91fa83dd77be201df0077936e4ac8d71ff279188135cd4ea7ba706e6d0dc820",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_slotmem_plain.so",
-      "sha256": "46a5358dfb4764c7423f11865701ccff8e248cba3431a655e8d526d12cb44093",
+      "sha256": "306fa3246414f89b9f2e055f7b7fa247b8a981fd346e48ded2448f89ecb9cb5d",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_slotmem_shm.so",
-      "sha256": "d268a321ae08caea2e3d5f0c612fdf20f479f6c56353c707ba83952971bdd783",
+      "sha256": "7db5144e684f7660b5960a2f90bf1c1abd3e0be845b59cf18a1ee6d79c27cf3f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_socache_dbm.so",
-      "sha256": "5dcb8575cf2219cc8aa63681ffd90a40af7f81d79424ca9dcc77cbdaef09df57",
+      "sha256": "7df711899d4b20de61a056a64f75cb2c41faa0a1db10248ea45b180831de6715",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_socache_memcache.so",
-      "sha256": "95553dc72d87d40b0451c61b699420d99f15222b066e505caea37754aacd53d1",
+      "sha256": "7c300b2b39fd50f86a7de7822fe08eb81957b9c06daa6101779192dc5076caa4",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_socache_redis.so",
-      "sha256": "900510073921ddad53d6e691d7d7ef98c7f064a85648148f7d0c9b0b46317956",
+      "sha256": "2f561e75a6d45cc9dc8c3c69e1b8f012a1a37ab759872931c9723d0b484da3bb",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_socache_shmcb.so",
-      "sha256": "505887b057253ffc0cf951a37f280cef82fe2a02074973aae7d43fce1b7b0ba2",
+      "sha256": "8e16dd31e161233c6053b6d35e6ea8d7fc297d51044294f6cf5cf743b3dbd30c",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_speling.so",
-      "sha256": "c9d61f12cf9c8213805eed4a8f0eea1449e9abb0cd7e8d818fd509686083d881",
+      "sha256": "0b99875163e9f10a0406f9649da5dd18251adc71d8e66310848f78574f8ad974",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_ssl.so",
-      "sha256": "ed2cea3ee8c44247a09e692b6bd82b47da91d47fef91aa32a09b66039aa894ee",
+      "sha256": "c883376f433e51c253e189cfbd1452f05119f177a4a03dc783a0380cd94aff78",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_status.so",
-      "sha256": "dc892eb4074a6d020f799353c5a60b5c5289b801fc419cdc1f5f9040deb5b5c8",
+      "sha256": "7a2d6acf7b198ee30e0bcd4ad83659a880f621f9b630318957586bec4903abb4",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_substitute.so",
-      "sha256": "ddf401d7903fd8596fb7c8f119b71866e3b969a6fb57d8ecfab410d9957d2d1f",
+      "sha256": "5c46342180d5b4d01a908118bdc4a07063864a63ba371abd0426c04d201ee76b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_unique_id.so",
-      "sha256": "9665de2e56a607c294d284e4f9f4d935a33c2b704a5086e2b6774ccd6f7e3031",
+      "sha256": "901e956971317422ebe3386109fb3d06d322aee023931cdd85c438922d250065",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_userdir.so",
-      "sha256": "b5bfc919eb5ba4a17fe0c2ebf2267fbe693de54224340426c28323cd3943d10e",
+      "sha256": "489b0e7e2e1ed0d155cfa434d591a55e9419b8a7a9143074454ce19996b8a48e",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_usertrack.so",
-      "sha256": "8ab4383cc57d7e1db814e6f305631369e3199e240127c9e8394d8d9f23e611aa",
+      "sha256": "756b0f6baab1005e7c712ef74cb17c6a035cf63041f48f41dbdd1d2eac52f898",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_version.so",
-      "sha256": "2e041a6acfb49016471e4dc0bbdea7b6d16b909a9d808460012f271869a5e2fa",
+      "sha256": "79dcb6bbd89db3bb963bb92ffa4cfcdbd275295998dec33c3ca81fdd40ca8067",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_vhost_alias.so",
-      "sha256": "4035fcf8d2605ce7466f071e1fd9126de97ea951966743fe0c3826312e26ae79",
+      "sha256": "1f6796b9049fb6f82b15498c89fdeb91153abca224f74d2fb95db83755eb054f",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_watchdog.so",
-      "sha256": "55b2d7ce309f857296903cdb75a18c857429bb7f4ee072a907f09e29f5d452dc",
+      "sha256": "a25d01d40518f2ae423ab3ece142463a608f4e903fbca88ab908f56aa9687e2b",
       "source": "ApacheLounge"
     },
     {
       "path": "Apache/modules/mod_xml2enc.so",
-      "sha256": "96ee1052ae4a1468115ee77bfeeadf91dbc77d59a937ffc090afc034cc3b4b8a",
+      "sha256": "1c999e7c943010d9bbd05cc21e173fefbd7c83cb10b6a3daf50fa91a149812e0",
       "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/modules/mod_fcgid.so",
+      "sha256": "1953538d2e3ec6d48d7ac833148b6d3cca231e9ac4f439576f7c8ef9f19d9b6e",
+      "source": "ApacheLounge-mod_fcgid"
+    },
+    {
+      "path": "Apache/modules/mod_security2.so",
+      "sha256": "770a9b9e1e369d0530f7c32a5a613e49eaab4d6b4cbbb0c5652d4e3f6a3f7ed5",
+      "source": "ApacheLounge-ModSecurity"
+    },
+    {
+      "path": "Apache/bin/yajl.dll",
+      "sha256": "37690fc16b6e3dba169ebcdcb7296c5caac375c3651d0a8367f71e45cfaa8a93",
+      "source": "ApacheLounge-ModSecurity"
+    },
+    {
+      "path": "Apache/modules/mod_xsendfile.so",
+      "sha256": "862209adae3144abdd0fd56b41ba3229e76734584ccfd14fe2e985a6048b5b3e",
+      "source": "ApacheLounge-mod_xsendfile"
+    },
+    {
+      "path": "Apache/LICENSE.txt",
+      "sha256": "ca43cb44970e9eba2572bf267f03b6ea7f6836d927ba3e53a4bc9c8858a48548",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/NOTICE.txt",
+      "sha256": "805141ee24a6af53470ed9591b6663c3c80daa66b45170af1c9ab781bac68713",
+      "source": "ApacheLounge"
+    },
+    {
+      "path": "Apache/licenses/mod_fcgid/LICENSE-FCGID",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "source": "ApacheLounge-mod_fcgid"
+    },
+    {
+      "path": "Apache/licenses/mod_fcgid/NOTICE-FCGID",
+      "sha256": "60dd489feda95b0c9799871c35cdea9c16017ccb59bb9fac7f757da6e25c594f",
+      "source": "ApacheLounge-mod_fcgid"
+    },
+    {
+      "path": "Apache/licenses/ModSecurity/LICENSE",
+      "sha256": "2c564f5a67e49e74c80e5a7dcacd1904e7408f1fd6a95218b38c04f012d94cb9",
+      "source": "ApacheLounge-ModSecurity"
+    },
+    {
+      "path": "Apache/licenses/ModSecurity/NOTICE",
+      "sha256": "7c5ab21c71d6f8ace2eed03222eed7035a77dc3cf84d56f307caa9d879ec475e",
+      "source": "ApacheLounge-ModSecurity"
     },
     {
       "path": "Apache/bin/LICENSE.brotli",
       "sha256": "60ae0f13e76cc2eaaa108677eefa4ce16b647f6bbe8cf0a1ac9429d82eca7248",
-      "source": "GoogleBrotli1.2.1"
+      "source": "RetainedGoogleBrotliLicense"
+    },
+    {
+      "path": "Apache/licenses/mod_xsendfile/Readme.html",
+      "sha256": "6190e38f4d2564c38316fa5660d6f18f48b4d47d048e62576eac7f467bc0502b",
+      "source": "ApacheLounge-mod_xsendfile"
+    },
+    {
+      "path": "Apache/licenses/ModSecurity/YAJL-COPYING.txt",
+      "sha256": "ab103de943b829030fad1f24e8cf39f5b3b6030fdab32bd0c06eaae6dc397736",
+      "source": "https://raw.githubusercontent.com/lloyd/yajl/2.1.0/COPYING"
+    }
+  ],
+  "dependencies": {
+    "openssl": "3.5.9",
+    "curl": "8.23.0",
+    "nghttp2": "1.71.0",
+    "zlib": "1.4",
+    "brotli": "1.2.1",
+    "pcre2": "10.49",
+    "libxml2": "2.15.4",
+    "expat": "2.10.0"
+  },
+  "securityFixes": [
+    "CVE-2026-119618",
+    "CVE-2026-106023",
+    "CVE-2026-109163"
+  ],
+  "extraModules": [
+    {
+      "name": "mod_fcgid",
+      "version": "2.3.10",
+      "compiler": "Apache Lounge VS18",
+      "url": "https://www.apachelounge.com/download/VS18/modules/mod_fcgid-2.3.10-win64-VS18.zip",
+      "sha256": "a92808ef3069366c8fcc939f5449f119ed4f0e37eda5575d1fe265e6937ab88a",
+      "verification": "HTTPS vendor download; locally computed SHA-256; no vendor checksum supplied on download page."
+    },
+    {
+      "name": "ModSecurity",
+      "version": "2.9.15",
+      "compiler": "Apache Lounge VS18",
+      "url": "https://www.apachelounge.com/download/VS18/modules/mod_security-2.9.15-win64-VS18.zip",
+      "sha256": "c08877f5686cf4187ac2205eeff44835465413dd4226298757ba60cf6fc7009c",
+      "verification": "HTTPS vendor download; locally computed SHA-256; no vendor checksum supplied on download page."
+    },
+    {
+      "name": "mod_xsendfile",
+      "version": "1.0-P1",
+      "compiler": "Apache Lounge VS18",
+      "url": "https://www.apachelounge.com/download/VS18/modules/mod_xsendfile-1.0-P1-win64-VS18.zip",
+      "sha256": "ddb72df6cf300803bda668ec63c8425cbab9be9aba4710473e43e3810cb770b5",
+      "verification": "HTTPS vendor download; locally computed SHA-256; no vendor checksum supplied on download page."
     }
   ]
 }

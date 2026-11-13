@@ -346,7 +346,7 @@ $checks = @(
         Name = 'Apache'
         RelativePath = 'ms4w_MSSQL\Apache\bin\httpd.exe'
         ArgumentList = @('-v')
-        ExpectedPattern = 'Apache/2\.4\.69(?:\s|$)'
+        ExpectedPattern = 'Apache/2\.4\.71(?:\s|$)'
     },
     @{
         Name = 'PHP'
@@ -358,7 +358,7 @@ $checks = @(
         Name = 'curl'
         RelativePath = 'ms4w_MSSQL\Apache\bin\curl.exe'
         ArgumentList = @('--version')
-        ExpectedPattern = '(?s)^curl 8\.22\.0\s.*\bbrotli/1\.2\.1(?:\s|$)'
+        ExpectedPattern = '(?s)^curl 8\.23\.0\s.*\bbrotli/1\.2\.1(?:\s|$)'
     },
     @{
         Name = 'Brotli'

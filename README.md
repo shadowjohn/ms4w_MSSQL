@@ -30,20 +30,22 @@ MS4W 4.0.4
 
 可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
 
-目前發行版：[v2026.11.05](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.11.05)。預設停用未使用的 PHP Session 上傳進度追蹤，移除 CGI 舊 PHP 與建置／測試檔案，並提供跨主機清理工具；Apache 2.4.69、PHP 8.3.36 與 Brotli 1.2.1 維持不變，完整內容見 [版本說明](docs/releases/v2026.11.05.md)。
+目前發行版：[v2026.11.13](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.11.13)。更新 Apache 2.4.71、PHP Windows 8.3.36-1、ModSecurity 2.9.15 與 app-local VC runtime 14.52.37029，保留既有 SQLite／SpatiaLite 與 SQLSRV 支援，完整內容見 [版本說明](docs/releases/v2026.11.13.md)。
 
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
 這個 ZIP 已採用 **app-local Microsoft Visual C++ v14 runtime**：x64 Apache、PHP 使用 x64 DLL，x86 MapServer 與 legacy CGI 使用 x86 DLL，均已放在各自的實際載入目錄，不需要使用者另外安裝 Visual C++ Redistributable。runtime 來源版本與每個 DLL 的 SHA-256 請見 `ms4w_MSSQL/VC_RUNTIME_X64.json` 與 `ms4w_MSSQL/VC_RUNTIME_X86.json`；不要自行以來路不明的 DLL 覆蓋。
 
+[更新及上架清單](docs/apache-2.4.71-php-refresh.md)說明本次需同步的 bin/modules、PHP、CGI VC DLL、授權文件與四份清冊；既有主機請先保留設定並釋放共用 PHP 程序。
+
 主要 runtime 版本：
 
 | 元件 | 版本 / 狀態 | 位置 |
 |---|---|---|
-| Apache | Apache/2.4.69 Win64，Apache Lounge VS18 build 2026-10-01 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
-| PHP | PHP 8.3.36 (Brotli 1.2.1 overlay) ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
+| Apache | Apache/2.4.71 Win64，Apache Lounge VS18 build 2026-11-11 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
+| PHP | PHP Windows 8.3.36-1 ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
-| PHP FastCGI | PHP 8.3.36 x64，供 Apache 執行 PHP；舊 `cgi-bin` PHP 5／7 runtime 已移除 | `ms4w_MSSQL/Apache/php/php-cgi.exe` |
+| PHP FastCGI | PHP Windows 8.3.36-1 x64，供 Apache 執行 PHP；舊 `cgi-bin` PHP 5／7 runtime 已移除 | `ms4w_MSSQL/Apache/php/php-cgi.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
 | GDAL / OGR | GDAL 2.4.0，released 2018-12-14 | `ms4w_MSSQL/GDAL/` |
 | Python | Python 3.7.8 | `ms4w_MSSQL/python/python.exe` |

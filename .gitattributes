@@ -1,6 +1,6 @@
 # Preserve the exact upstream PHP payload bytes across Windows Git checkouts.
 # Limited to the official runtime metadata/templates covered by PHP_RUNTIME.json.
-ms4w_MSSQL/Apache/php/extras/ssl/openssl.cnf -text
+ms4w_MSSQL/Apache/php/extras/ssl/openssl.cnf -text whitespace=cr-at-eol
 ms4w_MSSQL/Apache/php/license.txt -text
 ms4w_MSSQL/Apache/php/news.txt -text
 ms4w_MSSQL/Apache/php/phar.phar.bat -text
@@ -21,3 +21,8 @@ ms4w_MSSQL/Apache/bin/pcre2-config -text -whitespace
 ms4w_MSSQL/Apache/bin/wcurl -text -whitespace
 ms4w_MSSQL/Apache/bin/xml2-config -text -whitespace
 ms4w_MSSQL/Apache/bin/LICENSE.brotli -text -whitespace
+
+# Preserve the Apache and extra-module vendor notices byte-for-byte.
+ms4w_MSSQL/Apache/LICENSE.txt -text -whitespace
+ms4w_MSSQL/Apache/NOTICE.txt -text -whitespace
+ms4w_MSSQL/Apache/licenses/** -text -whitespace

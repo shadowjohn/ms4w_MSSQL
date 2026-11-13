@@ -66,3 +66,12 @@ CLI 與實際 port 82 Apache FastCGI 均為 PHP 8.3.36；HTTP 200、SAPI cgi-fcg
 更新既有正式環境時，先核對核心與 ABI。若尚非 PHP 8.3.36，應先按本文件同步完整 runtime 清單並保留相容的自訂 SQLite/SQLSRV 與設定；若已在同一基底，僅套用兩個 Brotli DLL 和對應清冊。保留 php.ini、憑證與 SpatiaLite；確認所有共用目標 PHP 的 Apache/IIS worker 或 CLI 工作已釋放檔案後再更換。
 
 驗收須看實際 curl_version() 的 Brotli 1.2.1、兩個 DLL 雜湊及 Web SAPI；php -v 仍顯示 8.3.36，不能單獨判斷修補。正式機的完整更新範圍與回復步驟見 docs/releases/v2026.10.28.md。
+
+
+## 2026-11-13 Windows 8.3.36-1 完整重建包更新
+
+本次由官方 PHP Windows 8.3.36-1 TS x64 VS16 包更新 56 個有差異的已管理檔案，補齊 glib 2.90.1、libzip 1.12.1 與 zlib 回補，Brotli 1.2.1 已由新基底原生提供。PHP_RUNTIME.json 的官方來源、SBOM 與逐檔 hash 已同步，舊 Brotli overlay 不再適用於目前安裝狀態。php -v 仍顯示 8.3.36；應以清冊及實際 DLL 核對重建版本。
+
+自製 SQLite 3.54.1 的 PDO/SQLite3 extension、SQLSRV 5.12.0、php.ini、OpenSSL 設定、CA 與 GIS 依賴保留；VC runtime 另由 Microsoft 已驗證來源升為 14.52.37029.0。候選 CLI 及 Apache FastCGI 的 SQLite/RTree/SpatiaLite、SQLSRV 載入、ZIP/gzip、HTTPS 與失敗路徑通過。沒有實際 MSSQL 連線。
+
+完整部署範圍、來源及驗證邊界見 [Apache 2.4.71 與 PHP 更新清單](apache-2.4.71-php-refresh.md)。若有共用 PHP 的 IIS 集區、排程或背景 worker，必須先釋放檔案；只關閉測試站可能不足。
