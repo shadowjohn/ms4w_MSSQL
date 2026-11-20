@@ -30,22 +30,24 @@ MS4W 4.0.4
 
 可直接使用的 Windows x64 壓縮包放在 [GitHub Releases](https://github.com/shadowjohn/ms4w_MSSQL/releases)。每個版本會一併提供 `SHA256SUMS.txt` 與 `release-manifest.json`，方便核對下載檔、來源 commit、核心工具版本與簽章狀態。
 
-目前發行版：[v2026.11.13](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.11.13)。更新 Apache 2.4.71、PHP Windows 8.3.36-1、ModSecurity 2.9.15 與 app-local VC runtime 14.52.37029，保留既有 SQLite／SpatiaLite 與 SQLSRV 支援，完整內容見 [版本說明](docs/releases/v2026.11.13.md)。
+目前發行版：[v2026.11.20](https://github.com/shadowjohn/ms4w_MSSQL/releases/tag/v2026.11.20)。更新 PHP Windows 8.3.37，兩個 SQLite extensions 同步重編，保留 SQLite 3.54.1、RTree、SpatiaLite 與 SQLSRV；Apache 2.4.71 與 VC runtime 維持不變，完整內容見 [版本說明](docs/releases/v2026.11.20.md)。
 
 主要執行檔目前沒有 Authenticode 簽章，Windows 可能顯示未知發行者警告。下載後請先核對 SHA-256，再完整解壓縮；不要只複製單一 EXE 或 DLL。
 
 這個 ZIP 已採用 **app-local Microsoft Visual C++ v14 runtime**：x64 Apache、PHP 使用 x64 DLL，x86 MapServer 與 legacy CGI 使用 x86 DLL，均已放在各自的實際載入目錄，不需要使用者另外安裝 Visual C++ Redistributable。runtime 來源版本與每個 DLL 的 SHA-256 請見 `ms4w_MSSQL/VC_RUNTIME_X64.json` 與 `ms4w_MSSQL/VC_RUNTIME_X86.json`；不要自行以來路不明的 DLL 覆蓋。
 
-[更新及上架清單](docs/apache-2.4.71-php-refresh.md)說明本次需同步的 bin/modules、PHP、CGI VC DLL、授權文件與四份清冊；既有主機請先保留設定並釋放共用 PHP 程序。
+由 v2026.11.13 升級時，本次只需同步 PHP 管理檔案與根目錄 PHP_RUNTIME.json，保留各主機設定。較舊版本的 Apache／VC 更新範圍見 [先前上架清單](docs/apache-2.4.71-php-refresh.md)。
+
+PHP 8.3.37 的官方來源、重編流程、部署與防護軟體執行限制見 [更新說明](docs/php-8.3.37-upgrade.md)。
 
 主要 runtime 版本：
 
 | 元件 | 版本 / 狀態 | 位置 |
 |---|---|---|
 | Apache | Apache/2.4.71 Win64，Apache Lounge VS18 build 2026-11-11 | `ms4w_MSSQL/Apache/bin/httpd.exe` |
-| PHP | PHP Windows 8.3.36-1 ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
+| PHP | PHP Windows 8.3.37 ZTS x64、Visual C++ 2019、Zend OPcache；SQLite3 extension 內含 SQLite 3.54.1 與 RTree | `ms4w_MSSQL/Apache/php/php.exe` |
 | PHP Apache module | `php8apache2_4.dll` | `ms4w_MSSQL/Apache/php/` |
-| PHP FastCGI | PHP Windows 8.3.36-1 x64，供 Apache 執行 PHP；舊 `cgi-bin` PHP 5／7 runtime 已移除 | `ms4w_MSSQL/Apache/php/php-cgi.exe` |
+| PHP FastCGI | PHP Windows 8.3.37 x64，供 Apache 執行 PHP；舊 `cgi-bin` PHP 5／7 runtime 已移除 | `ms4w_MSSQL/Apache/php/php-cgi.exe` |
 | MapServer | MapServer 7.7.0-dev，MS4W build string 顯示 4.0.5 | `ms4w_MSSQL/Apache/cgi-bin/mapserv.exe` |
 | GDAL / OGR | GDAL 2.4.0，released 2018-12-14 | `ms4w_MSSQL/GDAL/` |
 | Python | Python 3.7.8 | `ms4w_MSSQL/python/python.exe` |
@@ -65,11 +67,11 @@ MS4W 4.0.4
 
 其中 `pdo_geosqlite` / GeoSQLite 支援是這個整理版的重要用途之一，用來讓舊 Easymap / PHP 程式可以透過 PDO / SQLite 路線讀寫帶空間能力的 SQLite 資料，而不是只依賴純文字 WKT 或外部轉檔。
 
-PHP 8.3.36 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中 `php_pdo_sqlite.dll` 為可執行 `load_extension()` 的重編版本，已以 PDO 載入 SpatiaLite 5.1.0 驗證；`php_sqlite3.dll` 則為含 RTree 的重編版本。兩者是獨立 extension，重編其中之一不會改變另一個的行為。Apache FastCGI 必須保留 `C:/sqlite3_ext` 於 PATH，否則 SpatiaLite 的相依 DLL 無法被載入。
+PHP 8.3.37 已啟用 `sqlsrv`、`pdo_sqlsrv`、`pdo_sqlite`、`sqlite3`。其中 `php_pdo_sqlite.dll` 為可執行 `load_extension()` 的重編版本，已以 PDO 載入 SpatiaLite 5.1.0 驗證；`php_sqlite3.dll` 則為含 RTree 的重編版本。兩者是獨立 extension，重編其中之一不會改變另一個的行為。Apache FastCGI 必須保留 `C:/sqlite3_ext` 於 PATH，否則 SpatiaLite 的相依 DLL 無法被載入。
 
 ### PHP SQLite extension 重編與驗證
 
-目前 runtime 的 ABI 為 PHP 8.3.36、x64、ZTS、VS2019（vc16）。重編 DLL 時必須完全對齊這組 ABI；VS2022（vc17）產物不可混用。
+目前 runtime 的 ABI 為 PHP 8.3.37、x64、ZTS、VS2019（vc16）。重編 DLL 時必須完全對齊這組 ABI；VS2022（vc17）產物不可混用。
 
 - `php_pdo_sqlite.dll`：在 PDO connection 開啟 `load_extension()`，供受控的程式載入 SpatiaLite。
 - `php_sqlite3.dll`：以 RTree-enabled SQLite static library 編譯，供 `new SQLite3(...)` 讀寫 `idx_*_GEOMETRY` virtual table。
@@ -323,4 +325,4 @@ https://github.com/shadowjohn/ms4w_MSSQL
 https://github.com/shadowjohn/dem20M_terrain
 ```
 
-PHP 8.3.36 security update, reproducible SQLite build and host rollout: [docs/php-8.3.36-upgrade.md](docs/php-8.3.36-upgrade.md).
+PHP 8.3.37 security update, reproducible SQLite build and host rollout: [docs/php-8.3.37-upgrade.md](docs/php-8.3.37-upgrade.md).

@@ -352,7 +352,7 @@ $checks = @(
         Name = 'PHP'
         RelativePath = 'ms4w_MSSQL\Apache\php\php.exe'
         ArgumentList = @('-n', '-v')
-        ExpectedPattern = 'PHP 8\.3\.36'
+        ExpectedPattern = 'PHP 8\.3\.37'
     },
     @{
         Name = 'curl'

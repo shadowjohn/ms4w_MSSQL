@@ -1,9 +1,9 @@
 This snapshot was automatically generated on
-Mon, 26 Oct 2026 10:08:31 +0000
+Wed, 18 Nov 2026 00:57:22 +0000
 
-Version: 8.3.36
+Version: 8.3.37
 Branch: HEAD
-Build: C:\Users\runneradmin\AppData\Local\Temp\php-f18a4ffb-4644-4df4-988f-8b5bb20ecebf\config\vs16\x64\obj\Release_TS
+Build: D:\a\php-windows-builder-security\obj\Release_TS
 
 Built-in Extensions
 ===========================

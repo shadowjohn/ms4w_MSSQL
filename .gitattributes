@@ -2,7 +2,7 @@
 # Limited to the official runtime metadata/templates covered by PHP_RUNTIME.json.
 ms4w_MSSQL/Apache/php/extras/ssl/openssl.cnf -text whitespace=cr-at-eol
 ms4w_MSSQL/Apache/php/license.txt -text
-ms4w_MSSQL/Apache/php/news.txt -text
+ms4w_MSSQL/Apache/php/news.txt -text whitespace=cr-at-eol
 ms4w_MSSQL/Apache/php/phar.phar.bat -text
 ms4w_MSSQL/Apache/php/php.ini-development -text
 ms4w_MSSQL/Apache/php/php.ini-production -text

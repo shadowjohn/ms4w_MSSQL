@@ -5,6 +5,7 @@ param(
     [Parameter(Mandatory)][string]$SqliteSource,
     [Parameter(Mandatory)][string]$CompilerRoot,
     [Parameter(Mandatory)][string]$OutputDirectory,
+    [ValidatePattern('^8\.3\.\d+$')][string]$PhpVersion='8.3.36',
     [string]$WindowsSdkRoot='C:\Program Files (x86)\Windows Kits\10',
     [string]$WindowsSdkVersion='10.0.26100.0'
 )
@@ -16,8 +17,10 @@ $compiler=(Resolve-Path -LiteralPath $CompilerRoot).Path
 $build=[IO.Path]::GetFullPath($OutputDirectory)
 if(Test-Path -LiteralPath $build){throw 'OutputDirectory must be new; existing build output is never overwritten.'}
 if((Get-Item -LiteralPath "$compiler\bin\Hostx64\x64\cl.exe").VersionInfo.FileVersion -notmatch '^19\.29\.') {throw 'Use the VS2019 14.29 compiler matching PHP 8.3 VS16.'}
-if([IO.File]::ReadAllText("$source\main\php_version.h") -notmatch '#define PHP_VERSION "8\.3\.36"'){throw 'PHP source must be 8.3.36.'}
-if([IO.File]::ReadAllText("$devel\include\main\php_version.h") -notmatch '#define PHP_VERSION "8\.3\.36"'){throw 'PHP development package must be 8.3.36 TS x64 VS16.'}
+# Source and development headers must match the requested PHP 8.3 patch version.
+$versionPattern='#define PHP_VERSION "'+[regex]::Escape($PhpVersion)+'"'
+if([IO.File]::ReadAllText("$source\main\php_version.h") -notmatch $versionPattern){throw "PHP source must be $PhpVersion."}
+if([IO.File]::ReadAllText("$devel\include\main\php_version.h") -notmatch $versionPattern){throw "PHP development package must be $PhpVersion TS x64 VS16."}
 if([IO.File]::ReadAllText("$sqlite\sqlite3.h") -notmatch '#define SQLITE_VERSION\s+"3\.54\.1"'){throw 'SQLite source must be 3.54.1.'}
 $phpInclude=Join-Path $devel 'include'
 New-Item -ItemType Directory -Path $build | Out-Null

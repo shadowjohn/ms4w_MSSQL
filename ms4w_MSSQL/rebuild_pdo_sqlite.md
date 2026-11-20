@@ -1,4 +1,4 @@
-> PHP 8.3.36: see [current build and upgrade guide](../docs/php-8.3.36-upgrade.md) and [build script](../scripts/Build-PhpSqliteExtensions.ps1). The notes below describe the historical 8.3.32 build.
+> PHP 8.3.37: see [current build and upgrade guide](../docs/php-8.3.37-upgrade.md) and [build script](../scripts/Build-PhpSqliteExtensions.ps1). The notes below describe the historical 8.3.32 build.
 
 # Windows 重編 PHP 8.3.32 SQLite extensions
 

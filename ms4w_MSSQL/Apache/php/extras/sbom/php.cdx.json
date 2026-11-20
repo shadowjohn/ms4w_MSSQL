@@ -1,26 +1,26 @@
 {
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:c6ed2cbc-1f92-404c-925e-e7093a891951",
+    "serialNumber": "urn:uuid:474de9d2-e640-40b5-bf43-0b0223726a13",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-10-26T10:09:06Z",
+        "timestamp": "2026-11-18T00:57:41Z",
         "tools": {
             "components": [
                 {
                     "type": "application",
                     "name": "php",
-                    "version": "8.3.36"
+                    "version": "8.3.37"
                 }
             ]
         },
         "component": {
             "type": "application",
-            "bom-ref": "pkg:generic/php@8.3.36",
+            "bom-ref": "pkg:generic/php@8.3.37",
             "name": "php",
-            "version": "8.3.36",
-            "purl": "pkg:generic/php@8.3.36",
-            "cpe": "cpe:2.3:a:php:php:8.3.36:*:*:*:*:*:*:*",
+            "version": "8.3.37",
+            "purl": "pkg:generic/php@8.3.37",
+            "cpe": "cpe:2.3:a:php:php:8.3.37:*:*:*:*:*:*:*",
             "supplier": {
                 "name": "PHP Group"
             },
@@ -71,7 +71,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -121,7 +121,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -171,7 +171,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -221,7 +221,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -271,7 +271,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -321,7 +321,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -371,7 +371,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -421,7 +421,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -471,7 +471,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -521,7 +521,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -571,7 +571,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -621,7 +621,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -671,7 +671,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -719,7 +719,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -767,7 +767,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -815,7 +815,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -865,7 +865,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -915,7 +915,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -965,7 +965,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -1015,7 +1015,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -1065,7 +1065,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -1113,7 +1113,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -1163,7 +1163,7 @@
                 },
                 {
                     "name": "php:source-artifact",
-                    "value": "php-8.3.36 source tree"
+                    "value": "php-8.3.37 source tree"
                 },
                 {
                     "name": "php:source-path",
@@ -1307,10 +1307,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:php-windows-deps/apache@2.4.69",
+            "bom-ref": "pkg:php-windows-deps/apache@2.4.71",
             "name": "apache",
-            "version": "2.4.69",
-            "purl": "pkg:generic/apache-httpd@2.4.69",
+            "version": "2.4.71",
+            "purl": "pkg:generic/apache-httpd@2.4.71",
             "licenses": [
                 {
                     "license": {
@@ -1325,7 +1325,7 @@
             "externalReferences": [
                 {
                     "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/apache-2.4.69-vs16-x64.zip"
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/apache-2.4.71-vs16-x64.zip"
                 },
                 {
                     "type": "website",
@@ -1333,11 +1333,11 @@
                 },
                 {
                     "type": "vcs",
-                    "url": "https://github.com/apache/httpd/tree/2.4.69"
+                    "url": "https://github.com/apache/httpd/tree/2.4.71"
                 },
                 {
                     "type": "vcs",
-                    "url": "git+https://github.com/apache/httpd.git@1e06e9860794ce39605b79a0a787abfe084e5677"
+                    "url": "git+https://github.com/apache/httpd.git@4554c7436049b6a68bfee7fbae32fc5ced666355"
                 }
             ],
             "properties": [
@@ -1351,11 +1351,11 @@
                 },
                 {
                     "name": "php:version",
-                    "value": "2.4.69"
+                    "value": "2.4.71"
                 },
                 {
                     "name": "php:upstream-version",
-                    "value": "2.4.69"
+                    "value": "2.4.71"
                 },
                 {
                     "name": "php:source-origin",
@@ -1371,7 +1371,7 @@
                 },
                 {
                     "name": "php:upstream-tag",
-                    "value": "2.4.69"
+                    "value": "2.4.71"
                 },
                 {
                     "name": "php:source-repository",
@@ -1383,15 +1383,15 @@
                 },
                 {
                     "name": "php:source-ref",
-                    "value": "2.4.69"
+                    "value": "2.4.71"
                 },
                 {
                     "name": "php:source-commit",
-                    "value": "1e06e9860794ce39605b79a0a787abfe084e5677"
+                    "value": "4554c7436049b6a68bfee7fbae32fc5ced666355"
                 },
                 {
                     "name": "php:input-version",
-                    "value": "2.4.69"
+                    "value": "2.4.71"
                 },
                 {
                     "name": "php:vs",
@@ -1407,23 +1407,23 @@
                 },
                 {
                     "name": "php:package-file-name",
-                    "value": "apache-2.4.69-vs16-x64.zip"
+                    "value": "apache-2.4.71-vs16-x64.zip"
                 },
                 {
                     "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/apache-2.4.69-vs16-x64.zip"
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/apache-2.4.71-vs16-x64.zip"
                 }
             ],
-            "cpe": "cpe:2.3:a:apache:http_server:2.4.69:*:*:*:*:*:*:*"
+            "cpe": "cpe:2.3:a:apache:http_server:2.4.71:*:*:*:*:*:*:*"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/apr-x64-windows@79372cb00fcc88bb9371821ac250bd10333fb891c001b901f93cb636788889bf",
-            "name": "apr:x64-windows",
-            "version": "79372cb00fcc88bb9371821ac250bd10333fb891c001b901f93cb636788889bf",
+            "bom-ref": "pkg:generic/pcre2-x64-windows@fc1de8c2804f11ce1d1f081b9bd42f398e0bb4ffd2569cd5d1bb668d09118c04",
+            "name": "pcre2:x64-windows",
+            "version": "fc1de8c2804f11ce1d1f081b9bd42f398e0bb4ffd2569cd5d1bb668d09118c04",
             "licenses": [
                 {
-                    "expression": "Apache-2.0"
+                    "expression": "BSD-3-Clause"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -1433,13 +1433,28 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:vcpkg/openssl@3.6.4?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fopenssl",
-            "name": "openssl",
-            "version": "3.6.4#1",
-            "purl": "pkg:vcpkg/openssl@3.6.4?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fopenssl",
+            "bom-ref": "pkg:generic/zherczeg-sljit@45f910b78c6605ebf5b53d3ec7cb00f2312fe417",
+            "name": "zherczeg/sljit",
+            "version": "45f910b78c6605ebf5b53d3ec7cb00f2312fe417",
             "licenses": [
                 {
-                    "expression": "Apache-2.0"
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Zoltan Herczeg"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:vcpkg/nghttp2@1.70.0?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fnghttp2",
+            "name": "nghttp2",
+            "version": "1.70.0",
+            "purl": "pkg:vcpkg/nghttp2@1.70.0?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fnghttp2",
+            "licenses": [
+                {
+                    "expression": "MIT"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -1449,24 +1464,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/curl-x64-windows@22515276e11843c73d5de5e5f3d1889e42b26250b3b8733a234847e47f5b9acc",
-            "name": "curl:x64-windows",
-            "version": "22515276e11843c73d5de5e5f3d1889e42b26250b3b8733a234847e47f5b9acc",
-            "licenses": [
-                {
-                    "expression": "BSD-3-Clause AND ISC AND curl"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Winlibs"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/zlib-x64-windows@be8dc6fdfde485aefc59e59df985de8d1975ee0140e996d68a4f607014d3813e",
-            "name": "zlib:x64-windows",
-            "version": "be8dc6fdfde485aefc59e59df985de8d1975ee0140e996d68a4f607014d3813e",
+            "bom-ref": "pkg:vcpkg/zlib@1.4?triplet=x64-windows",
+            "name": "zlib",
+            "version": "1.4",
+            "purl": "pkg:vcpkg/zlib@1.4?triplet=x64-windows",
             "licenses": [
                 {
                     "expression": "Zlib"
@@ -1474,22 +1475,7 @@
             ],
             "copyright": "See accompanying license and notice files.",
             "supplier": {
-                "name": "Winlibs"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/nghttp2-x64-windows@51e4e64d9e8287e77f1245f1d965d10b8a5dda9c6de9cf1b92ed25c97a724b76",
-            "name": "nghttp2:x64-windows",
-            "version": "51e4e64d9e8287e77f1245f1d965d10b8a5dda9c6de9cf1b92ed25c97a724b76",
-            "licenses": [
-                {
-                    "expression": "MIT"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Winlibs"
+                "name": "Microsoft"
             }
         },
         {
@@ -1510,24 +1496,40 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/apr-util-x64-windows@44d1833e330b7f7de7512914aafc63efef09dddcb58934caf83505daf42cdbd3",
-            "name": "apr-util:x64-windows",
-            "version": "44d1833e330b7f7de7512914aafc63efef09dddcb58934caf83505daf42cdbd3",
+            "bom-ref": "pkg:generic/libexpat-libexpat@R_2_8_5",
+            "name": "libexpat/libexpat",
+            "version": "R_2_8_5",
             "licenses": [
                 {
-                    "expression": "Apache-2.0"
+                    "expression": "CC0-1.0 AND MIT"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
             "supplier": {
-                "name": "Winlibs"
+                "name": "libexpat"
             }
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/lua-x64-windows@bca05daf5ac49980eaa53edc29911f86ae4f3f642b8f961fe87776cee4b183c1",
+            "bom-ref": "pkg:vcpkg/lua@5.5.1?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Flua",
+            "name": "lua",
+            "version": "5.5.1",
+            "purl": "pkg:vcpkg/lua@5.5.1?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Flua",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Microsoft"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/lua-x64-windows@120b54615034e0c40ee94ea4e1f7a01e65d2ab2f573464eca0b9b7ccb48d306e",
             "name": "lua:x64-windows",
-            "version": "bca05daf5ac49980eaa53edc29911f86ae4f3f642b8f961fe87776cee4b183c1",
+            "version": "120b54615034e0c40ee94ea4e1f7a01e65d2ab2f573464eca0b9b7ccb48d306e",
             "licenses": [
                 {
                     "expression": "MIT"
@@ -1540,25 +1542,9 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/pcre2-x64-windows@9eded7a89701a5ff47425f2d3b9ec2cf1234133817258057709c481da77f74f9",
-            "name": "pcre2:x64-windows",
-            "version": "9eded7a89701a5ff47425f2d3b9ec2cf1234133817258057709c481da77f74f9",
-            "licenses": [
-                {
-                    "expression": "BSD-3-Clause"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Winlibs"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows-static-md",
-            "name": "zlib",
-            "version": "1.3.2-winlibs.1",
-            "purl": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows-static-md",
+            "bom-ref": "pkg:generic/winlibs-zlib@cf7eb981cf4fce56a88608c68fd3f255a2c452c9",
+            "name": "winlibs/zlib",
+            "version": "cf7eb981cf4fce56a88608c68fd3f255a2c452c9",
             "licenses": [
                 {
                     "expression": "Zlib"
@@ -1566,51 +1552,17 @@
             ],
             "copyright": "See accompanying license and notice files.",
             "supplier": {
-                "name": "Microsoft"
-            },
-            "properties": [
-                {
-                    "name": "php:source-repository",
-                    "value": "winlibs/zlib"
-                },
-                {
-                    "name": "php:source-commit",
-                    "value": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
-                }
-            ],
-            "pedigree": {
-                "commits": [
-                    {
-                        "uid": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
-                        "url": "https://github.com/winlibs/zlib/commit/838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
-                    }
-                ],
-                "notes": "Patched source selected by the Apache vcpkg overlay: https://github.com/winlibs/zlib/commit/838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
+                "name": "winlibs"
             }
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/apr-1.7.6.tar.bz2@1.7.6",
-            "name": "apr-1.7.6.tar.bz2",
-            "version": "1.7.6",
+            "bom-ref": "pkg:generic/zlib-x64-windows-static-md@7e354a2a276eef74f238c893476fb9e1b66e1d50c8f8dc16c88a81fe333d66cb",
+            "name": "zlib:x64-windows-static-md",
+            "version": "7e354a2a276eef74f238c893476fb9e1b66e1d50c8f8dc16c88a81fe333d66cb",
             "licenses": [
                 {
-                    "expression": "Apache-2.0"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Apache Software Foundation"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/brotli-x64-windows@f8f7c8948650953263ba74a8ea6ab2911cf2c4fb0e37f64a1de6962c5eb7a8d1",
-            "name": "brotli:x64-windows",
-            "version": "f8f7c8948650953263ba74a8ea6ab2911cf2c4fb0e37f64a1de6962c5eb7a8d1",
-            "licenses": [
-                {
-                    "expression": "MIT"
+                    "expression": "Zlib"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -1636,17 +1588,32 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/expat-x64-windows@867450c95b4c495dfac17527e0d21a8fe23dbcc7f560d39740356fd37e7115ee",
-            "name": "expat:x64-windows",
-            "version": "867450c95b4c495dfac17527e0d21a8fe23dbcc7f560d39740356fd37e7115ee",
+            "bom-ref": "pkg:generic/curl-x64-windows@2721591077b499a188cb2533ad864151682999a9035cab91146aadc029a4bc44",
+            "name": "curl:x64-windows",
+            "version": "2721591077b499a188cb2533ad864151682999a9035cab91146aadc029a4bc44",
             "licenses": [
                 {
-                    "expression": "CC0-1.0 AND MIT"
+                    "expression": "BSD-3-Clause AND ISC AND curl"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
             "supplier": {
                 "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/google-brotli@1.2.1",
+            "name": "google/brotli",
+            "version": "1.2.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "google"
             }
         },
         {
@@ -1673,6 +1640,38 @@
             "licenses": [
                 {
                     "expression": "BSD-3-Clause"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Microsoft"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:vcpkg/brotli@1.2.1?triplet=x64-windows",
+            "name": "brotli",
+            "version": "1.2.1",
+            "purl": "pkg:vcpkg/brotli@1.2.1?triplet=x64-windows",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Microsoft"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:vcpkg/apr@1.7.6?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fapr",
+            "name": "apr",
+            "version": "1.7.6#1",
+            "purl": "pkg:vcpkg/apr@1.7.6?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fapr",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -1732,6 +1731,36 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:generic/apr-util-1.6.3.tar.bz2@1.6.3",
+            "name": "apr-util-1.6.3.tar.bz2",
+            "version": "1.6.3",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Apache Software Foundation"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/brotli-x64-windows@a70fb5e86d969f9cb700efe6c14422ddc10db045bff82e6aefcb9b94141b42ca",
+            "name": "brotli:x64-windows",
+            "version": "a70fb5e86d969f9cb700efe6c14422ddc10db045bff82e6aefcb9b94141b42ca",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:generic/nghttp2-nghttp2@1.70.0",
             "name": "nghttp2/nghttp2",
             "version": "1.70.0",
@@ -1747,9 +1776,39 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/zlib-x64-windows-static-md@095a4dcfd7d22e2d5a0c450707077ea16701f6370fddc45774ac30e4ced34a0c",
-            "name": "zlib:x64-windows-static-md",
-            "version": "095a4dcfd7d22e2d5a0c450707077ea16701f6370fddc45774ac30e4ced34a0c",
+            "bom-ref": "pkg:generic/expat-x64-windows@7ad21b3075f883dfc6d452e10a5f6d36547aa2bf7ea4ec684e0efca11658df2a",
+            "name": "expat:x64-windows",
+            "version": "7ad21b3075f883dfc6d452e10a5f6d36547aa2bf7ea4ec684e0efca11658df2a",
+            "licenses": [
+                {
+                    "expression": "CC0-1.0 AND MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/apr-1.7.6.tar.bz2@1.7.6",
+            "name": "apr-1.7.6.tar.bz2",
+            "version": "1.7.6",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Apache Software Foundation"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/zlib-x64-windows@055afdbbaf380c856903dcbefa9588d5b028707a24babccf5a38659a618957ed",
+            "name": "zlib:x64-windows",
+            "version": "055afdbbaf380c856903dcbefa9588d5b028707a24babccf5a38659a618957ed",
             "licenses": [
                 {
                     "expression": "Zlib"
@@ -1758,6 +1817,127 @@
             "copyright": "See accompanying license and notice files.",
             "supplier": {
                 "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/apr-x64-windows@cbe3e938a3ac70898d5fb2fd0c473437eabaa6782e360ec7d4fdfe93bb711e32",
+            "name": "apr:x64-windows",
+            "version": "cbe3e938a3ac70898d5fb2fd0c473437eabaa6782e360ec7d4fdfe93bb711e32",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/openssl-x64-windows@e9c880212c4bd76ecd2611f0d562f38d9cd9a55ddd9018719e4e1639867ad027",
+            "name": "openssl:x64-windows",
+            "version": "e9c880212c4bd76ecd2611f0d562f38d9cd9a55ddd9018719e4e1639867ad027",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/apr-util-x64-windows@c4377839c8351cfbb51a48d0e71c50e599c980fc4c18295611131ee7f96123a5",
+            "name": "apr-util:x64-windows",
+            "version": "c4377839c8351cfbb51a48d0e71c50e599c980fc4c18295611131ee7f96123a5",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:vcpkg/openssl@3.6.4?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fopenssl",
+            "name": "openssl",
+            "version": "3.6.4#1",
+            "purl": "pkg:vcpkg/openssl@3.6.4?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fopenssl",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Microsoft"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/nghttp2-x64-windows@453bd9059d4fa08c96701b3fd30906b6d54d287110aaaadce470c9f6e8562d7a",
+            "name": "nghttp2:x64-windows",
+            "version": "453bd9059d4fa08c96701b3fd30906b6d54d287110aaaadce470c9f6e8562d7a",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "Winlibs"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/PCRE2Project-pcre2@10.47",
+            "name": "PCRE2Project/pcre2",
+            "version": "10.47",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "PCRE2Project"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/akheron-jansson@2.15.1",
+            "name": "akheron/jansson",
+            "version": "2.15.1",
+            "licenses": [
+                {
+                    "expression": "MIT AND dtoa"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "akheron"
+            }
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:generic/openssl-openssl@3.6.4",
+            "name": "openssl/openssl",
+            "version": "3.6.4",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "copyright": "See accompanying license and notice files.",
+            "supplier": {
+                "name": "openssl"
             }
         },
         {
@@ -1772,102 +1952,7 @@
             ],
             "copyright": "See accompanying license and notice files.",
             "supplier": {
-                "name": "Lua.org"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/openssl-x64-windows@5e22ecabd637e32f203c4e79c87f7db4d0aa640bb2fd05a5698c5988fb2f1715",
-            "name": "openssl:x64-windows",
-            "version": "5e22ecabd637e32f203c4e79c87f7db4d0aa640bb2fd05a5698c5988fb2f1715",
-            "licenses": [
-                {
-                    "expression": "Apache-2.0"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Winlibs"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows",
-            "name": "zlib",
-            "version": "1.3.2-winlibs.1",
-            "purl": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows",
-            "licenses": [
-                {
-                    "expression": "Zlib"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Microsoft"
-            },
-            "properties": [
-                {
-                    "name": "php:source-repository",
-                    "value": "winlibs/zlib"
-                },
-                {
-                    "name": "php:source-commit",
-                    "value": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
-                }
-            ],
-            "pedigree": {
-                "commits": [
-                    {
-                        "uid": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
-                        "url": "https://github.com/winlibs/zlib/commit/838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
-                    }
-                ],
-                "notes": "Patched source selected by the Apache vcpkg overlay: https://github.com/winlibs/zlib/commit/838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/zherczeg-sljit@45f910b78c6605ebf5b53d3ec7cb00f2312fe417",
-            "name": "zherczeg/sljit",
-            "version": "45f910b78c6605ebf5b53d3ec7cb00f2312fe417",
-            "licenses": [
-                {
-                    "expression": "BSD-2-Clause"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Zoltan Herczeg"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/google-brotli@1.2.1",
-            "name": "google/brotli",
-            "version": "1.2.1",
-            "licenses": [
-                {
-                    "expression": "MIT"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "google"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/winlibs-zlib@838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
-            "name": "winlibs/zlib",
-            "version": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
-            "licenses": [
-                {
-                    "expression": "Zlib"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "winlibs"
+                "name": "distfiles.alpinelinux.org"
             }
         },
         {
@@ -1888,13 +1973,13 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:vcpkg/apr@1.7.6?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fapr",
-            "name": "apr",
-            "version": "1.7.6#1",
-            "purl": "pkg:vcpkg/apr@1.7.6?port_version=1&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fapr",
+            "bom-ref": "pkg:vcpkg/zlib@1.4?triplet=x64-windows-static-md",
+            "name": "zlib",
+            "version": "1.4",
+            "purl": "pkg:vcpkg/zlib@1.4?triplet=x64-windows-static-md",
             "licenses": [
                 {
-                    "expression": "Apache-2.0"
+                    "expression": "Zlib"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -1904,54 +1989,9 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:generic/openssl-openssl@3.6.4",
-            "name": "openssl/openssl",
-            "version": "3.6.4",
-            "licenses": [
-                {
-                    "expression": "Apache-2.0"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "openssl"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/apr-util-1.6.3.tar.bz2@1.6.3",
-            "name": "apr-util-1.6.3.tar.bz2",
-            "version": "1.6.3",
-            "licenses": [
-                {
-                    "expression": "Apache-2.0"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Apache Software Foundation"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/akheron-jansson@2.15.1",
-            "name": "akheron/jansson",
-            "version": "2.15.1",
-            "licenses": [
-                {
-                    "expression": "MIT AND dtoa"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "akheron"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/jansson-x64-windows@8957e97a569c870d5b4221163550190a5f640e2abc181620273fabdb2b47262b",
+            "bom-ref": "pkg:generic/jansson-x64-windows@2f5ed1fc6042cf7e7455a6eae322aa9b751e1f2a329cbcd4d4160fe40ac1570d",
             "name": "jansson:x64-windows",
-            "version": "8957e97a569c870d5b4221163550190a5f640e2abc181620273fabdb2b47262b",
+            "version": "2f5ed1fc6042cf7e7455a6eae322aa9b751e1f2a329cbcd4d4160fe40ac1570d",
             "licenses": [
                 {
                     "expression": "MIT AND dtoa"
@@ -1971,84 +2011,6 @@
             "licenses": [
                 {
                     "expression": "MIT AND dtoa"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Microsoft"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:vcpkg/brotli@1.2.1?triplet=x64-windows",
-            "name": "brotli",
-            "version": "1.2.1",
-            "purl": "pkg:vcpkg/brotli@1.2.1?triplet=x64-windows",
-            "licenses": [
-                {
-                    "expression": "MIT"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Microsoft"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/PCRE2Project-pcre2@10.47",
-            "name": "PCRE2Project/pcre2",
-            "version": "10.47",
-            "licenses": [
-                {
-                    "expression": "BSD-3-Clause"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "PCRE2Project"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:vcpkg/nghttp2@1.70.0?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fnghttp2",
-            "name": "nghttp2",
-            "version": "1.70.0",
-            "purl": "pkg:vcpkg/nghttp2@1.70.0?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fnghttp2",
-            "licenses": [
-                {
-                    "expression": "MIT"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Microsoft"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:generic/libexpat-libexpat@R_2_8_5",
-            "name": "libexpat/libexpat",
-            "version": "R_2_8_5",
-            "licenses": [
-                {
-                    "expression": "CC0-1.0 AND MIT"
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "libexpat"
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:vcpkg/lua@5.5.1?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Flua",
-            "name": "lua",
-            "version": "5.5.1",
-            "purl": "pkg:vcpkg/lua@5.5.1?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Flua",
-            "licenses": [
-                {
-                    "expression": "MIT"
                 }
             ],
             "copyright": "See accompanying license and notice files.",
@@ -2875,10 +2837,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:php-windows-deps/zlib@1.3.2-1",
+            "bom-ref": "pkg:php-windows-deps/zlib@1.4",
             "name": "zlib",
-            "version": "1.3.2-1",
-            "purl": "pkg:generic/zlib@1.3.2",
+            "version": "1.4",
+            "purl": "pkg:generic/zlib@1.4",
             "licenses": [
                 {
                     "license": {
@@ -2893,7 +2855,7 @@
             "externalReferences": [
                 {
                     "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/zlib-1.3.2-1-vs16-x64.zip"
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/zlib-1.4-vs16-x64.zip"
                 },
                 {
                     "type": "website",
@@ -2901,11 +2863,11 @@
                 },
                 {
                     "type": "vcs",
-                    "url": "https://github.com/madler/zlib/tree/v1.3.2"
+                    "url": "https://github.com/madler/zlib/tree/v1.4"
                 },
                 {
                     "type": "vcs",
-                    "url": "git+https://github.com/winlibs/zlib.git@838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
+                    "url": "git+https://github.com/winlibs/zlib.git@cf7eb981cf4fce56a88608c68fd3f255a2c452c9"
                 }
             ],
             "properties": [
@@ -2919,11 +2881,11 @@
                 },
                 {
                     "name": "php:version",
-                    "value": "1.3.2-1"
+                    "value": "1.4"
                 },
                 {
                     "name": "php:upstream-version",
-                    "value": "1.3.2"
+                    "value": "1.4"
                 },
                 {
                     "name": "php:source-origin",
@@ -2939,7 +2901,7 @@
                 },
                 {
                     "name": "php:upstream-tag",
-                    "value": "v1.3.2"
+                    "value": "v1.4"
                 },
                 {
                     "name": "php:source-repository",
@@ -2951,15 +2913,15 @@
                 },
                 {
                     "name": "php:source-ref",
-                    "value": "zlib-1.3.2-1"
+                    "value": "zlib-1.4"
                 },
                 {
                     "name": "php:source-commit",
-                    "value": "838fe0e338adb28f5662e5ac332b0f0eb96ba93a"
+                    "value": "cf7eb981cf4fce56a88608c68fd3f255a2c452c9"
                 },
                 {
                     "name": "php:input-version",
-                    "value": "zlib-1.3.2-1"
+                    "value": "zlib-1.4"
                 },
                 {
                     "name": "php:vs",
@@ -2975,46 +2937,25 @@
                 },
                 {
                     "name": "php:package-file-name",
-                    "value": "zlib-1.3.2-1-vs16-x64.zip"
+                    "value": "zlib-1.4-vs16-x64.zip"
                 },
                 {
                     "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/zlib-1.3.2-1-vs16-x64.zip"
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/zlib-1.4-vs16-x64.zip"
                 }
             ],
-            "cpe": "cpe:2.3:a:zlib:zlib:1.3.2:*:*:*:*:*:*:*",
+            "cpe": "cpe:2.3:a:zlib:zlib:1.4:*:*:*:*:*:*:*",
             "pedigree": {
                 "ancestors": [
                     {
                         "type": "library",
-                        "bom-ref": "urn:php:upstream:zlib:1.3.2",
+                        "bom-ref": "urn:php:upstream:zlib:1.4",
                         "name": "zlib",
-                        "version": "1.3.2",
-                        "purl": "pkg:generic/zlib@1.3.2"
+                        "version": "1.4",
+                        "purl": "pkg:generic/zlib@1.4"
                     }
                 ],
-                "notes": "Built from winlibs/zlib ref zlib-1.3.2-1 at commit 838fe0e338adb28f5662e5ac332b0f0eb96ba93a with upstream identity madler/zlib tag v1.3.2.",
-                "patches": [
-                    {
-                        "type": "backport",
-                        "resolves": [
-                            {
-                                "type": "security",
-                                "id": "CVE-2026-85091",
-                                "source": {
-                                    "name": "NVD",
-                                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091"
-                                },
-                                "description": "Fixed in zlib-1.3.2-1 by backporting the upstream input-state reset after a failed non-blocking gzwrite, preventing stale external buffer pointers from reaching gzprintf or gzvprintf.",
-                                "references": [
-                                    "https://github.com/winlibs/zlib/commit/838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
-                                    "https://github.com/madler/zlib/commit/df84af25dc1942490e1d1c899a07619152a46148",
-                                    "https://github.com/madler/zlib/issues/1310"
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                "notes": "Built from winlibs/zlib ref zlib-1.4 at commit cf7eb981cf4fce56a88608c68fd3f255a2c452c9 with upstream identity madler/zlib tag v1.4."
             }
         },
         {
@@ -4572,10 +4513,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:php-windows-deps/libjpeg-turbo@3.2.0",
+            "bom-ref": "pkg:php-windows-deps/libjpeg-turbo@3.2.1",
             "name": "libjpeg-turbo",
-            "version": "3.2.0",
-            "purl": "pkg:generic/libjpeg-turbo@3.2.0",
+            "version": "3.2.1",
+            "purl": "pkg:generic/libjpeg-turbo@3.2.1",
             "licenses": [
                 {
                     "expression": "BSD-3-Clause AND IJG"
@@ -4588,7 +4529,7 @@
             "externalReferences": [
                 {
                     "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libjpeg-turbo-3.2.0-vs16-x64.zip"
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libjpeg-turbo-3.2.1-vs16-x64.zip"
                 },
                 {
                     "type": "website",
@@ -4596,11 +4537,11 @@
                 },
                 {
                     "type": "vcs",
-                    "url": "https://github.com/libjpeg-turbo/libjpeg-turbo/tree/3.2.0"
+                    "url": "https://github.com/libjpeg-turbo/libjpeg-turbo/tree/3.2.1"
                 },
                 {
                     "type": "vcs",
-                    "url": "git+https://github.com/winlibs/libjpeg.git@66ef88ad97f3c47eb1c7b85f2637ff1073ebce9b"
+                    "url": "git+https://github.com/winlibs/libjpeg.git@5e31759d415fef210f96b75bab79fe22aa77680a"
                 }
             ],
             "properties": [
@@ -4614,11 +4555,11 @@
                 },
                 {
                     "name": "php:version",
-                    "value": "3.2.0"
+                    "value": "3.2.1"
                 },
                 {
                     "name": "php:upstream-version",
-                    "value": "3.2.0"
+                    "value": "3.2.1"
                 },
                 {
                     "name": "php:source-origin",
@@ -4634,7 +4575,7 @@
                 },
                 {
                     "name": "php:upstream-tag",
-                    "value": "3.2.0"
+                    "value": "3.2.1"
                 },
                 {
                     "name": "php:source-repository",
@@ -4646,15 +4587,15 @@
                 },
                 {
                     "name": "php:source-ref",
-                    "value": "libjpeg-turbo-3.2.0"
+                    "value": "libjpeg-turbo-3.2.1"
                 },
                 {
                     "name": "php:source-commit",
-                    "value": "66ef88ad97f3c47eb1c7b85f2637ff1073ebce9b"
+                    "value": "5e31759d415fef210f96b75bab79fe22aa77680a"
                 },
                 {
                     "name": "php:input-version",
-                    "value": "libjpeg-turbo-3.2.0"
+                    "value": "libjpeg-turbo-3.2.1"
                 },
                 {
                     "name": "php:vs",
@@ -4670,25 +4611,25 @@
                 },
                 {
                     "name": "php:package-file-name",
-                    "value": "libjpeg-turbo-3.2.0-vs16-x64.zip"
+                    "value": "libjpeg-turbo-3.2.1-vs16-x64.zip"
                 },
                 {
                     "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libjpeg-turbo-3.2.0-vs16-x64.zip"
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libjpeg-turbo-3.2.1-vs16-x64.zip"
                 }
             ],
-            "cpe": "cpe:2.3:a:libjpeg-turbo:libjpeg-turbo:3.2.0:*:*:*:*:*:*:*",
+            "cpe": "cpe:2.3:a:libjpeg-turbo:libjpeg-turbo:3.2.1:*:*:*:*:*:*:*",
             "pedigree": {
                 "ancestors": [
                     {
                         "type": "library",
-                        "bom-ref": "urn:php:upstream:libjpeg-turbo:3.2.0",
+                        "bom-ref": "urn:php:upstream:libjpeg-turbo:3.2.1",
                         "name": "libjpeg-turbo",
-                        "version": "3.2.0",
-                        "purl": "pkg:generic/libjpeg-turbo@3.2.0"
+                        "version": "3.2.1",
+                        "purl": "pkg:generic/libjpeg-turbo@3.2.1"
                     }
                 ],
-                "notes": "Built from winlibs/libjpeg ref libjpeg-turbo-3.2.0 at commit 66ef88ad97f3c47eb1c7b85f2637ff1073ebce9b with upstream identity libjpeg-turbo/libjpeg-turbo tag 3.2.0."
+                "notes": "Built from winlibs/libjpeg ref libjpeg-turbo-3.2.1 at commit 5e31759d415fef210f96b75bab79fe22aa77680a with upstream identity libjpeg-turbo/libjpeg-turbo tag 3.2.1."
             }
         },
         {
@@ -5545,10 +5486,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:php-windows-deps/sqlite3@3.53.4",
+            "bom-ref": "pkg:php-windows-deps/sqlite3@3.54.1",
             "name": "sqlite3",
-            "version": "3.53.4",
-            "purl": "pkg:generic/sqlite@3.53.4",
+            "version": "3.54.1",
+            "purl": "pkg:generic/sqlite@3.54.1",
             "licenses": [
                 {
                     "license": {
@@ -5563,7 +5504,7 @@
             "externalReferences": [
                 {
                     "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.53.4-vs16-x64.zip"
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.54.1-vs16-x64.zip"
                 },
                 {
                     "type": "website",
@@ -5571,11 +5512,11 @@
                 },
                 {
                     "type": "vcs",
-                    "url": "https://github.com/sqlite/sqlite/tree/version-3.53.4"
+                    "url": "https://github.com/sqlite/sqlite/tree/version-3.54.1"
                 },
                 {
                     "type": "vcs",
-                    "url": "git+https://github.com/winlibs/sqlite3.git@90771f2f145baf5b9a2e094ff9ad36d700079125"
+                    "url": "git+https://github.com/winlibs/sqlite3.git@9652784a43e2719e1ab71f3276b87e5be8a66696"
                 }
             ],
             "properties": [
@@ -5589,11 +5530,11 @@
                 },
                 {
                     "name": "php:version",
-                    "value": "3.53.4"
+                    "value": "3.54.1"
                 },
                 {
                     "name": "php:upstream-version",
-                    "value": "3.53.4"
+                    "value": "3.54.1"
                 },
                 {
                     "name": "php:source-origin",
@@ -5609,7 +5550,7 @@
                 },
                 {
                     "name": "php:upstream-tag",
-                    "value": "version-3.53.4"
+                    "value": "version-3.54.1"
                 },
                 {
                     "name": "php:source-repository",
@@ -5621,15 +5562,15 @@
                 },
                 {
                     "name": "php:source-ref",
-                    "value": "sqlite3-3.53.4"
+                    "value": "sqlite3-3.54.1"
                 },
                 {
                     "name": "php:source-commit",
-                    "value": "90771f2f145baf5b9a2e094ff9ad36d700079125"
+                    "value": "9652784a43e2719e1ab71f3276b87e5be8a66696"
                 },
                 {
                     "name": "php:input-version",
-                    "value": "sqlite3-3.53.4"
+                    "value": "sqlite3-3.54.1"
                 },
                 {
                     "name": "php:vs",
@@ -5645,25 +5586,25 @@
                 },
                 {
                     "name": "php:package-file-name",
-                    "value": "sqlite3-3.53.4-vs16-x64.zip"
+                    "value": "sqlite3-3.54.1-vs16-x64.zip"
                 },
                 {
                     "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.53.4-vs16-x64.zip"
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.54.1-vs16-x64.zip"
                 }
             ],
-            "cpe": "cpe:2.3:a:sqlite:sqlite:3.53.4:*:*:*:*:*:*:*",
+            "cpe": "cpe:2.3:a:sqlite:sqlite:3.54.1:*:*:*:*:*:*:*",
             "pedigree": {
                 "ancestors": [
                     {
                         "type": "library",
-                        "bom-ref": "urn:php:upstream:sqlite3:3.53.4",
+                        "bom-ref": "urn:php:upstream:sqlite3:3.54.1",
                         "name": "sqlite3",
-                        "version": "3.53.4",
-                        "purl": "pkg:generic/sqlite@3.53.4"
+                        "version": "3.54.1",
+                        "purl": "pkg:generic/sqlite@3.54.1"
                     }
                 ],
-                "notes": "Built from winlibs/sqlite3 ref sqlite3-3.53.4 at commit 90771f2f145baf5b9a2e094ff9ad36d700079125 with upstream identity sqlite/sqlite tag version-3.53.4."
+                "notes": "Built from winlibs/sqlite3 ref sqlite3-3.54.1 at commit 9652784a43e2719e1ab71f3276b87e5be8a66696 with upstream identity sqlite/sqlite tag version-3.54.1."
             }
         },
         {
@@ -7356,10 +7297,10 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:php-windows-deps/openldap@2.7.0-3",
+            "bom-ref": "pkg:php-windows-deps/openldap@2.7.2",
             "name": "openldap",
-            "version": "2.7.0-3",
-            "purl": "pkg:generic/openldap@2.7.0",
+            "version": "2.7.2",
+            "purl": "pkg:generic/openldap@2.7.2",
             "licenses": [
                 {
                     "license": {
@@ -7374,7 +7315,7 @@
             "externalReferences": [
                 {
                     "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/openldap-2.7.0-3-vs16-x64.zip"
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/openldap-2.7.2-vs16-x64.zip"
                 },
                 {
                     "type": "website",
@@ -7382,11 +7323,11 @@
                 },
                 {
                     "type": "vcs",
-                    "url": "https://github.com/openldap/openldap/tree/OPENLDAP_REL_ENG_2_7_0"
+                    "url": "https://github.com/openldap/openldap/tree/OPENLDAP_REL_ENG_2_7_2"
                 },
                 {
                     "type": "vcs",
-                    "url": "git+https://github.com/winlibs/openldap.git@4b2449a2e39d92b3b789ff71350b4bf70ed0713e"
+                    "url": "git+https://github.com/winlibs/openldap.git@8aedbc7d067fa0096395d540f396ac75cc032846"
                 }
             ],
             "properties": [
@@ -7400,11 +7341,11 @@
                 },
                 {
                     "name": "php:version",
-                    "value": "2.7.0-3"
+                    "value": "2.7.2"
                 },
                 {
                     "name": "php:upstream-version",
-                    "value": "2.7.0"
+                    "value": "2.7.2"
                 },
                 {
                     "name": "php:source-origin",
@@ -7420,7 +7361,7 @@
                 },
                 {
                     "name": "php:upstream-tag",
-                    "value": "OPENLDAP_REL_ENG_2_7_0"
+                    "value": "OPENLDAP_REL_ENG_2_7_2"
                 },
                 {
                     "name": "php:source-repository",
@@ -7432,15 +7373,15 @@
                 },
                 {
                     "name": "php:source-ref",
-                    "value": "openldap-2.7.0-3"
+                    "value": "openldap-2.7.2"
                 },
                 {
                     "name": "php:source-commit",
-                    "value": "4b2449a2e39d92b3b789ff71350b4bf70ed0713e"
+                    "value": "8aedbc7d067fa0096395d540f396ac75cc032846"
                 },
                 {
                     "name": "php:input-version",
-                    "value": "openldap-2.7.0-3"
+                    "value": "openldap-2.7.2"
                 },
                 {
                     "name": "php:vs",
@@ -7456,147 +7397,25 @@
                 },
                 {
                     "name": "php:package-file-name",
-                    "value": "openldap-2.7.0-3-vs16-x64.zip"
+                    "value": "openldap-2.7.2-vs16-x64.zip"
                 },
                 {
                     "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/openldap-2.7.0-3-vs16-x64.zip"
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/openldap-2.7.2-vs16-x64.zip"
                 }
             ],
-            "cpe": "cpe:2.3:a:openldap:openldap:2.7.0:*:*:*:*:*:*:*",
+            "cpe": "cpe:2.3:a:openldap:openldap:2.7.2:*:*:*:*:*:*:*",
             "pedigree": {
                 "ancestors": [
                     {
                         "type": "library",
-                        "bom-ref": "urn:php:upstream:openldap:2.7.0",
+                        "bom-ref": "urn:php:upstream:openldap:2.7.2",
                         "name": "openldap",
-                        "version": "2.7.0",
-                        "purl": "pkg:generic/openldap@2.7.0"
+                        "version": "2.7.2",
+                        "purl": "pkg:generic/openldap@2.7.2"
                     }
                 ],
-                "notes": "Built from winlibs/openldap ref openldap-2.7.0-3 at commit 4b2449a2e39d92b3b789ff71350b4bf70ed0713e with upstream identity openldap/openldap tag OPENLDAP_REL_ENG_2_7_0."
-            }
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:php-windows-deps/libsasl@2.1.28-2",
-            "name": "libsasl",
-            "version": "2.1.28-2",
-            "purl": "pkg:generic/cyrus-sasl@2.1.28",
-            "licenses": [
-                {
-                    "license": {
-                        "id": "BSD-4-Clause"
-                    }
-                }
-            ],
-            "copyright": "See accompanying license and notice files.",
-            "supplier": {
-                "name": "Winlibs"
-            },
-            "externalReferences": [
-                {
-                    "type": "distribution",
-                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libsasl-2.1.28-2-vs16-x64.zip"
-                },
-                {
-                    "type": "website",
-                    "url": "https://github.com/cyrusimap/cyrus-sasl"
-                },
-                {
-                    "type": "vcs",
-                    "url": "https://github.com/cyrusimap/cyrus-sasl/tree/cyrus-sasl-2.1.28"
-                },
-                {
-                    "type": "vcs",
-                    "url": "git+https://github.com/winlibs/cyrus-sasl.git@63a75ce9293206aea981e9f3edcd96645bafd677"
-                }
-            ],
-            "properties": [
-                {
-                    "name": "php:library",
-                    "value": "cyrus-sasl"
-                },
-                {
-                    "name": "php:component",
-                    "value": "libsasl"
-                },
-                {
-                    "name": "php:version",
-                    "value": "2.1.28-2"
-                },
-                {
-                    "name": "php:upstream-version",
-                    "value": "2.1.28"
-                },
-                {
-                    "name": "php:source-origin",
-                    "value": "winlibs-fork"
-                },
-                {
-                    "name": "php:upstream-repository",
-                    "value": "cyrusimap/cyrus-sasl"
-                },
-                {
-                    "name": "php:upstream-url",
-                    "value": "https://github.com/cyrusimap/cyrus-sasl"
-                },
-                {
-                    "name": "php:upstream-tag",
-                    "value": "cyrus-sasl-2.1.28"
-                },
-                {
-                    "name": "php:source-repository",
-                    "value": "winlibs/cyrus-sasl"
-                },
-                {
-                    "name": "php:source-url",
-                    "value": "https://github.com/winlibs/cyrus-sasl"
-                },
-                {
-                    "name": "php:source-ref",
-                    "value": "libsasl-2.1.28-2"
-                },
-                {
-                    "name": "php:source-commit",
-                    "value": "63a75ce9293206aea981e9f3edcd96645bafd677"
-                },
-                {
-                    "name": "php:input-version",
-                    "value": "libsasl-2.1.28-2"
-                },
-                {
-                    "name": "php:vs",
-                    "value": "vs16"
-                },
-                {
-                    "name": "php:arch",
-                    "value": "x64"
-                },
-                {
-                    "name": "php:php-version",
-                    "value": "8.2"
-                },
-                {
-                    "name": "php:package-file-name",
-                    "value": "libsasl-2.1.28-2-vs16-x64.zip"
-                },
-                {
-                    "name": "php:download-location",
-                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/libsasl-2.1.28-2-vs16-x64.zip"
-                }
-            ],
-            "pedigree": {
-                "ancestors": [
-                    {
-                        "type": "library",
-                        "bom-ref": "urn:php:upstream:libsasl:2.1.28",
-                        "name": "libsasl",
-                        "version": "2.1.28",
-                        "purl": "pkg:generic/cyrus-sasl@2.1.28"
-                    }
-                ],
-                "notes": "Built from winlibs/cyrus-sasl ref libsasl-2.1.28-2 at commit 63a75ce9293206aea981e9f3edcd96645bafd677 with upstream identity cyrusimap/cyrus-sasl tag cyrus-sasl-2.1.28."
+                "notes": "Built from winlibs/openldap ref openldap-2.7.2 at commit 8aedbc7d067fa0096395d540f396ac75cc032846 with upstream identity openldap/openldap tag OPENLDAP_REL_ENG_2_7_2."
             }
         },
         {
@@ -7668,6 +7487,129 @@
                     "value": "9f835b523f1af617ca54e06863a1924c23f6e56a"
                 }
             ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:php-windows-deps/sqlite3@3.54.1-1",
+            "name": "sqlite3",
+            "version": "3.54.1-1",
+            "purl": "pkg:generic/sqlite@3.54.1",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "blessing"
+                    }
+                }
+            ],
+            "copyright": "NONE",
+            "supplier": {
+                "name": "Winlibs"
+            },
+            "externalReferences": [
+                {
+                    "type": "distribution",
+                    "url": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.54.1-1-vs16-x64.zip"
+                },
+                {
+                    "type": "website",
+                    "url": "https://github.com/sqlite/sqlite"
+                },
+                {
+                    "type": "vcs",
+                    "url": "https://github.com/sqlite/sqlite/tree/version-3.54.1"
+                },
+                {
+                    "type": "vcs",
+                    "url": "git+https://github.com/winlibs/sqlite3.git@9652784a43e2719e1ab71f3276b87e5be8a66696"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "php:library",
+                    "value": "sqlite3"
+                },
+                {
+                    "name": "php:component",
+                    "value": "sqlite3"
+                },
+                {
+                    "name": "php:version",
+                    "value": "3.54.1-1"
+                },
+                {
+                    "name": "php:upstream-version",
+                    "value": "3.54.1"
+                },
+                {
+                    "name": "php:source-origin",
+                    "value": "winlibs-fork"
+                },
+                {
+                    "name": "php:upstream-repository",
+                    "value": "sqlite/sqlite"
+                },
+                {
+                    "name": "php:upstream-url",
+                    "value": "https://github.com/sqlite/sqlite"
+                },
+                {
+                    "name": "php:upstream-tag",
+                    "value": "version-3.54.1"
+                },
+                {
+                    "name": "php:source-repository",
+                    "value": "winlibs/sqlite3"
+                },
+                {
+                    "name": "php:source-url",
+                    "value": "https://github.com/winlibs/sqlite3"
+                },
+                {
+                    "name": "php:source-ref",
+                    "value": "sqlite3-3.54.1-1"
+                },
+                {
+                    "name": "php:source-commit",
+                    "value": "9652784a43e2719e1ab71f3276b87e5be8a66696"
+                },
+                {
+                    "name": "php:input-version",
+                    "value": "sqlite3-3.54.1-1"
+                },
+                {
+                    "name": "php:vs",
+                    "value": "vs16"
+                },
+                {
+                    "name": "php:arch",
+                    "value": "x64"
+                },
+                {
+                    "name": "php:php-version",
+                    "value": "8.2"
+                },
+                {
+                    "name": "php:package-file-name",
+                    "value": "sqlite3-3.54.1-1-vs16-x64.zip"
+                },
+                {
+                    "name": "php:download-location",
+                    "value": "https://downloads.php.net/~windows/php-sdk/deps/vs16/x64/sqlite3-3.54.1-1-vs16-x64.zip"
+                }
+            ],
+            "cpe": "cpe:2.3:a:sqlite:sqlite:3.54.1:*:*:*:*:*:*:*",
+            "pedigree": {
+                "ancestors": [
+                    {
+                        "type": "library",
+                        "bom-ref": "urn:php:upstream:sqlite3:3.54.1",
+                        "name": "sqlite3",
+                        "version": "3.54.1",
+                        "purl": "pkg:generic/sqlite@3.54.1"
+                    }
+                ],
+                "notes": "Built from winlibs/sqlite3 ref sqlite3-3.54.1-1 at commit 9652784a43e2719e1ab71f3276b87e5be8a66696 with upstream identity sqlite/sqlite tag version-3.54.1."
+            }
         },
         {
             "type": "library",
@@ -7810,15 +7752,15 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/apr-util-x64-windows@44d1833e330b7f7de7512914aafc63efef09dddcb58934caf83505daf42cdbd3",
+            "ref": "pkg:generic/apr-util-x64-windows@c4377839c8351cfbb51a48d0e71c50e599c980fc4c18295611131ee7f96123a5",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/apr-x64-windows@79372cb00fcc88bb9371821ac250bd10333fb891c001b901f93cb636788889bf",
+            "ref": "pkg:generic/apr-x64-windows@cbe3e938a3ac70898d5fb2fd0c473437eabaa6782e360ec7d4fdfe93bb711e32",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/brotli-x64-windows@f8f7c8948650953263ba74a8ea6ab2911cf2c4fb0e37f64a1de6962c5eb7a8d1",
+            "ref": "pkg:generic/brotli-x64-windows@a70fb5e86d969f9cb700efe6c14422ddc10db045bff82e6aefcb9b94141b42ca",
             "dependsOn": []
         },
         {
@@ -7826,11 +7768,11 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/curl-x64-windows@22515276e11843c73d5de5e5f3d1889e42b26250b3b8733a234847e47f5b9acc",
+            "ref": "pkg:generic/curl-x64-windows@2721591077b499a188cb2533ad864151682999a9035cab91146aadc029a4bc44",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/expat-x64-windows@867450c95b4c495dfac17527e0d21a8fe23dbcc7f560d39740356fd37e7115ee",
+            "ref": "pkg:generic/expat-x64-windows@7ad21b3075f883dfc6d452e10a5f6d36547aa2bf7ea4ec684e0efca11658df2a",
             "dependsOn": []
         },
         {
@@ -7838,7 +7780,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/jansson-x64-windows@8957e97a569c870d5b4221163550190a5f640e2abc181620273fabdb2b47262b",
+            "ref": "pkg:generic/jansson-x64-windows@2f5ed1fc6042cf7e7455a6eae322aa9b751e1f2a329cbcd4d4160fe40ac1570d",
             "dependsOn": []
         },
         {
@@ -7850,7 +7792,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/lua-x64-windows@bca05daf5ac49980eaa53edc29911f86ae4f3f642b8f961fe87776cee4b183c1",
+            "ref": "pkg:generic/lua-x64-windows@120b54615034e0c40ee94ea4e1f7a01e65d2ab2f573464eca0b9b7ccb48d306e",
             "dependsOn": []
         },
         {
@@ -7858,7 +7800,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/nghttp2-x64-windows@51e4e64d9e8287e77f1245f1d965d10b8a5dda9c6de9cf1b92ed25c97a724b76",
+            "ref": "pkg:generic/nghttp2-x64-windows@453bd9059d4fa08c96701b3fd30906b6d54d287110aaaadce470c9f6e8562d7a",
             "dependsOn": []
         },
         {
@@ -7866,11 +7808,11 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/openssl-x64-windows@5e22ecabd637e32f203c4e79c87f7db4d0aa640bb2fd05a5698c5988fb2f1715",
+            "ref": "pkg:generic/openssl-x64-windows@e9c880212c4bd76ecd2611f0d562f38d9cd9a55ddd9018719e4e1639867ad027",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/pcre2-x64-windows@9eded7a89701a5ff47425f2d3b9ec2cf1234133817258057709c481da77f74f9",
+            "ref": "pkg:generic/pcre2-x64-windows@fc1de8c2804f11ce1d1f081b9bd42f398e0bb4ffd2569cd5d1bb668d09118c04",
             "dependsOn": []
         },
         {
@@ -7878,7 +7820,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/winlibs-zlib@838fe0e338adb28f5662e5ac332b0f0eb96ba93a",
+            "ref": "pkg:generic/winlibs-zlib@cf7eb981cf4fce56a88608c68fd3f255a2c452c9",
             "dependsOn": []
         },
         {
@@ -7886,19 +7828,17 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/zlib-x64-windows-static-md@095a4dcfd7d22e2d5a0c450707077ea16701f6370fddc45774ac30e4ced34a0c",
+            "ref": "pkg:generic/zlib-x64-windows-static-md@7e354a2a276eef74f238c893476fb9e1b66e1d50c8f8dc16c88a81fe333d66cb",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/zlib-x64-windows@be8dc6fdfde485aefc59e59df985de8d1975ee0140e996d68a4f607014d3813e",
+            "ref": "pkg:generic/zlib-x64-windows@055afdbbaf380c856903dcbefa9588d5b028707a24babccf5a38659a618957ed",
             "dependsOn": []
         },
         {
-            "ref": "pkg:php-windows-deps/apache@2.4.69",
+            "ref": "pkg:php-windows-deps/apache@2.4.71",
             "dependsOn": [
-                "pkg:php-windows-deps/apr-iconv@1.2.2",
-                "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows",
-                "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows-static-md"
+                "pkg:php-windows-deps/apr-iconv@1.2.2"
             ]
         },
         {
@@ -7946,11 +7886,11 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows",
+            "ref": "pkg:vcpkg/zlib@1.4?triplet=x64-windows",
             "dependsOn": []
         },
         {
-            "ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows-static-md",
+            "ref": "pkg:vcpkg/zlib@1.4?triplet=x64-windows-static-md",
             "dependsOn": []
         },
         {
@@ -7974,7 +7914,7 @@
             "dependsOn": [
                 "pkg:php-windows-deps/libffi@3.8.0-1",
                 "pkg:php-windows-deps/libintl@1.0",
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         },
         {
@@ -7986,7 +7926,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:php-windows-deps/zlib@1.3.2-1",
+            "ref": "pkg:php-windows-deps/zlib@1.4",
             "dependsOn": []
         },
         {
@@ -8015,14 +7955,14 @@
                 "pkg:php-windows-deps/libzstd@1.5.7",
                 "pkg:php-windows-deps/nghttp2@1.70.0",
                 "pkg:php-windows-deps/openssl@3.0.22.pl2",
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         },
         {
             "ref": "pkg:php-windows-deps/libssh2@1.11.1-9",
             "dependsOn": [
                 "pkg:php-windows-deps/openssl@3.0.22.pl2",
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         },
         {
@@ -8048,7 +7988,7 @@
             "dependsOn": []
         },
         {
-            "ref": "pkg:php-windows-deps/libjpeg-turbo@3.2.0",
+            "ref": "pkg:php-windows-deps/libjpeg-turbo@3.2.1",
             "dependsOn": []
         },
         {
@@ -8066,7 +8006,7 @@
         {
             "ref": "pkg:php-windows-deps/libpng@1.6.59",
             "dependsOn": [
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         },
         {
@@ -8084,11 +8024,11 @@
             "dependsOn": [
                 "pkg:php-windows-deps/liblmdb@0.9.35",
                 "pkg:php-windows-deps/openssl@3.0.22.pl2",
-                "pkg:php-windows-deps/sqlite3@3.53.4"
+                "pkg:php-windows-deps/sqlite3@3.54.1"
             ]
         },
         {
-            "ref": "pkg:php-windows-deps/sqlite3@3.53.4",
+            "ref": "pkg:php-windows-deps/sqlite3@3.54.1",
             "dependsOn": []
         },
         {
@@ -8126,7 +8066,7 @@
                 "pkg:php-windows-deps/libbzip2@1.0.8",
                 "pkg:php-windows-deps/liblzma@5.8.4",
                 "pkg:php-windows-deps/libzstd@1.5.7",
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         },
         {
@@ -8140,17 +8080,9 @@
             ]
         },
         {
-            "ref": "pkg:php-windows-deps/libsasl@2.1.28-2",
+            "ref": "pkg:php-windows-deps/openldap@2.7.2",
             "dependsOn": [
-                "pkg:php-windows-deps/liblmdb@0.9.35",
-                "pkg:php-windows-deps/openssl@3.0.22.pl2",
-                "pkg:php-windows-deps/sqlite3@3.53.4"
-            ]
-        },
-        {
-            "ref": "pkg:php-windows-deps/openldap@2.7.0-3",
-            "dependsOn": [
-                "pkg:php-windows-deps/libsasl@2.1.28-2",
+                "pkg:php-windows-deps/libsasl@2.1.28-4",
                 "pkg:php-windows-deps/openssl@3.0.22.pl2",
                 "pkg:php-windows-deps/rxspencer@3.9.0"
             ]
@@ -8160,11 +8092,15 @@
             "dependsOn": []
         },
         {
+            "ref": "pkg:php-windows-deps/sqlite3@3.54.1-1",
+            "dependsOn": []
+        },
+        {
             "ref": "pkg:php-windows-deps/wineditline@2.208",
             "dependsOn": []
         },
         {
-            "ref": "pkg:generic/php@8.3.36",
+            "ref": "pkg:generic/php@8.3.37",
             "dependsOn": [
                 "pkg:generic/berkeley-uuencode",
                 "pkg:generic/boost-context-assembly",
@@ -8190,7 +8126,7 @@
                 "pkg:generic/xkcp-sha3",
                 "pkg:generic/xxhash@0.8.1",
                 "pkg:php-windows-deps/ICU@72.1-1",
-                "pkg:php-windows-deps/apache@2.4.69",
+                "pkg:php-windows-deps/apache@2.4.71",
                 "pkg:php-windows-deps/brotli@1.2.1",
                 "pkg:php-windows-deps/c-client@2007f-1",
                 "pkg:php-windows-deps/fbclient@3.0.14",
@@ -8204,7 +8140,7 @@
                 "pkg:php-windows-deps/libffi@3.8.0-1",
                 "pkg:php-windows-deps/libiconv@1.19",
                 "pkg:php-windows-deps/libintl@1.0",
-                "pkg:php-windows-deps/libjpeg-turbo@3.2.0",
+                "pkg:php-windows-deps/libjpeg-turbo@3.2.1",
                 "pkg:php-windows-deps/liblmdb@0.9.35",
                 "pkg:php-windows-deps/liblzma@5.8.4",
                 "pkg:php-windows-deps/libonig@6.9.10",
@@ -8224,11 +8160,11 @@
                 "pkg:php-windows-deps/mpir@3.0.0-3",
                 "pkg:php-windows-deps/net-snmp@5.7.3-6",
                 "pkg:php-windows-deps/nghttp2@1.70.0",
-                "pkg:php-windows-deps/openldap@2.7.0-3",
+                "pkg:php-windows-deps/openldap@2.7.2",
                 "pkg:php-windows-deps/openssl@3.0.22.pl2",
-                "pkg:php-windows-deps/sqlite3@3.53.4",
+                "pkg:php-windows-deps/sqlite3@3.54.1-1",
                 "pkg:php-windows-deps/wineditline@2.208",
-                "pkg:php-windows-deps/zlib@1.3.2-1"
+                "pkg:php-windows-deps/zlib@1.4"
             ]
         }
     ],
@@ -8241,7 +8177,7 @@
             },
             "affects": [
                 {
-                    "ref": "pkg:php-windows-deps/apache@2.4.69"
+                    "ref": "pkg:php-windows-deps/apache@2.4.71"
                 }
             ],
             "analysis": {
@@ -8258,7 +8194,7 @@
             },
             "affects": [
                 {
-                    "ref": "pkg:php-windows-deps/apache@2.4.69"
+                    "ref": "pkg:php-windows-deps/apache@2.4.71"
                 }
             ],
             "analysis": {
@@ -8275,70 +8211,13 @@
             },
             "affects": [
                 {
-                    "ref": "pkg:php-windows-deps/apache@2.4.69"
+                    "ref": "pkg:php-windows-deps/apache@2.4.71"
                 }
             ],
             "analysis": {
                 "state": "not_affected",
                 "justification": "code_not_present",
                 "detail": "This CVE affects mod_auth_openidc, which is a separate module and is not included in the Apache dependency artifact."
-            }
-        },
-        {
-            "id": "CVE-2026-85091",
-            "source": {
-                "name": "NVD",
-                "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091"
-            },
-            "affects": [
-                {
-                    "ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows"
-                }
-            ],
-            "analysis": {
-                "state": "resolved",
-                "response": [
-                    "update"
-                ],
-                "detail": "Fixed in the Apache vcpkg zlib overlay 1.3.2-winlibs.1 using Winlibs zlib commit 838fe0e338adb28f5662e5ac332b0f0eb96ba93a (zlib-1.3.2-1), which backports upstream df84af25dc1942490e1d1c899a07619152a46148."
-            }
-        },
-        {
-            "id": "CVE-2026-85091",
-            "source": {
-                "name": "NVD",
-                "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091"
-            },
-            "affects": [
-                {
-                    "ref": "pkg:vcpkg/zlib@1.3.2-winlibs.1?triplet=x64-windows-static-md"
-                }
-            ],
-            "analysis": {
-                "state": "resolved",
-                "response": [
-                    "update"
-                ],
-                "detail": "Fixed in the Apache vcpkg zlib overlay 1.3.2-winlibs.1 using Winlibs zlib commit 838fe0e338adb28f5662e5ac332b0f0eb96ba93a (zlib-1.3.2-1), which backports upstream df84af25dc1942490e1d1c899a07619152a46148."
-            }
-        },
-        {
-            "id": "CVE-2026-85091",
-            "source": {
-                "name": "NVD",
-                "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091"
-            },
-            "affects": [
-                {
-                    "ref": "pkg:php-windows-deps/zlib@1.3.2-1"
-                }
-            ],
-            "analysis": {
-                "state": "resolved",
-                "response": [
-                    "update"
-                ],
-                "detail": "Fixed in zlib-1.3.2-1 by backporting the upstream input-state reset after a failed non-blocking gzwrite, preventing stale external buffer pointers from reaching gzprintf or gzvprintf."
             }
         },
         {
@@ -9577,6 +9456,23 @@
                 "state": "not_affected",
                 "justification": "code_not_present",
                 "detail": "CVE-2025-68615 affects snmptrapd trap handling in apps/snmptrapd_handlers.c. The Winlibs Windows package builds and ships snmpd.exe and netsnmp.lib; it does not build or ship snmptrapd, and the vulnerable snmp_input handler is absent from the library used by PHP."
+            }
+        },
+        {
+            "id": "CVE-2026-119586",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119586"
+            },
+            "affects": [
+                {
+                    "ref": "pkg:php-windows-deps/sqlite3@3.54.1-1"
+                }
+            ],
+            "analysis": {
+                "state": "not_affected",
+                "justification": "code_not_present",
+                "detail": "The Winlibs build does not define SQLITE_ENABLE_DBPAGE_VTAB, so shell.c sets SQLITE_SHELL_HAVE_RECOVER to 0 and excludes the recovery implementation and .recover command from sqlite3.exe. The SQLite DLL and static library also exclude the shell. Published x86, x64 and ARM64 executables were verified to reject .recover and omit ENABLE_DBPAGE_VTAB from PRAGMA compile_options."
             }
         }
     ]

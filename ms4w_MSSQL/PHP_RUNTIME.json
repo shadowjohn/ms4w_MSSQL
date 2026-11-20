@@ -1,20 +1,18 @@
 {
   "schemaVersion": 1,
-  "phpVersion": "8.3.36",
+  "phpVersion": "8.3.37",
   "architecture": "x64",
   "threadSafety": "TS",
   "extensionBuild": "API20230831,TS,VS16",
   "officialRuntime": {
-    "url": "https://downloads.php.net/~windows/releases/php-8.3.36-1-Win32-vs16-x64.zip",
-    "sha256": "126dd3cc8c19df5085b9420b2bc74ed591de3d98528858c52fc42739b7bba92e",
-    "sbomUrl": "https://downloads.php.net/~windows/releases/php-8.3.36-1-Win32-vs16-x64.zip.spdx.json",
-    "sbomSha256": "8755b30d871da4b93dd87dcc4e1c86c32eec3874719572bdd9eacf3f497b19ff"
+    "url": "https://downloads.php.net/~windows/releases/php-8.3.37-Win32-vs16-x64.zip",
+    "sha256": "07984bdcfd4391888954c2e73b1cf2c0d403cfa5fd8cb32ad60ddcd854c6b7de"
   },
   "customExtensions": {
-    "phpSourceUrl": "https://downloads.php.net/~windows/releases/php-8.3.36-src.zip",
-    "phpSourceSha256": "2dd2271952dff11ec1f7149ef0cc661132c918ae2a419e1842b31defaf5007e8",
-    "develUrl": "https://downloads.php.net/~windows/releases/php-devel-pack-8.3.36-Win32-vs16-x64.zip",
-    "develSha256": "6d4b58f6baf0e72e3d13fc5d613a01ef6af0a85864df5033c236bbd515668fb5",
+    "phpSourceUrl": "https://downloads.php.net/~windows/releases/php-8.3.37-src.zip",
+    "phpSourceSha256": "10dbc26beedd10c039f8a4232183166161aa93a9f49a8eac2e0a23cfb0ef3691",
+    "develUrl": "https://downloads.php.net/~windows/releases/php-devel-pack-8.3.37-Win32-vs16-x64.zip",
+    "develSha256": "8f75d8a9be8eb75701951eb91b420664e1372c862c6212129d59d58480250901",
     "sqliteVersion": "3.54.1",
     "sqliteUrl": "https://www.sqlite.org/2026/sqlite-amalgamation-3540100.zip",
     "sqliteSha3_256": "92281c86e2957f9b9305890f9ac04204caa7b677cc868dc326d942689df28e30",
@@ -26,7 +24,9 @@
     ],
     "signatureStatus": "NotSigned",
     "sqliteLinkage": "static",
-    "pdoPatch": "sqlite3_enable_load_extension(H->db, 1) after successful database open"
+    "pdoPatch": "sqlite3_enable_load_extension(H->db, 1) after successful database open",
+    "phpVersion": "8.3.37",
+    "buildVersionArgument": "-PhpVersion 8.3.37"
   },
   "retainedSqlsrvVersion": "5.12.0+17729",
   "configuration": "Existing php.ini and Apache configuration are retained; not covered by payload replacement.",
@@ -41,7 +41,7 @@
     },
     {
       "path": "Apache/php/deplister.exe",
-      "sha256": "81c630e208d3d2bcccd54ee67f875065d3eeb42ae5a711ac56e5527f70f86561"
+      "sha256": "d6f64632a17b24f0a60250102f20f4a1f5c346c92a7fc8bf86c524c2301b7446"
     },
     {
       "path": "Apache/php/dev/php8ts.lib",
@@ -49,155 +49,155 @@
     },
     {
       "path": "Apache/php/ext/php_bz2.dll",
-      "sha256": "e9ee84530c9756b8d040a82333482f87c3e999466ff44acbc62a40a9b346f896"
+      "sha256": "eaaed4df5c4332499f7021d65a4d0dd5b1ae7c4447b98977ecd3a2539f3ec6d1"
     },
     {
       "path": "Apache/php/ext/php_com_dotnet.dll",
-      "sha256": "4f6703bbdf28a1c3a2855b4692771e5b45574e16109abc089fea125785e3cdc3"
+      "sha256": "a803f198fd653b019ba419020d8adeeeb46c39487ea2c164ead3a0bdf686fb25"
     },
     {
       "path": "Apache/php/ext/php_curl.dll",
-      "sha256": "29dc53d2da353e159f9ff774b12d4a3ba11b0aeb168f0b4e8bd762ddfe8469a5"
+      "sha256": "8c53e863543e61458993931c02206308472651fa4f2b43292523fed8a7a9e43c"
     },
     {
       "path": "Apache/php/ext/php_dba.dll",
-      "sha256": "489d475679272684a87311701105aee277dabad27c24814e8e0eea388aa471c6"
+      "sha256": "26a13b53da6e34a55d213a8aead8c441fbbd1f02662fbbcccb079f1e23fc7f92"
     },
     {
       "path": "Apache/php/ext/php_dl_test.dll",
-      "sha256": "7df9301bc42c3667494478ce5438a32a60ddc46917f1ae4848927a1c32372093"
+      "sha256": "534cb42311b10d236306fc16c49f9da6872d77e3ee038d3f0d3f2d55cd42e48e"
     },
     {
       "path": "Apache/php/ext/php_enchant.dll",
-      "sha256": "a83080ac7683233a38adefed122b44efa1d7c628eb2beddee7dd0092f58d04a9"
+      "sha256": "6f0603a57a6d26ebacec7e06a816aa59132751fad900f72ca057f39a6840f551"
     },
     {
       "path": "Apache/php/ext/php_exif.dll",
-      "sha256": "597135675cd8609f3f13be7c81de717ca29ca76a793fe6aaec9bde74a16fda9c"
+      "sha256": "d9643da35eabb32fac99df6468599c7461e7dc3947ba3febe83f4023b39f5e3c"
     },
     {
       "path": "Apache/php/ext/php_ffi.dll",
-      "sha256": "068c3d1ce07439bff4d072aa67b31e27ae6342c67d0df5dbfdb529159f7c82a1"
+      "sha256": "f530f6a6244ca3862c5bd1166f80aea9bd67c561c3f5b21c68b076e4716b402c"
     },
     {
       "path": "Apache/php/ext/php_fileinfo.dll",
-      "sha256": "159ffb392cd2367ec5a73d11ff2a39bfc49999a682496cbfdc3244cd194d72bc"
+      "sha256": "4197495a4a07195169e2d25f3ff45ede3e50e46ed549046c74b67f6a718af030"
     },
     {
       "path": "Apache/php/ext/php_ftp.dll",
-      "sha256": "c2c04020651dccdafe448a046d28d14453aaf7821accbedee9ca049958b15693"
+      "sha256": "6c224040f88b45270a146bfab83dbf662e0d6047589d4c283e94bc42ee8ed8b4"
     },
     {
       "path": "Apache/php/ext/php_gd.dll",
-      "sha256": "e360fcf024ed1545921d174b05389ff1f8f33a5f27831a9882284169443189ce"
+      "sha256": "f7327c4ae61594695ac6c5c5b983773a53c33e321658e0da1c7eab0184df7875"
     },
     {
       "path": "Apache/php/ext/php_gettext.dll",
-      "sha256": "a5579a43cdc206f0a0555055edaaa00f2d386d6a4d17dc2f1c8987fb4583d341"
+      "sha256": "6ee58c57f5d73a68386f891c8c8e4ede7c8f3f2b72ac06f22009edf2379b26af"
     },
     {
       "path": "Apache/php/ext/php_gmp.dll",
-      "sha256": "155431254756dcd1b7b815e81ce634f1dcc9a0734c4b41ee8f68e1d88f37370b"
+      "sha256": "3c82533978fbbb381a295917c01f2f935ee4873820d1181413ae71d8c8b41748"
     },
     {
       "path": "Apache/php/ext/php_imap.dll",
-      "sha256": "334c55ba0c3d1cffd08ded104884ed38ea0a34a67ab02413ea19d8b07d184a9d"
+      "sha256": "999d00c06f1fd630e31dd644130565393561b5b17ae3bcf3471576f26e429e1e"
     },
     {
       "path": "Apache/php/ext/php_intl.dll",
-      "sha256": "d6e5e5e830998fed94d27407d8e278a5ea4190bbd7adf08846f78bf6784afa70"
+      "sha256": "c38ae2cfa4905d327ab813a1e2d3538bdf031d44205c0ee7a51f7cbfaad164aa"
     },
     {
       "path": "Apache/php/ext/php_ldap.dll",
-      "sha256": "9f0198cf90eac973459caa94e438200045d42c18526dedef9e6ba2a55de3978d"
+      "sha256": "3194f6f0a342f80dbd59a00b513191132cd23259171624f9c5b26d5ef37692b7"
     },
     {
       "path": "Apache/php/ext/php_mbstring.dll",
-      "sha256": "bf9b95ba4fb66c7ba678a196732d197b330d0db4645539305cfaa93dc5d0b71f"
+      "sha256": "fe0a621ce527be1c480feb711a95640f4474d87394f97f6300ab47feb433e927"
     },
     {
       "path": "Apache/php/ext/php_mysqli.dll",
-      "sha256": "b5c766c094ea4e800dbc9558e117d80219dbf5c93235103ef7c1da763373528b"
+      "sha256": "4908bbee27dd08c653d8a1bd7f5c883ffa33c4ede625fefe67e2df1f7ffe63f0"
     },
     {
       "path": "Apache/php/ext/php_odbc.dll",
-      "sha256": "bf6fe06142abb602082c5469f2a3d768592cc3a946cfec2ab5e6e4b822d60146"
+      "sha256": "53a4ad3ef81b22fd39d7e3ccb38168c28a71f3a1f75f67ff3b7d2310abeacb70"
     },
     {
       "path": "Apache/php/ext/php_opcache.dll",
-      "sha256": "47d475919756378d84f3cabfaf14f7952fba1a66b2b748998dce92940e6b57f6"
+      "sha256": "1387da89632d7d8d2491c01f8657c3d930ab9a5f34e99708bb5a4c45c0089097"
     },
     {
       "path": "Apache/php/ext/php_openssl.dll",
-      "sha256": "6ecd6fa0ce2c6010a18ea4c3ad855d79fa6229cb05df49e419fe8f5cc2e71b44"
+      "sha256": "78c29efcf0920d45563c1be5901179c5be81a0ac5736bca1475768f3f79114b6"
     },
     {
       "path": "Apache/php/ext/php_pdo_firebird.dll",
-      "sha256": "984abb2823af2846c70d2c7d0f2e19335af8f8fbd639e520a816b6c5bb74f27f"
+      "sha256": "9eb0f75c41f9c310b374a8d19637823f9cba59d12cda73c47fcef9dedf98a8f6"
     },
     {
       "path": "Apache/php/ext/php_pdo_mysql.dll",
-      "sha256": "5bbad04eb1bbc53a0bebc72d2885717bee0c422568f89627f42375d85ed51872"
+      "sha256": "7747f099b36dc08d2c2c15d1b7d2f6d907d1c38065a4d9c6b3ad7fad8e8583ff"
     },
     {
       "path": "Apache/php/ext/php_pdo_odbc.dll",
-      "sha256": "f722b457f173fbd5e22a297fc405e56dac4c78f836e2dbada0fdd2af38119d8d"
+      "sha256": "814b94d6c29ca7777adc496b2f7f69a122bcfd827301c768e2dbaa3a62be5b69"
     },
     {
       "path": "Apache/php/ext/php_pdo_pgsql.dll",
-      "sha256": "ddd099200aafde36b59b422fc10f513da9c3d60a29be1c1102f7fa8e44ef38ce"
+      "sha256": "e4170f0bd628288bf1ec18b7684d00897378a4fc0528a78e0d0758a36eb0d367"
     },
     {
       "path": "Apache/php/ext/php_pdo_sqlite.dll",
-      "sha256": "8a4c4e1ed436c14d64e5162f9e45b3eff0d507ddcb9aec3c70efe5c8806f0666"
+      "sha256": "ffc17fedc91fcb294c0dedb6c425f04db119ea5bd909436cd447486b1c9b6c40"
     },
     {
       "path": "Apache/php/ext/php_pgsql.dll",
-      "sha256": "2fbdb56ef521a9597fc7eb6f7ceab4b533c8c84909b8837c29d2af199189e735"
+      "sha256": "1e7a4b087b966f3907f72f88e958b7168e06f50d27daefe8c4fa10d26da5a898"
     },
     {
       "path": "Apache/php/ext/php_shmop.dll",
-      "sha256": "faebd975ebba39d57663296b0494d4bd85d943c6f65a0a9143a5fdb3d65be5e0"
+      "sha256": "c6d55064f9d471bc5c8eeb188ea7a52b1863fdeb5f7c0b4558ec3599d469f8e0"
     },
     {
       "path": "Apache/php/ext/php_snmp.dll",
-      "sha256": "e8c30a13f4b34b0667d9cdc02c3c5906fb4180adf41bfcf6b038a19519c44fa8"
+      "sha256": "9a48991c9819636204d91ff0eb6c6eed21a808f916eeb3065fa2eecd1fb7de83"
     },
     {
       "path": "Apache/php/ext/php_soap.dll",
-      "sha256": "ccc605da8823d93762756b0491a69c5523d515304c44609c70fece425216f9ed"
+      "sha256": "d88a3f555d5de829cfc5f2973218ea16289360d02c82a67634695889086f386b"
     },
     {
       "path": "Apache/php/ext/php_sockets.dll",
-      "sha256": "7fa4d3526504fc7e10a973361ac5851a22adaed603462dc6027bbaf7996427b0"
+      "sha256": "d5e28a30adbbf16d06e734303880055f3421b814a38e452e496e5d822af68185"
     },
     {
       "path": "Apache/php/ext/php_sodium.dll",
-      "sha256": "6df360a8a6fcf034f0bc86d47ff88299a70af9b760f9764249f30b378b64e389"
+      "sha256": "f527452764fbc7859018a59827b12000d9171e7b935c2e137df00fabdd1860d5"
     },
     {
       "path": "Apache/php/ext/php_sqlite3.dll",
-      "sha256": "daa0b03b59471bce36448e9005ebc9b6bca83c5b1ccc344ea6652db8e06ec4ef"
+      "sha256": "3eb0e0aebb37c84b8f5657ce85fc4ef9430ef67d045fbd8e9f936a7329c9a213"
     },
     {
       "path": "Apache/php/ext/php_sysvshm.dll",
-      "sha256": "fc881bddb76e18007b83795ca2e59565f956acbc6ae9ac39d88c16a373ab68a0"
+      "sha256": "a23604b3cc0658a331e2d88bf0f4eae880d07a9c07b382a6c1eda045bedeb922"
     },
     {
       "path": "Apache/php/ext/php_tidy.dll",
-      "sha256": "c958c5f8e407330be3fce9eb644aa0bbaaf1a00e3cb7dc97188460d1894850b0"
+      "sha256": "52605f1cda6bf24b8dd6cd95841e8c9c5749798b55d621edff5efbf2eeb57cc7"
     },
     {
       "path": "Apache/php/ext/php_xsl.dll",
-      "sha256": "d503b4be3e51a7ddbf226156c7cea781e8f88bd0a8f523118de2ea4901bec483"
+      "sha256": "a8152606709633fbb7d617532b1e14b9b3d01b8a06072f22a6a92089872b2f9a"
     },
     {
       "path": "Apache/php/ext/php_zend_test.dll",
-      "sha256": "d73b832b148866fa12ca81107bd983e383964de41832790bf402b588c0b93bd4"
+      "sha256": "ba5126e2d2d2b2920b799bfa4a858995570cd4529c4f7e2665abe9ca3906ad74"
     },
     {
       "path": "Apache/php/ext/php_zip.dll",
-      "sha256": "eae4557778c4a91590b1ca9ac55699acaaf216ce6f167969f592b1d16d7a1321"
+      "sha256": "d0baec7b061e70024e9382fd174f03cb3ca9bf84faa30ecfa241c680ebc8b07e"
     },
     {
       "path": "Apache/php/extras/ssl/legacy.dll",
@@ -209,15 +209,15 @@
     },
     {
       "path": "Apache/php/glib-2.dll",
-      "sha256": "99e1b8d9cf41dcfef0361d504446f3f19cd71c2e8bd404acab18301e598a9754"
+      "sha256": "69aa9c27ddaa7ebb9d1b9e3090b5db035093326088ae7fcb3356dc8c04449364"
     },
     {
       "path": "Apache/php/gmodule-2.dll",
-      "sha256": "dd09d6d60b0004afe24e9f56d1c3f60b95ec68ff31a9fd6bfe71f1e6bef867f0"
+      "sha256": "a680b7d948dbf45841dbd21d30a4305e620355ae65e4d80a789d515855524e0c"
     },
     {
       "path": "Apache/php/gobject-2.dll",
-      "sha256": "0c4e283bf8376f1599e23ac80703f4ee433be96346958f5a1b25d82c07c08390"
+      "sha256": "282535b201ffc27ba62e0082936d19cc07b134906dd9e61341865ebb6a61efe7"
     },
     {
       "path": "Apache/php/icudt72.dll",
@@ -237,7 +237,7 @@
     },
     {
       "path": "Apache/php/lib/enchant/libenchant2_hunspell.dll",
-      "sha256": "0fa72821cc011eaa60cc1c024376261079ccc00a15383fbd294adfb531e34dfc"
+      "sha256": "9dd689c6781cbccf1e5fd02135cae280020ad1bfacbfdeb200c33c6a814c30b0"
     },
     {
       "path": "Apache/php/libcrypto-3-x64.dll",
@@ -245,7 +245,7 @@
     },
     {
       "path": "Apache/php/libenchant2.dll",
-      "sha256": "ccd2ef74c3c19672afe68b58146c11489114db5ac992709728ab7f57fd8d7c1d"
+      "sha256": "a59050d96faaf3a9820cf3f6c05707460ac23a2e09f877f767e9171834434b2d"
     },
     {
       "path": "Apache/php/libpq.dll",
@@ -253,7 +253,7 @@
     },
     {
       "path": "Apache/php/libsasl.dll",
-      "sha256": "06699f066819840012b99e54f9a70512fae7d6a49e68ea51645e8e1d696b8c11"
+      "sha256": "f7de63e4b0fe76d56d535e94197374f14a8839576d7c6d369095b92988bd8133"
     },
     {
       "path": "Apache/php/libsodium.dll",
@@ -261,11 +261,11 @@
     },
     {
       "path": "Apache/php/libsqlite3.dll",
-      "sha256": "f3ee8b66e38bbfd80589d70cf6d1b463b7eab51dfbf8d1f4eb2e525289e39aac"
+      "sha256": "b2cb938dfac25a0fde235c1bd315ee3274c59c158795a24036c0788e7797742f"
     },
     {
       "path": "Apache/php/libssh2.dll",
-      "sha256": "0dbd4130ec1b683d8486de3dd991f9ec3b16d1c5079398d3da527803598f47ee"
+      "sha256": "b4e06cfa14dea7b40112a8771e2e771da9b210c44037e3a12ecad716815249df"
     },
     {
       "path": "Apache/php/libssl-3-x64.dll",
@@ -277,7 +277,7 @@
     },
     {
       "path": "Apache/php/news.txt",
-      "sha256": "26ff2d8e226de43dc20d7a9752a11284f48782d90546d34b0eb18fc0764d8789"
+      "sha256": "a4f6d5e1fe41e1bc4134ebc647f03aa768516d745e6a8a09e5c3b07cda7ab954"
     },
     {
       "path": "Apache/php/nghttp2.dll",
@@ -289,19 +289,19 @@
     },
     {
       "path": "Apache/php/pharcommand.phar",
-      "sha256": "0c7f6a8fbdff245a8933eba47c37b6754d9e2d5de11e9239e5f309a3e1c62d59"
+      "sha256": "bf0a10c40ba9a0f0a5b4fe2a42098911e920a5831512509811c7a1be11d4a1bd"
     },
     {
       "path": "Apache/php/php-cgi.exe",
-      "sha256": "f3c38c5cc6bb0490fb31efb4d3a7623967b150ddfdda7436f3cadde2f43ab295"
+      "sha256": "7112c040ddfcb8e15ef46ec91ab20612e97399fc690d5f7af6a5f847e94828c6"
     },
     {
       "path": "Apache/php/php-win.exe",
-      "sha256": "e8958efff269713757c0715a4e4a1de9ab59da1fb98b6741953aa46fbfedb5e5"
+      "sha256": "5e8f10f9037b25bf3b7149fb451433e50ccffcee1edf4bf9063b72582afd6cb7"
     },
     {
       "path": "Apache/php/php.exe",
-      "sha256": "e18a4d8d13b243515c222e6a00260217b3fd1f2651b2261a526ac10653bfc2fd"
+      "sha256": "54db1035722e402a7e6d65eaa6b79f4918563387aabf2ffc479de0f2d30519fb"
     },
     {
       "path": "Apache/php/php.ini-development",
@@ -313,23 +313,23 @@
     },
     {
       "path": "Apache/php/php8apache2_4.dll",
-      "sha256": "923b1496b07c5f26e0c573738df9efe494d0eea024d6357708f9a2f72f69dc1d"
+      "sha256": "e2874ef954f3c3218323469d93ff496eae0b121a990b8100335d3b7cfc060765"
     },
     {
       "path": "Apache/php/php8embed.lib",
-      "sha256": "fa3fab96e29d8a008ab79466870c6203d1539457e26a75361495e8d7ec33d9b4"
+      "sha256": "c8ab993ebecf647a655bd0272d008bb17a74b0e859a21325923aaf579b2a2560"
     },
     {
       "path": "Apache/php/php8phpdbg.dll",
-      "sha256": "326a8ae9274d2c5a22e0693d63cd89749f2c020cd6a241002cf9f7e4dcd8308b"
+      "sha256": "69e37bcad421692ad638a858e312d4bf5abefe8b928a9cee03f62b0a8f9c93fe"
     },
     {
       "path": "Apache/php/php8ts.dll",
-      "sha256": "0c8de24a1e034ddfa7a3749d662803d2411587c7899436e64be30e0417de16c9"
+      "sha256": "2db25f9b03dcdeda268e9ada8e93a1b13124a1a823d71e19cf7e75b8d787cc53"
     },
     {
       "path": "Apache/php/phpdbg.exe",
-      "sha256": "48dc7a4413e96fd73144b895950bddab935d4aa170dd908f678c130c2f233748"
+      "sha256": "70b33067e43c1443dc7e5019413b792b9f24a6d803e404b847d587d73235bae1"
     },
     {
       "path": "Apache/php/README.md",
@@ -337,7 +337,7 @@
     },
     {
       "path": "Apache/php/snapshot.txt",
-      "sha256": "8ee0155dcbae5f6e667d18dde64f4f5d7f179f2ad805ffbfb8e65e2ca6ccae2f"
+      "sha256": "b411423b61aecada3772430aab0bffbb73b1b9fb726dd991328aaa0c2db66884"
     },
     {
       "path": "Apache/php/readme-redist-bins.txt",
@@ -345,20 +345,19 @@
     },
     {
       "path": "Apache/php/extras/sbom/php.cdx.json",
-      "sha256": "4c59c9442f17624bcebacd32afabef888bdce1d41cd47589f8829774668375f9"
+      "sha256": "69dca9ad9602b08cab231f0d77a0a093017954e465cace6030e29d7561504c0a"
     },
     {
       "path": "Apache/php/extras/sbom/php.spdx.json",
-      "sha256": "fb9d8dd206d15fc83e2b544a192fb48486e19c83d2775fe1c16705308a591691"
+      "sha256": "604773fa0f408e0bb5c8d025547e21e848cf9f6c5537b8b15e35f41cbc999e13"
     },
     {
       "path": "Apache/php/extras/sbom/php.openvex.json",
-      "sha256": "d55407903751da87f9dc98ec598e8b488020e94239d7c731493d565dfca269c0"
+      "sha256": "efc6848823a8a63486c735585937258afa7f4ff786224f4f734e88b61d32b3f3"
     }
   ],
   "dependencyOverlays": [],
-  "windowsPackageVersion": "8.3.36-1",
-  "installedAtUtc": "2026-11-13T05:18:43.683164+00:00",
+  "windowsPackageVersion": "8.3.37",
   "retainedConfiguration": [
     {
       "path": "Apache/php/extras/ssl/openssl.cnf",
@@ -366,13 +365,19 @@
       "reason": "Preserve existing OpenSSL configuration."
     }
   ],
-  "inventoryInterpretation": "Official Windows 8.3.36-1 SBOM plus retained custom SQLite 3.54.1 extensions and SQLSRV 5.12.0; app-local VC runtime tracked separately.",
+  "inventoryInterpretation": "Official PHP Windows 8.3.37 SBOM with custom SQLite 3.54.1 extensions and retained SQLSRV 5.12.0; app-local VC runtime managed separately.",
+  "preparedAtUtc": "2026-11-20T07:38:16.148543+00:00",
+  "installedAtUtc": "2026-11-20T07:41:32.492097+00:00",
   "validation": {
-    "isolatedCliChecksPassed": 8,
-    "isolatedCliReportSha256": "4a828da92a9fbc8d2e32ad19b59c861f1a4f521572b64d49ee06611d8f172472",
-    "isolatedWebReportSha256": "bd15867fc8eb0fcfe410858cc9b3abcf7ffe0206c44c3c5e1abcc7e19ee09f46",
-    "sqlsrvConnection": "Not tested; extensions loaded, no live database accessed.",
-    "installedWebReportSha256": "8c5a38514cb7624524c2235f640f180687ab765039af838101b4c616eede8f55",
-    "installedGisChecksPassed": 27
+    "isolatedCliChecksPassed": 10,
+    "isolatedWebChecksPassed": 16,
+    "isolatedGisChecksPassed": 27,
+    "isolatedCliReportSha256": "abe9f684d5b22b01f3a9f20b56b756ab7ecc3b53f8b5829310036cc7d3b48e0e",
+    "isolatedWebReportSha256": "3f1cdb9ee09c6f97ea2539bdd4a3108fed739c12f70eb3ccfdb248f21124ae74",
+    "sqlsrvConnection": "Extensions loaded; no live database connection performed.",
+    "installedWebChecksPassed": 16,
+    "installedGisChecksPassed": 27,
+    "runtimeChecksPassed": 8,
+    "installedWebReportSha256": "5145adee2bfe03f6c0caafa27dddb5248bb3398837cc3122d159c8c5f815ec41"
   }
 }
